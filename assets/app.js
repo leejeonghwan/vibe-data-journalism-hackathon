@@ -7,58 +7,61 @@
     menuBtn.addEventListener('click', function () { sidebar.classList.toggle('open'); });
   }
 
-  // 페이지 내 섹션 전환 (data-s ↔ section id)
-  var items = document.querySelectorAll('.nav-item');
+  var items = Array.prototype.slice.call(document.querySelectorAll('.nav-item'));
   var sections = document.querySelectorAll('.section');
-  if (items.length && sections.length) {
-    var go = function (id) {
-      sections.forEach(function (s) { s.classList.toggle('active', s.id === id); });
-      items.forEach(function (i) { i.classList.toggle('active', i.dataset.s === id); });
-      if (sidebar) sidebar.classList.remove('open');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    items.forEach(function (i) { i.addEventListener('click', function () { go(i.dataset.s); }); });
-    // 내부 상호 참조 링크(.xref)
-    document.querySelectorAll('.xref').forEach(function (x) {
-      x.style.cursor = 'pointer';
-      x.addEventListener('click', function () { go(x.dataset.s); });
-    });
-    // 해시로 들어온 경우 해당 섹션 열기
-    if (location.hash) {
-      var id = location.hash.slice(1);
-      if (document.getElementById(id)) go(id);
-    }
-  }
-
-  // 페이지 하단 페이지네이션 (이전/다음 강) — 자동 생성
-  var pages = [
-    { f: 'index.html', t: '강의 홈' },
-    { f: '01-first-exercise.html', t: '1강 · 첫 실습 30분' },
-    { f: '02-method.html', t: '2강 · 기초취재 방법론' },
-    { f: '03-data-100.html', t: '3강 · 공공데이터 100선' },
-    { f: '04-case-colin.html', t: '4강 · 콜린알포 케이스' },
-    { f: '05-manual.html', t: '5강 · 프로젝트 매뉴얼' },
-    { f: '06-verification.html', t: '6강 · 검증과 원칙' }
-  ];
-  var path = (location.pathname.split('/').pop() || 'index.html');
-  if (path === '') path = 'index.html';
-  var idx = -1;
-  for (var i = 0; i < pages.length; i++) { if (pages[i].f === path) { idx = i; break; } }
   var main = document.querySelector('.main');
-  if (idx !== -1 && main) {
-    var prev = idx > 0 ? pages[idx - 1] : null;
-    var next = idx < pages.length - 1 ? pages[idx + 1] : null;
-    var pager = document.createElement('nav');
+  if (!items.length || !sections.length) return;
+
+  // 섹션 순서와 라벨(목차 텍스트)
+  var order = items.map(function (i) { return i.dataset.s; });
+  var labels = {};
+  items.forEach(function (i) { labels[i.dataset.s] = (i.textContent || '').replace(/\s+/g, ' ').trim(); });
+
+  // 하단 페이지네이션(현재 강 안에서 이전/다음 섹션)
+  var pager = null;
+  if (main) {
+    pager = document.createElement('nav');
     pager.className = 'pager';
-    pager.setAttribute('aria-label', '강의 이동');
-    var html = '';
-    html += prev
-      ? '<a class="pg prev" href="' + prev.f + '"><span class="dir">← 이전 강</span><span class="t">' + prev.t + '</span></a>'
-      : '<span class="pg empty"></span>';
-    html += next
-      ? '<a class="pg next" href="' + next.f + '"><span class="dir">다음 강 →</span><span class="t">' + next.t + '</span></a>'
-      : '<span class="pg empty"></span>';
-    pager.innerHTML = html;
+    pager.setAttribute('aria-label', '페이지 이동');
     main.appendChild(pager);
   }
+
+  function renderPager(id) {
+    if (!pager) return;
+    var pos = order.indexOf(id);
+    var prevId = pos > 0 ? order[pos - 1] : null;
+    var nextId = (pos > -1 && pos < order.length - 1) ? order[pos + 1] : null;
+    var html = '';
+    html += prevId
+      ? '<button class="pg prev" data-go="' + prevId + '"><span class="dir">← 이전</span><span class="t">' + labels[prevId] + '</span></button>'
+      : '<span class="pg empty"></span>';
+    html += nextId
+      ? '<button class="pg next" data-go="' + nextId + '"><span class="dir">다음 →</span><span class="t">' + labels[nextId] + '</span></button>'
+      : '<span class="pg empty"></span>';
+    pager.innerHTML = html;
+    Array.prototype.slice.call(pager.querySelectorAll('button[data-go]')).forEach(function (b) {
+      b.addEventListener('click', function () { go(b.dataset.go); });
+    });
+  }
+
+  function go(id) {
+    sections.forEach(function (s) { s.classList.toggle('active', s.id === id); });
+    items.forEach(function (i) { i.classList.toggle('active', i.dataset.s === id); });
+    renderPager(id);
+    if (sidebar) sidebar.classList.remove('open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  items.forEach(function (i) { i.addEventListener('click', function () { go(i.dataset.s); }); });
+  document.querySelectorAll('.xref').forEach(function (x) {
+    x.style.cursor = 'pointer';
+    x.addEventListener('click', function () { go(x.dataset.s); });
+  });
+
+  // 초기 표시 섹션 결정 (해시 > 현재 active > 첫 섹션)
+  var startId = order[0];
+  var activeSection = document.querySelector('.section.active');
+  if (activeSection) startId = activeSection.id;
+  if (location.hash && document.getElementById(location.hash.slice(1))) startId = location.hash.slice(1);
+  go(startId);
 })();
