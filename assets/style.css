@@ -206,3 +206,10 @@ blockquote{border-left:3px solid var(--accent);background:var(--accent-light);ma
   .site-header .mod-label{display:none;}
   td.ds{width:auto;}
 }
+
+/* ── 마침표 일괄 (제목·메뉴 항목·버튼) ── */
+.main h2::after,.main h3::after,.main h4::after{content:".";}
+.course-nav a::after{content:".";}
+.sidebar .nav-item::after{content:".";}
+.btn::after{content:".";}
+.pager .pg .t::after{content:".";}
