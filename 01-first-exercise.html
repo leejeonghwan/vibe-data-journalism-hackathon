@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1강 · 첫 실습 30분 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘 해커톤</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">1강 · 첫 실습 30분</span>
+</header>
+
+<nav class="sidebar">
+  <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="01-first-exercise.html" class="current"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
+    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="intro">들어가며 — 30분이면 된다</a>
+  <a class="nav-item" data-s="guide">시작 전 가이드라인 4가지</a>
+  <a class="nav-item" data-s="prep">준비 (5분)</a>
+  <a class="nav-item" data-s="stages">30분 실습 — 4단계</a>
+  <a class="nav-item" data-s="next">여기서부터가 진짜다</a>
+  <a class="nav-item" data-s="scope">하는 것 / 안 하는 것</a>
+  <a class="nav-item" data-s="run">강사용 운영 노트</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="intro">
+  <div class="module-header m1"><div class="subtitle">1강 · 입문</div><h2>첫 실습 30분 — 데이터로 기삿거리 찾기</h2><p>국회의원 재산 엑셀 하나로, 코딩을 몰라도 30분 안에 단서를 찾는다.</p></div>
+
+  <p class="lead">데이터 저널리즘의 첫 관문은 기술이 아니라 확신이다. "나도 데이터를 다룰 수 있다"는 감각을 30분 만에 갖게 하는 것 — 이 강의의 출발점이다.</p>
+
+  <div class="hero">
+    <div class="big">이 실습의 약속</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">가이드라인 몇 가지만 지키면, 누구나 첫 30분 안에 "어? 이거 기사 되겠는데" 하는 단서를 직접 찾게 된다. 그리고 그 순간 한 가지를 함께 깨닫는다. <b>여기서부터가 진짜 취재의 시작</b>이라는 것.</p>
+    <div class="promise">
+      <div class="c"><div class="t">이 실습이 하는 것</div><p>기삿거리 발굴과 초벌 취재. 어디를 파야 할지 알려 주는 나침반.</p></div>
+      <div class="c"><div class="t">하지 않는 것</div><p>기사 완성은 아니다. 검증·확인·반론은 그다음, 기자의 일이다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="module-header m1"><div class="subtitle">1강</div><h2>시작 전, 가이드라인 4가지</h2><p>이 네 가지가 "그냥 AI에게 물어보기"와 "데이터 저널리즘"을 가른다.</p></div>
+  <table>
+    <thead><tr><th>규칙</th><th>이유</th></tr></thead>
+    <tbody>
+      <tr><td><b>① 원본은 건드리지 않는다</b></td><td>엑셀 원본은 그대로 두고, 클로드가 사본으로 작업하게 한다. 나중에 "원래 숫자가 무엇이었나"를 되짚기 위해서다.</td></tr>
+      <tr><td><b>② 한 번에 하나씩 묻는다</b></td><td>"다 분석해 줘"가 아니라 "재산 1위가 누구인가"처럼 한 질문씩. 답을 눈으로 확인하며 나아간다.</td></tr>
+      <tr><td><b>③ 숫자는 일단 의심한다</b></td><td>클로드가 낸 수가 그럴듯해 보여도 그대로 믿지 않는다. "어떻게 계산했나"를 되묻는다.</td></tr>
+      <tr><td><b>④ '어?' 하는 지점을 메모한다</b></td><td>분석이 목적이 아니다. 상식과 어긋나는 지점을 적는 것이 목적이다. 그것이 기삿거리다.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="prep">
+  <div class="module-header m1"><div class="subtitle">1강</div><h2>준비 (5분)</h2></div>
+  <ol>
+    <li>국회의원 재산내역 엑셀 파일을 준비한다. (관보·국회 공개본. 없으면 강사가 배포)</li>
+    <li>클로드 코워크를 열고, 그 파일이 든 폴더를 선택(마운트)한다.</li>
+    <li>준비 끝. 이제 대화하듯 물어보면 된다.</li>
+  </ol>
+  <div class="prompt"><div class="pl">첫 마디</div><div class="q">이 폴더에 국회의원 재산내역 엑셀 파일이 있다. 원본은 건드리지 말고 사본으로 작업해라. 먼저 이 파일에 어떤 항목(열)이 들어 있는지, 몇 명 분량인지만 알려 달라.</div></div>
+  <div class="expect">✅ <b>기대 결과:</b> "의원 300명, 열은 이름·정당·지역구·총재산·부동산·예금·주식·채무…"와 같은 답. 이 답을 받은 순간, 이미 데이터를 다루기 시작한 것이다.</div>
+</section>
+
+<section class="section" id="stages">
+  <div class="module-header m1"><div class="subtitle">1강</div><h2>30분 실습 — 4단계</h2></div>
+
+  <div class="stage">
+    <div class="head"><div class="n">1</div><h4>데이터와 인사하기 <span class="timer">5분</span></h4></div>
+    <p>무엇이 들어 있는지, 비어 있는 칸은 없는지부터 본다. 분석이 아니라 '파악' 단계다.</p>
+    <div class="prompt"><div class="pl">물어보기</div><div class="q">총재산 기준으로 상위 10명만 표로 보여 달라. 그리고 값이 비어 있거나 이상한(음수, 0, 글자가 섞인) 칸이 있으면 알려 달라.</div></div>
+    <div class="expect">✅ 상위 10명 명단과 함께 "주식 열에 빈칸 30개"처럼 데이터의 구멍이 드러난다. 구멍도 단서다.</div>
+  </div>
+
+  <div class="stage">
+    <div class="head"><div class="n">2</div><h4>대충 뽑아 보기 <span class="timer">10분</span></h4></div>
+    <p>정렬·합계·순위. 가장 단순한 질문이 가장 많이 알려 준다. 이 입문 실습의 핵심이 바로 이 단계다.</p>
+    <div class="prompt"><div class="pl">물어보기 (하나씩)</div><div class="q">· 부동산이 총재산에서 차지하는 비중이 가장 높은 의원 10명은?<br>· 주식을 가장 많이 보유한 의원 10명과 종목은?<br>· 채무가 재산보다 많은 의원이 있는가?<br>· 정당별 평균 재산을 비교해 달라.</div></div>
+    <div class="expect">✅ 질문 하나마다 순위표가 나온다. 이 중 하나에서 반드시 "어?"가 나온다. 그것이 2단계의 목표다.</div>
+    <div class="callout warn" style="margin-top:14px"><div class="ct">가이드라인 ③ 적용</div>흥미로운 수가 나오면 곧바로 되묻는다. <b>"이 숫자는 어떻게 계산했나? 원본에서 그 의원의 행을 그대로 보여 달라."</b> 클로드가 근거를 대지 못하면 그 수치는 버린다.</div>
+  </div>
+
+  <div class="stage">
+    <div class="head"><div class="n">3</div><h4>'어?' 하는 지점 파고들기 <span class="timer">10분</span></h4></div>
+    <p>1·2단계에서 메모한 이상한 지점을 한 단계 더 들어간다. 비교하고 교차한다.</p>
+    <div class="prompt"><div class="pl">물어보기 (나온 단서에 맞게)</div><div class="q">· 같은 종목을 여러 의원이 동시에 보유하고 있는가? 그 종목과 인원수를 세어 달라.<br>· 작년 자료가 있다면, 1년 사이 재산이 가장 많이 늘어난 의원은? 무엇이 늘었나?<br>· 특정 지역에 부동산이 몰린 의원이 있는가?</div></div>
+    <div class="expect">✅ "엔비디아를 62명이 보유" "1년 사이 ○○가 △억 증가"처럼 구체적인 후킹 포인트가 나온다. 이것이 헤드라인 후보가 된다.</div>
+  </div>
+
+  <div class="stage">
+    <div class="head"><div class="n">4</div><h4>기삿거리 3개 적기 <span class="timer">5분</span></h4></div>
+    <p>클로드에게 시키지 않는다. 기자가 직접 적는다. 발굴은 기자의 일이다.</p>
+    <div class="prompt"><div class="pl">스스로 정리</div><div class="q">① 가장 기사가 될 만한 단서 한 줄:<br>② 그것이 사실이려면 추가로 확인해야 할 것:<br>③ 누구에게 물어야 하나 (본인 해명·전문가):</div></div>
+    <div class="expect">✅ 30분 전에는 막막했던 엑셀에서, 취재 방향이 적힌 메모 한 장이 나왔다. 실습 끝.</div>
+  </div>
+
+  <div class="callout tip"><div class="ct">여기까지가 핵심 경험</div>"코딩을 못 하는데 데이터를 다뤘다." "막막한 파일에서 단서를 찾았다." 이 두 가지 성취감이 김도연 기자의 만족도를 끌어올린 지점이다. 우선 이것을 맛보게 하는 것이 모든 교육의 출발점이다.</div>
+</section>
+
+<section class="section" id="next">
+  <div class="module-header m1"><div class="subtitle">1강</div><h2>그런데 — 여기서부터가 진짜다</h2><p>이 30분이 준 것은 기삿거리와 방향이지, 기사가 아니다.</p></div>
+  <p>찾아낸 단서는 아직 '정황'일 뿐이다. 진짜 취재는 지금부터 시작된다.</p>
+  <ol>
+    <li><b>원본 대조 검증</b> — 클로드가 낸 수를 원본에서 직접 한 건 이상 다시 확인한다.</li>
+    <li><b>맥락 확인</b> — 재산이 늘어난 것이 상속인가, 시세인가, 신규 취득인가. 숫자만으로는 알 수 없다.</li>
+    <li><b>제도·기준 확인</b> — 공개 시점, 평가 기준, 백지신탁 의무 같은 규칙을 안다.</li>
+    <li><b>본인·전문가 취재</b> — 당사자 해명, 회계·법률 전문가 자문. 데이터가 못 잡는 칸을 사람이 메운다.</li>
+    <li><b>표현 수위</b> — '유착'이 아니라 '정황'. 단정하지 않고 한계를 먼저 밝힌다.</li>
+  </ol>
+  <div class="callout info"><div class="ct">제대로 된 기대 설정</div>이 작업은 기자를 대체하지 않는다. 막막함을 없애고, 어디를 파야 할지 알려 주고, 초벌 취재를 몇 배 빠르게 해 줄 뿐이다. 판단·검증·취재·책임은 끝까지 기자의 몫이다. 이 점을 처음부터 분명히 말해야 환상도, 실망도 생기지 않는다.</div>
+</section>
+
+<section class="section" id="scope">
+  <div class="module-header m1"><div class="subtitle">1강</div><h2>이 작업이 하는 것 / 하지 않는 것</h2></div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ 한다</div>
+      <ul>
+        <li>방대한 엑셀을 30분에 훑기</li>
+        <li>순위·합계·이상치 즉시 계산</li>
+        <li>"어?" 하는 지점 발견</li>
+        <li>취재 방향·질문 목록 제시</li>
+        <li>코딩 없이 데이터 다루기</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">⛔ 하지 않는다 (사람의 몫)</div>
+      <ul>
+        <li>숫자의 진위 최종 검증</li>
+        <li>맥락·동기 판단</li>
+        <li>당사자·전문가 취재</li>
+        <li>기사 완성과 표현 책임</li>
+        <li>'기사 가치가 있다'는 결정</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="run">
+  <div class="module-header m1"><div class="subtitle">1강</div><h2>강사용 운영 노트</h2></div>
+  <ul>
+    <li><b>성취감을 먼저, 이론은 나중에.</b> 설명을 길게 하지 말고 5분 안에 첫 결과를 보게 한다. "되네!"가 동기를 만든다.</li>
+    <li><b>같은 파일, 다른 발견.</b> 한 엑셀로 전원이 실습하되, 4단계 메모를 공유하게 하면 사람마다 다른 단서를 찾은 것을 보고 서로 배운다.</li>
+    <li><b>'하지 않는 것'을 반드시 말한다.</b> 성취감만 주고 끝내면 과신이 생긴다. 마지막 5분은 "여기서부터가 진짜 취재"에 쓴다.</li>
+    <li><b>다음 단계로 연결.</b> 이 실습으로 맛을 들인 사람을 <a href="02-method.html">2강(방법론)</a>과 <a href="04-case-colin.html">4강(케이스)</a>으로 안내한다.</li>
+  </ul>
+  <blockquote>이 30분의 목적은 기사를 만드는 것이 아니라, "나도 데이터를 다룰 수 있다"는 확신을 만드는 것이다. 확신이 생긴 기자는 다음 데이터를 스스로 연다.</blockquote>
+  <div class="footer-note">
+    1강 · 첫 실습 30분 (입문, 국회의원 재산 편) · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
+    다음 강 — <a href="02-method.html">2강 · 기초취재 방법론</a>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2강 · 기초취재 방법론 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘 해커톤</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">2강 · 기초취재 방법론</span>
+</header>
+
+<nav class="sidebar">
+  <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html" class="current"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
+    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="intro">기자는 방향, 클로드는 실행</a>
+  <a class="nav-item" data-s="loop">핵심 루프</a>
+  <a class="nav-item" data-s="modes">두 가지 진입 모드</a>
+  <a class="nav-item" data-s="throw">'대충 던지기'의 기술</a>
+  <a class="nav-item" data-s="verify">루프 속 검증</a>
+  <a class="nav-item" data-s="signals">멈춤·전환 신호</a>
+  <a class="nav-item" data-s="traps">피할 함정</a>
+  <a class="nav-item" data-s="caseA">미니 사례 A · 빈손 탐색</a>
+  <a class="nav-item" data-s="caseB">미니 사례 B · 데이터 투척</a>
+  <a class="nav-item" data-s="card">한 장 요약 카드</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="intro">
+  <div class="module-header m2"><div class="subtitle">2강 · 방법</div><h2>기초취재 방법론</h2><p>클로드를 최대한 활용해, 막막한 데이터를 대충 던져 보고 검증하며 취재의 윤곽을 잡는 법.</p></div>
+  <p class="lead">이 방법은 기사를 완성하는 것이 아니라, 어디를 파야 할지 찾아내는 단계의 기술이다.</p>
+  <div class="callout info"><div class="ct">이 방법의 한 줄 정의</div>완벽한 질문을 미리 만들지 않는다. <b>대충 던지고, 반응을 보고, 좁힌다.</b> 탐색은 계획이 아니라 대화다.</div>
+
+  <h3>전제 — 기자는 방향, 클로드는 실행</h3>
+  <p>슬로우뉴스의 콜린알포 취재에서 실제로 일어난 일은 이랬다. 기자는 중간중간 방향만 잡았고, 손이 많이 가는 일은 대부분 클로드가 했다. 이것은 기자가 '덜 한 것'이 아니라 <b>올바른 분업</b>이다. 둘이 잘하는 일이 다르기 때문이다.</p>
+  <div class="role">
+    <div class="col you"><div class="h">🧭 기자가 한다 (방향)</div>
+      <ul>
+        <li>"이건 뭔가 있을 것 같다" — 냄새 맡기</li>
+        <li>무엇을 던질지, 어디로 좁힐지 결정</li>
+        <li>"어?" 하는 결과를 알아보기</li>
+        <li>이것이 기사인지 판단</li>
+        <li>검증을 요구하고, 멈출지 더 갈지 정하기</li>
+      </ul>
+    </div>
+    <div class="col ai"><div class="h">⚙️ 클로드가 한다 (실행)</div>
+      <ul>
+        <li>데이터 찾고·읽고·정리하기</li>
+        <li>집계·정렬·비교·계산</li>
+        <li>패턴·이상치 후보 제시</li>
+        <li>시각화·표 만들기</li>
+        <li>"어떻게 계산했는지" 근거 대기</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout tip"><div class="ct">그래서 코딩을 몰라도 된다</div>기자가 코드를 짜는 것이 아니다. <b>무엇을, 왜 물을지</b>를 정하는 것이 기자의 일이고, 그것은 코딩이 아니라 취재 감각이다. 이 방법론은 그 감각을 클로드에 얹는 법이다.</div>
+</section>
+
+<section class="section" id="loop">
+  <div class="module-header m2"><div class="subtitle">2강</div><h2>핵심 루프</h2><p>한 번에 끝내려 하지 않는다. 작게 돌리고, 또 돌린다. 윤곽이 잡힐 때까지.</p></div>
+  <div class="loop">
+    <div class="node"><div class="nn">1 던지기</div><div class="nt">대충 묻기</div><div class="nd">넓고 거칠게</div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="nn">2 뽑기</div><div class="nt">결과 보기</div><div class="nd">클로드가 집계</div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="nn">3 포착</div><div class="nt">"어?" 찾기</div><div class="nd">상식과 어긋남</div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="nn">4 검증</div><div class="nt">되묻기</div><div class="nd">근거·역추적</div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="nn">5 좁히기</div><div class="nt">고쳐 던지기</div><div class="nd">한 단계 깊이</div></div>
+  </div>
+  <div class="repeat">↻ 윤곽이 잡힐 때까지 1→5 반복 (보통 한 바퀴 5~15분)</div>
+  <p>한 바퀴의 산출물은 '기사'가 아니라 <b>'다음에 무엇을 물을지'</b>다. 그것이 정상이다. 탐색은 깔때기처럼 넓게 시작해 점점 좁아진다. 세 바퀴쯤 돌면 "이건 기사다 / 아니다"가 보인다.</p>
+  <div class="callout warn"><div class="ct">초보가 가장 자주 틀리는 지점</div>첫 던지기에서 완벽한 답을 기대하는 것이다. 첫 결과는 <b>방향 잡기용</b>이다. 실망하지 말고 그 결과를 보고 다음 질문을 더 낫게 다듬는다 — 그것이 루프의 전부다.</div>
+</section>
+
+<section class="section" id="modes">
+  <div class="module-header m2"><div class="subtitle">2강</div><h2>두 가지 진입 모드</h2><p>탐색은 보통 둘 중 하나로 시작된다. 시작점이 다를 뿐 루프는 같다.</p></div>
+  <h3>모드 A · 빈손 탐색 — "뭔가 이상한 것이 없는지 찾아보자"</h3>
+  <p>주제(냄새)는 있는데 데이터가 없을 때다. 데이터 찾기부터 클로드에 맡긴다.</p>
+  <div class="prompt"><div class="pl">던지기 예</div><div class="q">지자체 업무추진비를 들여다보려 한다. 어디서 공개되는지, 어떤 형식으로 받을 수 있는지 먼저 찾아 달라. 받을 수 있으면 한 곳만 샘플로 가져와서 무엇이 들어 있는지 보여 달라.</div></div>
+  <p>여기서 클로드는 ① 출처를 찾고 ② 형식을 파악하고 ③ 샘플을 가져온다. 기자는 "이 출처가 쓸 만한가, 다음에 어느 지자체·연도를 볼까"만 판단한다.</p>
+
+  <h3>모드 B · 데이터 투척 — "이 파일을 분석해서 알려 달라"</h3>
+  <p>데이터는 손에 있는데 무엇이 들었는지 모를 때다. 1강의 국회의원 재산 엑셀이 이 모드다.</p>
+  <div class="prompt"><div class="pl">던지기 예</div><div class="q">이 엑셀 원본은 두고 사본으로 작업해라. 무엇이 들었는지 훑어 주고, 기자라면 눈여겨볼 만한 이상한 지점 5개를 근거와 함께 짚어 달라.</div></div>
+  <div class="callout info"><div class="ct">두 모드의 공통 출발 문장</div>"<b>원본은 두고 사본으로</b>, <b>먼저 무엇이 들었는지</b>, <b>근거와 함께.</b>" 이 세 마디가 모든 탐색의 안전한 첫 문장이다.</div>
+</section>
+
+<section class="section" id="throw">
+  <div class="module-header m2"><div class="subtitle">2강</div><h2>'대충 던지기'의 기술</h2><p>'대충'은 게으름이 아니라 전략이다. 다만 잘 대충 해야 한다.</p></div>
+  <h3>넓게 시작해서 좁힌다</h3>
+  <div class="two">
+    <div class="col bad"><div class="h">✗ 처음부터 좁게</div>"3선 이상 의원 중 강남 3구에 상가를 보유하고 1년 사이 5억 이상 증가한 사람" — 결과가 0건이면 길이 막힌다.</div>
+    <div class="col good"><div class="h">✓ 넓게 → 좁게</div>"재산이 많이 늘어난 순으로 보여 달라" → (결과를 보고) "그중 부동산이 늘어난 사람만" → "그 부동산이 어디인지"</div>
+  </div>
+  <h3>좋은 '대충'의 3요소</h3>
+  <ul>
+    <li><b>열린 질문 한 개.</b> "이 데이터에서 무엇이 흥미로운가"로 시작해도 좋다. 클로드가 후보를 깔아 주면 거기서 고른다.</li>
+    <li><b>근거 요구를 붙인다.</b> "흥미로운 것"만 묻지 말고 "근거와 함께"를 늘 붙인다. 그래야 검증으로 바로 넘어간다.</li>
+    <li><b>한 번에 하나.</b> 여러 개를 한꺼번에 시키면 어디서 틀렸는지 알 수 없다. 한 질문, 한 확인.</li>
+  </ul>
+  <div class="callout tip"><div class="ct">방향 잡기 문장 모음</div>"제일 튀는 것 하나만" · "예상과 다른 것이 있는가" · "이것 말고 다른 각도는" · "왜 그런지 데이터로 더 파 달라" · "반대 경우도 찾아 달라". 기자는 이런 짧은 키잡이 문장으로 충분하다.</div>
+</section>
+
+<section class="section" id="verify">
+  <div class="module-header m2"><div class="subtitle">2강</div><h2>루프 속 검증 — 매 바퀴마다 조금씩</h2><p>검증을 맨 끝에 몰아서 하지 않는다. 흥미로운 것이 나올 때마다 그 자리에서 한 번 의심한다.</p></div>
+  <p>클로드는 그럴듯하지만 틀린 수를 자신 있게 내놓을 수 있다. 그래서 "어?"가 나온 <b>바로 그 순간</b> 세 가지를 되묻는다.</p>
+  <table>
+    <thead><tr><th>되묻기</th><th>문장</th></tr></thead>
+    <tbody>
+      <tr><td>① 계산 근거</td><td>"이 숫자는 어떻게 나왔나? 어느 열을 어떻게 합쳤나?"</td></tr>
+      <tr><td>② 원본 역추적</td><td>"그 사람(행)을 원본에서 그대로 보여 달라. 정말 그 값인가?"</td></tr>
+      <tr><td>③ 반대·맥락</td><td>"이것이 단지 ○○ 때문은 아닌가? 다른 설명은 없는가?"</td></tr>
+    </tbody>
+  </table>
+  <div class="callout danger"><div class="ct">절대 규칙</div>보도로 이어질 핵심 수치는 <b>사람이 원본에서 한 건 이상 직접 확인</b>한다. 루프 안에서 가볍게 거른 것과, 보도 직전 검증은 다르다. '대충'은 탐색까지이고, 발행에는 '대충'이 없다. (자세히는 <a href="06-verification.html">6강</a>)</div>
+  <div class="callout warn"><div class="ct">확증편향 주의</div>"○○가 문제라는 증거를 찾아 달라"고 물으면 클로드는 그쪽으로만 판다. <b>"○○가 문제인지 아닌지"</b>로 중립적으로 묻는다. 원하는 답을 유도하면 탐색이 아니라 자기최면이 된다.</div>
+</section>
+
+<section class="section" id="signals">
+  <div class="module-header m2"><div class="subtitle">2강</div><h2>멈춤·전환 신호</h2><p>언제 더 파고, 언제 방향을 틀고, 언제 접는가. 탐색의 종료 조건.</p></div>
+  <h3>🟢 더 판다 (좋은 신호)</h3>
+  <ul>
+    <li>상식과 또렷이 어긋나는 수가 나왔고, 검증해도 살아남는다.</li>
+    <li>하나의 발견이 다음 질문을 계속 낳는다 (실이 풀린다).</li>
+    <li>처음 가설보다 <b>더 센 것</b>이 옆에서 나온다 (콜린알포의 '1,789개 상병'처럼).</li>
+  </ul>
+  <h3>🟡 방향을 튼다</h3>
+  <ul>
+    <li>흥미롭지만 검증에서 자꾸 무너진다 → 같은 데이터의 다른 각도로.</li>
+    <li>"어?"가 사실은 제도·인구로 설명된다 → 그 제도 자체를 새 주제로.</li>
+  </ul>
+  <h3>🔴 접는다 (중요한 능력)</h3>
+  <ul>
+    <li>세 바퀴를 돌아도 "어?"가 없다. 데이터가 평범하다.</li>
+    <li>발견이 있어도 데이터로 입증이 불가능하다 (마스킹·표본 한계).</li>
+  </ul>
+  <div class="callout tip"><div class="ct">접는 것도 성과다</div>"여기엔 기사가 없다"를 30분 만에 판정한 것도 취재다. 빠르게 접고 다음 아이템으로 가는 것이, 안 되는 데 며칠 매달리는 것보다 낫다. 루프가 빠른 이유가 여기에 있다.</div>
+</section>
+
+<section class="section" id="traps">
+  <div class="module-header m2"><div class="subtitle">2강</div><h2>피할 함정</h2><p>클로드를 최대한 활용할 때 따라오는 그림자. 알면 피한다.</p></div>
+  <table>
+    <thead><tr><th>함정</th><th>증상</th><th>대응</th></tr></thead>
+    <tbody>
+      <tr><td><b>그럴듯한 거짓</b></td><td>없는 수치를 자신 있게 지어냄</td><td>핵심 수는 원본 역추적 필수</td></tr>
+      <tr><td><b>데이터 있는 척</b></td><td>"못 찾겠다" 대신 가짜로 채움</td><td>"출처 URL과 원본을 보여 달라"</td></tr>
+      <tr><td><b>확증편향 유도</b></td><td>원하는 결론을 물으면 그쪽으로만 감</td><td>중립 질문 + "반대 경우도"</td></tr>
+      <tr><td><b>평균의 함정</b></td><td>"평균 ○○"가 극단값을 가림</td><td>분포·상하위·중앙값도 함께</td></tr>
+      <tr><td><b>상관=인과 착각</b></td><td>같이 움직이면 원인이라 오독</td><td>"다른 설명은?"을 매번</td></tr>
+      <tr><td><b>단위·기간 혼동</b></td><td>매출/주문, 명목/실질이 섞임</td><td>단위·기준연도를 매번 확인</td></tr>
+    </tbody>
+  </table>
+  <div class="callout danger"><div class="ct">한 문장 방패</div>"<b>그것을 어떻게 알았나? 원본을 보여 달라.</b>" — 이 한 마디가 위 함정의 절반을 막는다. 클로드를 믿되, 클로드의 근거를 본다.</div>
+</section>
+
+<section class="section" id="caseA">
+  <div class="module-header m2"><div class="subtitle">2강 · 미니 사례 A</div><h2>빈손 탐색 — 한 바퀴 돌려 보기</h2><p>주제만 있고 데이터는 없는 상태에서 루프가 어떻게 도는가.</p></div>
+  <p><b>냄새:</b> "지자체마다 업무추진비를 쓰는데, 어떤 패턴이 있지 않을까?"</p>
+  <table>
+    <thead><tr><th>루프</th><th>기자(방향)</th><th>클로드(실행) → 결과</th></tr></thead>
+    <tbody>
+      <tr><td>1 던지기</td><td>"업무추진비는 어디서 받나?"</td><td>출처·형식 정리, 한 시 샘플 확보</td></tr>
+      <tr><td>2 뽑기</td><td>"월별·부서별로 합쳐 달라"</td><td>특정 월·부서에 집중 발견</td></tr>
+      <tr><td>3 포착</td><td>"연말에 몰리네? (어?)"</td><td>12월 집행이 평월의 N배</td></tr>
+      <tr><td>4 검증</td><td>"정말인가? 원본을 보여 달라"</td><td>해당 건 원본 제시 — 사실</td></tr>
+      <tr><td>5 좁히기</td><td>"어디에 썼는지 항목별로"</td><td>특정 업종·가맹점 집중 → 다음 바퀴로</td></tr>
+    </tbody>
+  </table>
+  <div class="callout info"><div class="ct">한 바퀴의 결론</div>"연말 몰아쓰기 + 특정 가맹점 집중"이라는 <b>취재 방향</b>을 얻었다. 기사는 아직 아니다. 다음은 정보공개청구·당사자 확인 — 사람의 취재다.</div>
+</section>
+
+<section class="section" id="caseB">
+  <div class="module-header m2"><div class="subtitle">2강 · 미니 사례 B</div><h2>데이터 투척 — 한 바퀴 돌려 보기</h2><p>국회의원 재산 엑셀(모드 B)에서 루프가 도는 모습.</p></div>
+  <table>
+    <thead><tr><th>루프</th><th>기자(방향)</th><th>클로드(실행) → 결과</th></tr></thead>
+    <tbody>
+      <tr><td>1 던지기</td><td>"무엇이 들었는지 훑고, 눈여겨볼 5개"</td><td>열 구조 + 이상점 5개 후보</td></tr>
+      <tr><td>2 뽑기</td><td>"주식 보유가 많은 순으로"</td><td>상위 명단 + 보유 종목</td></tr>
+      <tr><td>3 포착</td><td>"같은 종목을 여럿이? (어?)"</td><td>한 종목을 수십 명이 동시 보유</td></tr>
+      <tr><td>4 검증</td><td>"몇 명인지, 누구인지 원본으로"</td><td>해당 행 제시 — 사실 확인</td></tr>
+      <tr><td>5 좁히기</td><td>"그 종목이 정책과 관련 있나"</td><td>소관 상임위 교차 → 다음 바퀴로</td></tr>
+    </tbody>
+  </table>
+  <div class="callout info"><div class="ct">한 바퀴의 결론</div>"특정 종목 다수 보유 + 소관 상임위 겹침"이라는 <b>이해충돌 취재 방향</b>. 다음은 본인 해명·매매 시점 확인 — 사람의 취재다.</div>
+  <div class="callout tip"><div class="ct">두 사례의 공통점</div>둘 다 <b>30분·한두 바퀴</b>에 "어디를 팔지"가 나왔고, 둘 다 결론이 '기사'가 아니라 <b>'다음 취재 방향'</b>이었다. 그것이 기초취재의 정확한 산출물이다.</div>
+</section>
+
+<section class="section" id="card">
+  <div class="module-header m2"><div class="subtitle">2강 · 정리</div><h2>한 장 요약 카드</h2><p>워크숍에서 출력해 나눠 주는 치트시트.</p></div>
+  <h3>루프</h3>
+  <p style="font-size:17px;font-weight:700;color:var(--green)">대충 던지기 → 뽑기 → "어?" 포착 → 되묻기(검증) → 좁혀 다시 던지기 ↻</p>
+  <h3>안전한 첫 문장</h3>
+  <blockquote>"원본은 두고 사본으로, 먼저 무엇이 들었는지, 근거와 함께 보여 달라."</blockquote>
+  <h3>방향 잡기 5문장 (기자의 일)</h3>
+  <p style="font-weight:700">"제일 튀는 것 하나" · "예상과 다른 것 있나" · "왜 그런지 더 파 달라" · "반대 경우도" · "그것을 어떻게 알았나? 원본을 보여 달라"</p>
+  <h3>잊지 말 것</h3>
+  <ul>
+    <li>첫 결과는 답이 아니라 <b>방향</b>이다.</li>
+    <li>흥미로운 수가 나오면 <b>그 자리에서</b> 한 번 의심한다.</li>
+    <li>핵심 수는 <b>사람이 원본 역추적</b>. 발행에는 '대충'이 없다.</li>
+    <li>안 되면 <b>빨리 접는다</b>. 접는 것도 취재다.</li>
+    <li>산출물은 기사가 아니라 <b>'다음에 무엇을 취재할지'</b>다.</li>
+  </ul>
+  <div class="footer-note">
+    2강 · 기초취재 방법론 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
+    다음 강 — <a href="03-data-100.html">3강 · 공공데이터 100선</a>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

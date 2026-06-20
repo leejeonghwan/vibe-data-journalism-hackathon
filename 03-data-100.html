@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3강 · 공공데이터 100선 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘 해커톤</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">3강 · 공공데이터 100선</span>
+</header>
+
+<nav class="sidebar">
+  <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html" class="current"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
+    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="intro">쓰는 법</a>
+  <div class="nav-group-title">분야별 (총 100)</div>
+  <a class="nav-item" data-s="c1">A 생활·인허가 <span class="ct">10</span></a>
+  <a class="nav-item" data-s="c2">B 부동산·국토 <span class="ct">10</span></a>
+  <a class="nav-item" data-s="c3">C 보건의료 <span class="ct">10</span></a>
+  <a class="nav-item" data-s="c4">D 복지·인구 <span class="ct">10</span></a>
+  <a class="nav-item" data-s="c5">E 안전·재난 <span class="ct">10</span></a>
+  <a class="nav-item" data-s="c6">F 교통·물류 <span class="ct">9</span></a>
+  <a class="nav-item" data-s="c7">G 환경·기상 <span class="ct">9</span></a>
+  <a class="nav-item" data-s="c8">H 교육 <span class="ct">8</span></a>
+  <a class="nav-item" data-s="c9">I 산업·고용·재정 <span class="ct">10</span></a>
+  <a class="nav-item" data-s="c10">J 농축수산·식품 <span class="ct">7</span></a>
+  <a class="nav-item" data-s="c11">K 문화·관광·행정 <span class="ct">7</span></a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="intro">
+  <div class="cat-head"><h2>공공데이터 100선 — 던져 보기 좋은 데이터</h2><p>data.go.kr에서 "대충 던져 보고 단서를 찾기" 좋은 데이터 100개.</p></div>
+  <p class="lead">각 항목은 <b>데이터셋 + 던질 질문 + 기대 단서</b>로 되어 있다. 그대로 코워크에 던지면 탐색이 시작된다.</p>
+  <div class="callout info"><div class="ct">2강과 함께 쓴다</div>이 100선은 <a href="02-method.html">기초취재 방법론</a>의 <b>연료</b>다. 여기서 데이터를 하나 골라 "대충 던지기 → 뽑기 → 어? 포착 → 검증 → 좁히기" 루프를 돌린다. 한 항목이 곧 한 번의 실습이 된다.</div>
+
+  <h3>왜 data.go.kr 하나면 충분한가</h3>
+  <p>공공데이터포털은 <b>16개 분류</b>(공공행정·보건의료·사회복지·재난안전·환경기상 등)에 걸쳐 수만 건의 데이터를 한곳에 모아 둔다. 특히 두 가지가 초보 훈련에 결정적이다.</p>
+  <ul>
+    <li><span class="tag file">파일</span> <b>파일데이터(엑셀·CSV)는 로그인·키 없이 즉시 다운로드.</b> 받아서 코워크에 던지기만 하면 된다. 초보 1순위.</li>
+    <li><span class="tag api">API</span> 오픈API는 회원가입·키 신청이 필요하지만, 시계열·전국 단위 대량 수집에 강하다. 익숙해지면 넘어간다.</li>
+  </ul>
+  <p>여기에 <b>LOCALDATA</b>(지방행정 인허가 195종: 일반음식점·통신판매·미용·담배소매 등)와 <b>전국 표준데이터</b>(어린이집·주차장·도서관 등 전국을 같은 양식으로)가 더해져, "전국을 한 양식으로 비교"하는 기사가 쉬워진다.</p>
+
+  <div class="callout warn"><div class="ct">쓰기 전 한 가지</div>데이터셋의 정확한 제목·연도는 수시로 바뀐다. 표의 이름은 <b>검색 키워드</b>로 쓰고, data.go.kr 상단 검색창에 넣어 최신본을 찾는다. "파일데이터" 탭부터 보면 키 없이 받을 수 있는 것만 추려진다.</div>
+
+  <h3>각 항목 읽는 법</h3>
+  <table>
+    <thead><tr><th>칸</th><th>뜻</th></tr></thead>
+    <tbody>
+      <tr><td class="ds">데이터셋</td><td>data.go.kr에서 검색할 이름 + 파일/API 표시</td></tr>
+      <tr><td class="ds">던질 질문</td><td>코워크에 그대로 던질 탐색 시작 질문</td></tr>
+      <tr><td class="ds">기대 단서</td><td>잘 풀리면 어떤 "어?"가 나올 수 있는지 — 정답이 아니라 방향</td></tr>
+    </tbody>
+  </table>
+  <div class="prompt"><div class="pl">공통 첫 문장</div><div class="q">이 폴더의 [파일]을 원본은 두고 사본으로 작업해라. 먼저 무엇이 들었는지 훑고, 기자가 눈여겨볼 이상한 지점을 근거와 함께 짚어 달라.</div></div>
+  <div class="callout tip"><div class="ct">난이도 기준</div><span class="tag file">파일</span>은 초보·주말 실습용, <span class="tag api">API</span>는 시계열·전수 수집이 필요한 심화용. 첫 해커톤은 <b>파일데이터 위주</b>로 배정하면 데이터를 받지 못해 시간을 날리는 일이 없다.</div>
+</section>
+
+<section class="section" id="c1">
+  <div class="cat-head"><h2>A · 생활·인허가</h2><p>LOCALDATA 195종. 전국이 같은 양식이라 "어느 동네가 유독…" 비교가 쉽다. 대부분 파일.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">1</td><td class="ds">일반음식점 인허가 <span class="tag file">파일</span></td><td>개·폐업을 연도·동별로 세어 달라. 폐업률이 급등한 상권은?</td><td>특정 상권 붕괴·젠트리피케이션 신호</td></tr>
+  <tr><td class="n">2</td><td class="ds">통신판매업 신고 <span class="tag file">파일</span></td><td>같은 주소에 수십 개 신고된 곳이 있는가?</td><td>유령업체·대량신고 주소 클러스터</td></tr>
+  <tr><td class="n">3</td><td class="ds">학원·교습소 인허가 <span class="tag file">파일</span></td><td>지역별 학원 밀도와 폐업률 비교</td><td>사교육 과밀지구·학령인구 감소 충격</td></tr>
+  <tr><td class="n">4</td><td class="ds">담배소매업 지정 <span class="tag file">파일</span></td><td>학교 인근 거리기준 위반 의심 분포</td><td>청소년 접근성·규제 사각</td></tr>
+  <tr><td class="n">5</td><td class="ds">PC방·게임제공업 <span class="tag file">파일</span></td><td>10년 추이로 업종 흥망을 그려 달라</td><td>사양 업종 지도·지역 경제 변화</td></tr>
+  <tr><td class="n">6</td><td class="ds">숙박업(여관·모텔) <span class="tag file">파일</span></td><td>폐업 후 용도전환 패턴이 있는가?</td><td>러브모텔→고시원 전환 등 도시 변화</td></tr>
+  <tr><td class="n">7</td><td class="ds">노래연습장 <span class="tag file">파일</span></td><td>인구 대비 밀도 상·하위 지역</td><td>유흥 인프라 편중</td></tr>
+  <tr><td class="n">8</td><td class="ds">동물병원·동물미용 <span class="tag file">파일</span></td><td>반려동물 인프라 증가 속도 지역 비교</td><td>반려 트렌드의 지역 격차</td></tr>
+  <tr><td class="n">9</td><td class="ds">장례식장·화장시설 <span class="tag file">파일</span></td><td>고령인구 대비 시설이 부족한 지역은?</td><td>초고령 사회 인프라 공백</td></tr>
+  <tr><td class="n">10</td><td class="ds">미용업·목욕장업 <span class="tag file">파일</span></td><td>개업 대비 1년 생존율 계산</td><td>자영업 생존율·창업 위험 업종</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c2">
+  <div class="cat-head"><h2>B · 부동산·국토</h2><p>실거래가·공시가·건축물대장. "거래가 비정상적으로 몰린 곳"이 단골 단서.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">11</td><td class="ds">아파트 매매 실거래가 <span class="tag api">API</span><span class="tag file">파일</span></td><td>특정 단지 거래량이 어느 달에 튀었나?</td><td>이상 급등락·자전거래 의심</td></tr>
+  <tr><td class="n">12</td><td class="ds">아파트 전월세 실거래가 <span class="tag api">API</span></td><td>전세가율 높은 동네를 지도로</td><td>깡통전세 위험지도</td></tr>
+  <tr><td class="n">13</td><td class="ds">토지 매매 실거래가 <span class="tag api">API</span></td><td>개발 발표 전 거래가 늘었나(통제군 비교)</td><td>사전 매집 시그니처 (LH 방식)</td></tr>
+  <tr><td class="n">14</td><td class="ds">상업업무용 부동산 실거래 <span class="tag api">API</span></td><td>법인·외지인 매수 비중 추이</td><td>외지·법인 자본 유입</td></tr>
+  <tr><td class="n">15</td><td class="ds">개별공시지가 <span class="tag file">파일</span></td><td>공시지가 대비 실거래 괴리가 큰 곳</td><td>저평가·과세 형평 문제</td></tr>
+  <tr><td class="n">16</td><td class="ds">건축물대장(표제부) <span class="tag api">API</span></td><td>노후 30년 이상 건물 밀집 지역</td><td>안전·재건축 압력 지도</td></tr>
+  <tr><td class="n">17</td><td class="ds">개발제한구역(그린벨트) <span class="tag file">파일</span></td><td>최근 해제지 인근 거래 변화</td><td>해제 수혜·투기</td></tr>
+  <tr><td class="n">18</td><td class="ds">공공임대주택 현황 <span class="tag file">파일</span></td><td>대기수요 대비 공급이 부족한 지역</td><td>주거복지 사각</td></tr>
+  <tr><td class="n">19</td><td class="ds">빈집·폐가 실태 <span class="tag file">파일</span></td><td>빈집 비율 상위 지역과 추세</td><td>지방소멸·도심 공동화</td></tr>
+  <tr><td class="n">20</td><td class="ds">외국인 토지·주택 보유 <span class="tag file">파일</span></td><td>외국인 보유 집중 지역·국적</td><td>외국 자본 부동산 유입</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c3">
+  <div class="cat-head"><h2>C · 보건의료</h2><p>병의원·약국·심평원. 콜린알포가 나온 분야. 적응증·편중·비급여가 단서.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">21</td><td class="ds">병의원·치과·한의원 현황 <span class="tag file">파일</span></td><td>인구 대비 의원이 부족한 지역(필수과목)</td><td>의료격차·소아과/산부인과 공백</td></tr>
+  <tr><td class="n">22</td><td class="ds">약국 현황 <span class="tag file">파일</span></td><td>심야·공휴 약국이 없는 지역</td><td>약 접근성 사각</td></tr>
+  <tr><td class="n">23</td><td class="ds">심평원 처방·청구(의약품) <span class="tag api">API</span></td><td>특정 약의 적응증 외 처방 비중</td><td>과잉처방 (콜린알포형)</td></tr>
+  <tr><td class="n">24</td><td class="ds">비급여 진료비 공개 <span class="tag file">파일</span></td><td>같은 시술인데 병원별 가격차가 최대인 곳?</td><td>비급여 가격 폭리</td></tr>
+  <tr><td class="n">25</td><td class="ds">응급의료기관 현황 <span class="tag file">파일</span></td><td>응급실까지 거리가 먼 지역</td><td>응급의료 골든타임 공백</td></tr>
+  <tr><td class="n">26</td><td class="ds">감염병 발생 통계 <span class="tag api">API</span></td><td>특정 감염병이 지역·계절에 급증?</td><td>방역 사각·집단발생</td></tr>
+  <tr><td class="n">27</td><td class="ds">의료기관 개·폐업 <span class="tag file">파일</span></td><td>폐업이 급증한 진료과·지역</td><td>지역의료 붕괴 신호</td></tr>
+  <tr><td class="n">28</td><td class="ds">건강검진·만성질환 통계 <span class="tag file">파일</span></td><td>지역별 비만·당뇨 격차</td><td>건강 불평등</td></tr>
+  <tr><td class="n">29</td><td class="ds">정신건강·자살 통계 <span class="tag file">파일</span></td><td>지역별 자살률과 상담인프라 비교</td><td>정신건강 자원 부족</td></tr>
+  <tr><td class="n">30</td><td class="ds">요양병원·시설 평가 <span class="tag file">파일</span></td><td>저평가 시설 분포·병상 과밀</td><td>노인의료 질 격차</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c4">
+  <div class="cat-head"><h2>D · 복지·인구</h2><p>어린이집·요양·수급. 표준데이터로 전국 비교가 쉽다.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">31</td><td class="ds">어린이집 정보(표준) <span class="tag file">파일</span></td><td>영유아 대비 정원이 부족·과잉인 지역</td><td>보육 수급 불균형·폐원 위기</td></tr>
+  <tr><td class="n">32</td><td class="ds">유치원 현황·감사 <span class="tag file">파일</span></td><td>정원 충원율이 급락한 곳</td><td>학령인구 감소·사학 회계</td></tr>
+  <tr><td class="n">33</td><td class="ds">노인복지시설 현황 <span class="tag file">파일</span></td><td>고령인구 대비 시설이 부족한 지역</td><td>돌봄 공백</td></tr>
+  <tr><td class="n">34</td><td class="ds">기초생활수급자 통계 <span class="tag file">파일</span></td><td>수급률과 빈곤지표가 어긋나는 곳</td><td>복지 사각(부양의무 등)</td></tr>
+  <tr><td class="n">35</td><td class="ds">장애인 편의·시설 <span class="tag file">파일</span></td><td>이동·편의시설 미설치 지역</td><td>접근권 차별</td></tr>
+  <tr><td class="n">36</td><td class="ds">아동학대 통계 <span class="tag file">파일</span></td><td>신고 대비 분리·조치율 지역차</td><td>보호 체계 편차</td></tr>
+  <tr><td class="n">37</td><td class="ds">주민등록 인구·세대 <span class="tag file">파일</span></td><td>1인가구·고령 단독세대가 급증한 지역</td><td>고독사 위험지대</td></tr>
+  <tr><td class="n">38</td><td class="ds">국내 인구이동 통계 <span class="tag file">파일</span></td><td>청년 순유출이 심한 지역과 행선지</td><td>지방소멸·수도권 집중</td></tr>
+  <tr><td class="n">39</td><td class="ds">출생·합계출산율 <span class="tag file">파일</span></td><td>출산율 지역격차와 인프라 상관</td><td>저출생 정책 효과 점검</td></tr>
+  <tr><td class="n">40</td><td class="ds">무연고 사망·공영장례 <span class="tag file">파일</span></td><td>무연고 사망이 증가한 지역·연령</td><td>고독사 실태</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c5">
+  <div class="cat-head"><h2>E · 안전·재난</h2><p>화재·교통사고·CCTV. 좌표가 있어 "핫스팟 지도"로 바로 보인다.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">41</td><td class="ds">국가화재정보 <span class="tag api">API</span><span class="tag file">파일</span></td><td>화재 원인·장소 유형이 집중된 지역</td><td>반복 화재 위험지대</td></tr>
+  <tr><td class="n">42</td><td class="ds">교통사고 정보(도로교통공단) <span class="tag api">API</span></td><td>사망사고 핫스팟을 좌표로 찍어 달라</td><td>위험 교차로·구간</td></tr>
+  <tr><td class="n">43</td><td class="ds">어린이보호구역 <span class="tag file">파일</span></td><td>스쿨존인데 사고가 잦은 곳</td><td>실효성 없는 보호구역</td></tr>
+  <tr><td class="n">44</td><td class="ds">CCTV 설치 현황 <span class="tag file">파일</span></td><td>인구·범죄 대비 CCTV가 적은 지역</td><td>안전 인프라 편중</td></tr>
+  <tr><td class="n">45</td><td class="ds">침수·홍수 위험지구 <span class="tag file">파일</span></td><td>상습침수지와 거주·시설이 겹치는 곳</td><td>기후 취약지대</td></tr>
+  <tr><td class="n">46</td><td class="ds">위험물 저장·취급시설 <span class="tag file">파일</span></td><td>주거지에 인접한 위험물시설</td><td>주민 노출 위험</td></tr>
+  <tr><td class="n">47</td><td class="ds">산업재해 발생 <span class="tag file">파일</span></td><td>업종·지역별 재해율 상위</td><td>위험 사업장·중대재해</td></tr>
+  <tr><td class="n">48</td><td class="ds">식중독 발생 통계 <span class="tag file">파일</span></td><td>학교·급식 관련 발생 추이</td><td>급식 위생 사각</td></tr>
+  <tr><td class="n">49</td><td class="ds">범죄 발생 지역통계 <span class="tag file">파일</span></td><td>범죄유형별 지역 집중도</td><td>체감 안전 격차</td></tr>
+  <tr><td class="n">50</td><td class="ds">노후 위험시설(D·E등급) <span class="tag file">파일</span></td><td>위험등급 시설 분포·방치 기간</td><td>안전점검 사각</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c6">
+  <div class="cat-head"><h2>F · 교통·물류</h2><p>자동차·주차·대중교통. 생활 밀착이라 독자 반응이 좋다.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">51</td><td class="ds">자동차 등록 현황 <span class="tag file">파일</span></td><td>전기·노후 경유차 비율 지역차</td><td>친환경 전환 격차</td></tr>
+  <tr><td class="n">52</td><td class="ds">전국 주차장 정보(표준) <span class="tag file">파일</span></td><td>차량 대비 주차장이 부족한 지역</td><td>주차난 지도</td></tr>
+  <tr><td class="n">53</td><td class="ds">전기차 충전소(표준) <span class="tag file">파일</span></td><td>충전소 공백·고장 방치</td><td>전기차 인프라 격차</td></tr>
+  <tr><td class="n">54</td><td class="ds">버스 정류장·노선 <span class="tag api">API</span></td><td>대중교통 사각(정류장이 먼 거주지)</td><td>교통 소외지역</td></tr>
+  <tr><td class="n">55</td><td class="ds">택시 운행·요금 <span class="tag file">파일</span></td><td>심야 승차난 지역·시간</td><td>이동권 불균형</td></tr>
+  <tr><td class="n">56</td><td class="ds">교통량 조사 <span class="tag file">파일</span></td><td>혼잡이 급증한 구간 추이</td><td>도로 정책 우선순위</td></tr>
+  <tr><td class="n">57</td><td class="ds">공영자전거·공유 모빌리티 <span class="tag file">파일</span></td><td>대여소 이용 편중·적자 노선</td><td>예산 대비 효과</td></tr>
+  <tr><td class="n">58</td><td class="ds">철도·지하철 승하차 <span class="tag api">API</span></td><td>역별 혼잡·이용 급변</td><td>생활권 변화</td></tr>
+  <tr><td class="n">59</td><td class="ds">개인형 이동장치 사고 <span class="tag file">파일</span></td><td>킥보드 사고가 급증한 지역·연령</td><td>신종 안전 공백</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c7">
+  <div class="cat-head"><h2>G · 환경·기상</h2><p>대기·수질·폐기물·에너지. 전력망 시뮬레이터의 연장.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">60</td><td class="ds">대기오염(미세먼지) 측정 <span class="tag api">API</span></td><td>측정소별 초과일수·악화 지역</td><td>대기질 불평등</td></tr>
+  <tr><td class="n">61</td><td class="ds">사업장 대기·수질 배출 <span class="tag file">파일</span></td><td>신고 대비 초과 배출 사업장</td><td>오염 배출 관리 사각</td></tr>
+  <tr><td class="n">62</td><td class="ds">폐기물 발생·처리 <span class="tag file">파일</span></td><td>처리시설 인근 vs 발생지 불일치</td><td>폐기물 이동·님비</td></tr>
+  <tr><td class="n">63</td><td class="ds">온실가스 배출 통계 <span class="tag file">파일</span></td><td>지역·업종별 배출 집중</td><td>탄소 다배출원</td></tr>
+  <tr><td class="n">64</td><td class="ds">상수도 통계(누수) <span class="tag file">파일</span></td><td>누수율이 높은 지자체와 노후관</td><td>물 새는 지자체</td></tr>
+  <tr><td class="n">65</td><td class="ds">재생에너지 발전 현황 <span class="tag file">파일</span></td><td>태양광이 급증한 지역·민원</td><td>입지 갈등·출력제어</td></tr>
+  <tr><td class="n">66</td><td class="ds">화학물질 배출·이동(PRTR) <span class="tag file">파일</span></td><td>발암물질 배출 상위 사업장</td><td>유해물질 노출</td></tr>
+  <tr><td class="n">67</td><td class="ds">소음·진동 측정 <span class="tag file">파일</span></td><td>주거지 소음 기준 초과 지점</td><td>생활환경 침해</td></tr>
+  <tr><td class="n">68</td><td class="ds">기상·폭염·한파 통계 <span class="tag api">API</span></td><td>폭염일수가 급증한 지역과 취약계층</td><td>기후 취약지도</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c8">
+  <div class="cat-head"><h2>H · 교육</h2><p>학교·급식·도서관. 학령인구 감소가 큰 흐름.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">69</td><td class="ds">전국 초중고 현황(표준) <span class="tag file">파일</span></td><td>학생 수 급감·통폐합 위기 학교</td><td>지방 학교 소멸</td></tr>
+  <tr><td class="n">70</td><td class="ds">대학 입학정원·충원율 <span class="tag file">파일</span></td><td>충원율 미달 대학·학과 추이</td><td>대학 위기·미충원</td></tr>
+  <tr><td class="n">71</td><td class="ds">학교급식 식재료·납품 <span class="tag file">파일</span></td><td>특정 업체 납품 편중이 있는가?</td><td>급식 납품 구조</td></tr>
+  <tr><td class="n">72</td><td class="ds">사교육비·학원 통계 <span class="tag file">파일</span></td><td>지역별 사교육비 격차</td><td>교육 불평등</td></tr>
+  <tr><td class="n">73</td><td class="ds">학업중단·학교밖 청소년 <span class="tag file">파일</span></td><td>중단율이 높은 지역·학년</td><td>교육 이탈 사각</td></tr>
+  <tr><td class="n">74</td><td class="ds">전국 도서관 정보(표준) <span class="tag file">파일</span></td><td>인구 대비 장서·예산 격차</td><td>문화 인프라 불균형</td></tr>
+  <tr><td class="n">75</td><td class="ds">학교폭력 실태 <span class="tag file">파일</span></td><td>유형별 증가·처리 지역차</td><td>대응 편차</td></tr>
+  <tr><td class="n">76</td><td class="ds">특수교육 대상·시설 <span class="tag file">파일</span></td><td>대상 학생 대비 시설·교사 부족</td><td>특수교육 공백</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c9">
+  <div class="cat-head"><h2>I · 산업·고용·재정</h2><p>상권·계약·보조금·공공기관. 돈의 흐름이 곧 기사.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">77</td><td class="ds">소상공인 상가(상권) 정보 <span class="tag api">API</span><span class="tag file">파일</span></td><td>업종 과밀·공실이 급증한 상권</td><td>자영업 위기 상권</td></tr>
+  <tr><td class="n">78</td><td class="ds">나라장터 입찰·계약 <span class="tag api">API</span></td><td>특정 업체 수의계약 집중도</td><td>편중 계약·전관</td></tr>
+  <tr><td class="n">79</td><td class="ds">국고보조금 교부 <span class="tag file">파일</span></td><td>같은 단체가 여러 사업을 수령했나?</td><td>보조금 중복·쏠림</td></tr>
+  <tr><td class="n">80</td><td class="ds">지방재정(세출·업무추진비) <span class="tag file">파일</span></td><td>연말 몰아쓰기·특정 항목 급증</td><td>예산 낭비 정황</td></tr>
+  <tr><td class="n">81</td><td class="ds">공공기관 경영정보(ALIO) <span class="tag file">파일</span></td><td>부채·임원 보수·복리후생 비교</td><td>방만 경영</td></tr>
+  <tr><td class="n">82</td><td class="ds">임금체불 사업장 <span class="tag file">파일</span></td><td>체불 상습·금액 상위 사업장</td><td>체불 명단 지도</td></tr>
+  <tr><td class="n">83</td><td class="ds">고용·실업 지역통계 <span class="tag file">파일</span></td><td>청년 고용률이 급락한 지역</td><td>고용 위기 지역</td></tr>
+  <tr><td class="n">84</td><td class="ds">사업체 통계(전수) <span class="tag file">파일</span></td><td>업종 증감으로 본 산업 구조변화</td><td>지역 산업 흥망</td></tr>
+  <tr><td class="n">85</td><td class="ds">전통시장·상점가 현황 <span class="tag file">파일</span></td><td>지원 대비 공실·매출 변화</td><td>시장 활성화 효과 점검</td></tr>
+  <tr><td class="n">86</td><td class="ds">지방세 체납·결손 <span class="tag file">파일</span></td><td>고액 체납 추이·결손 처리</td><td>징수 형평·봐주기</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c10">
+  <div class="cat-head"><h2>J · 농축수산·식품</h2><p>가격·방역·안전. 생활물가와 직결.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">87</td><td class="ds">농수산물 도소매 가격 <span class="tag api">API</span></td><td>산지·소비자 가격차(유통마진)</td><td>유통 폭리 구간</td></tr>
+  <tr><td class="n">88</td><td class="ds">가축전염병 발생 <span class="tag file">파일</span></td><td>발생지 확산 경로·살처분 규모</td><td>방역 구멍</td></tr>
+  <tr><td class="n">89</td><td class="ds">식품 위해·회수(리콜) <span class="tag api">API</span></td><td>회수가 잦은 품목·제조사</td><td>반복 위반 업체</td></tr>
+  <tr><td class="n">90</td><td class="ds">농약·잔류허용 검사 <span class="tag file">파일</span></td><td>부적합이 잦은 품목·산지</td><td>먹거리 안전</td></tr>
+  <tr><td class="n">91</td><td class="ds">원산지 표시 위반 <span class="tag file">파일</span></td><td>위반 업종·지역 집중</td><td>둔갑판매 패턴</td></tr>
+  <tr><td class="n">92</td><td class="ds">축산물 이력 <span class="tag api">API</span></td><td>이력 누락·전환 이상</td><td>유통 추적 사각</td></tr>
+  <tr><td class="n">93</td><td class="ds">농지·경자유전 통계 <span class="tag file">파일</span></td><td>비농민 소유·외지인 비중</td><td>농지 투기</td></tr>
+  </tbody></table>
+</section>
+
+<section class="section" id="c11">
+  <div class="cat-head"><h2>K · 문화·관광·행정</h2><p>시설·예약·민원. 예산 대비 효과를 보기 좋다.</p></div>
+  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
+  <tr><td class="n">94</td><td class="ds">관광지 방문자 통계 <span class="tag api">API</span></td><td>예산 투입 대비 방문이 정체된 관광지</td><td>혈세 관광사업 점검</td></tr>
+  <tr><td class="n">95</td><td class="ds">공공시설 예약·이용 <span class="tag file">파일</span></td><td>이용률 저조·특정인 독점 예약</td><td>공공자원 편중</td></tr>
+  <tr><td class="n">96</td><td class="ds">체육시설·생활체육 <span class="tag file">파일</span></td><td>인구 대비 시설이 부족한 지역</td><td>생활체육 격차</td></tr>
+  <tr><td class="n">97</td><td class="ds">공유재산·국유지 <span class="tag file">파일</span></td><td>저가 임대·유휴 방치 자산</td><td>공공자산 관리 부실</td></tr>
+  <tr><td class="n">98</td><td class="ds">정보공개 청구·처리 <span class="tag file">파일</span></td><td>비공개율이 높은 기관·항목</td><td>깜깜이 행정</td></tr>
+  <tr><td class="n">99</td><td class="ds">민원·콜센터 통계 <span class="tag file">파일</span></td><td>급증한 민원 유형·지역</td><td>숨은 생활 현안</td></tr>
+  <tr><td class="n">100</td><td class="ds">지방의회 의정·예산 <span class="tag file">파일</span></td><td>의정비·출장·조례 처리 비교</td><td>일 안 하는 의회</td></tr>
+  </tbody></table>
+  <div class="callout tip"><div class="ct">100을 넘기는 법</div>위 100개 대부분은 <b>전국이 같은 양식</b>(표준데이터·LOCALDATA)이라, <b>같은 분석을 다른 시·도/연도에 재적용</b>하면 수백 개로 불어난다. "서울로 한 것을 부산으로" — 가장 빠른 양산법이자, 초보의 두 번째 프로젝트로 안성맞춤이다.</div>
+  <div class="footer-note">
+    3강 · 공공데이터 100선 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
+    분류·데이터 유형은 data.go.kr 기준. 정확한 제목·연도는 포털 검색으로 확인. · 다음 강 — <a href="04-case-colin.html">4강 · 콜린알포 케이스</a>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
