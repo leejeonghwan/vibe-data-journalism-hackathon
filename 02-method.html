@@ -30,6 +30,7 @@
   <a class="nav-item" data-s="loop">핵심 루프</a>
   <a class="nav-item" data-s="modes">두 가지 진입 모드</a>
   <a class="nav-item" data-s="throw">'대충 던지기'의 기술</a>
+  <a class="nav-item" data-s="angles">캐묻는 각도 (해외 노하우)</a>
   <a class="nav-item" data-s="verify">루프 속 검증</a>
   <a class="nav-item" data-s="signals">멈춤·전환 신호</a>
   <a class="nav-item" data-s="traps">피할 함정</a>
@@ -115,6 +116,48 @@
     <li><b>한 번에 하나.</b> 여러 개를 한꺼번에 시키면 어디서 틀렸는지 알 수 없다. 한 질문, 한 확인.</li>
   </ul>
   <div class="callout tip"><div class="ct">방향 잡기 문장 모음</div>"제일 튀는 것 하나만" · "예상과 다른 것이 있는가" · "이것 말고 다른 각도는" · "왜 그런지 데이터로 더 파 달라" · "반대 경우도 찾아 달라". 기자는 이런 짧은 키잡이 문장으로 충분하다.</div>
+</section>
+
+<section class="section" id="angles">
+  <div class="module-header m2"><div class="subtitle">2강 · 해외 노하우</div><h2>캐묻는 각도 — 던질 질문의 틀</h2><p>"무엇을 물을지" 막힐 때 쓰는, 해외 교과서·부트캠프에서 검증된 질문 틀.</p></div>
+
+  <h3>데이터에서 찾는 8가지 스토리 각도</h3>
+  <p>숫자 하나를 받으면 코워크에게 <b>"이 8가지 각도로 다시 봐 달라"</b>고 시킨다. 데이터 저널리즘 핸드북이 제시하는 고전 체크리스트다.</p>
+  <table>
+    <thead><tr><th>각도</th><th>묻는 것</th></tr></thead>
+    <tbody>
+      <tr><td>① 측정</td><td>총량은 얼마인가</td></tr>
+      <tr><td>② 비율</td><td>전체에서 차지하는 몫은</td></tr>
+      <tr><td>③ 내부 비교</td><td>항목끼리 비교하면</td></tr>
+      <tr><td>④ 외부 비교</td><td>다른 집단·기준과 비교하면</td></tr>
+      <tr><td>⑤ 시계열</td><td>시간에 따라 어떻게 변했나</td></tr>
+      <tr><td>⑥ 순위</td><td>리그 테이블 — <b>단 인구·규모로 보정</b></td></tr>
+      <tr><td>⑦ 카테고리</td><td>유형별로 나누면</td></tr>
+      <tr><td>⑧ 연관성</td><td>무엇과 함께 움직이나 — <b>상관≠인과</b></td></tr>
+    </tbody>
+  </table>
+  <div class="callout tip"><div class="ct">핵심</div>"크다/작다"는 맥락이 있어야 안다. 그래서 수집 단계부터 <b>총량·지역별·인구 보정용 데이터</b>를 함께 챙긴다. (출처: Data Journalism Handbook 1)</div>
+
+  <h3>'데이터를 인터뷰하라' — 6가지 질문</h3>
+  <p>미국 NICAR 부트캠프의 핵심. 합계·추세 너머를 캐는 고정 질문 세트다.</p>
+  <div class="prompt"><div class="pl">코워크에 던지기</div><div class="q">이 표에서 ① 가장 큰 값 ② 가장 작은 값 ③ 평균에서 크게 벗어난 이상치 ④ 시간에 따른 변화 ⑤ 의미 있는 비교 대상을 찾아 줘. 그리고 "가장 튀는 행은 무엇이고, 왜 튀는지 다른 열로 설명되는가?"</div></div>
+  <p>이상치 하나가 종종 기사의 출발점이다. "왜 튀나"를 다른 열로 설명해 보는 것이 곧 다음 루프다. (출처: IRE/NICAR)</p>
+
+  <h3>텍스트도 데이터다 — 5가지 각도 (코워크의 강점)</h3>
+  <p>회의록·연설문·판결문처럼 긴 문서는 코워크가 특히 잘 다룬다. 핸드북 2판의 다섯 각도:</p>
+  <ul>
+    <li><b>길이</b> — 누가 더 많이 말했나 (비교 기준선 필요).</li>
+    <li><b>언급 빈도</b> — 특정 단어·이슈가 몇 번. <b>처음 등장한 말</b>이나 <b>사라진 언급(누락)</b>도 기사.</li>
+    <li><b>비교</b> — 문서 간 유사도(표절·법안 변경 추적).</li>
+    <li><b>분류</b> — 카테고리로 나눠 오분류 적발(미 LAPD 강력범죄 오분류 1.4만 건 사례).</li>
+    <li><b>감성</b> — 연설·발언의 톤 변화.</li>
+  </ul>
+
+  <h3>공공데이터 캐는 구글 연산자</h3>
+  <div class="code-block"><div class="ch"><span>검색창에 그대로</span></div><pre>filetype:xls OR filetype:csv     <span class="cm"># 스프레드시트만</span>
+site:기관.go.kr 통계              <span class="cm"># 특정 도메인 한정</span>
+inurl:download filetype:xls      <span class="cm"># 다운로드 폴더 노림</span></pre></div>
+  <p>파일 하나를 찾으면 <b>같은 서버 폴더의 다른 파일</b>도 확인한다. (출처: Data Journalism Handbook 1)</p>
 </section>
 
 <section class="section" id="verify">

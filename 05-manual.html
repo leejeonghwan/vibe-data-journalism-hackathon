@@ -30,6 +30,7 @@
   <a class="nav-item" data-s="hack-design">해커톤 — 주말 2일</a>
   <a class="nav-item" data-s="hack-roles">팀 구성과 멘토링</a>
   <a class="nav-item" data-s="hack-quality">품질·검증 게이트</a>
+  <a class="nav-item" data-s="teaching">교수법 노하우 (해외)</a>
   <div class="nav-group-title">표준 작업</div>
   <a class="nav-item" data-s="flow">표준 7단계 워크플로우</a>
   <a class="nav-item" data-s="template">저장소 표준 템플릿</a>
@@ -111,6 +112,27 @@
     </tbody>
   </table>
   <div class="callout danger"><div class="ct">절대 규칙</div>AI가 생성한 수치는 <b>반드시 원본에서 사람 손으로 1건 이상 역추적</b>해 일치해야 발행작이 된다. "코워크가 그렇게 말했다"는 근거가 아니다. 발표 직전 게이트의 구체적 체크리스트는 <a href="06-verification.html">6강(검증과 원칙)</a>에 있다.</div>
+</section>
+
+<section class="section" id="teaching">
+  <div class="module-header m4"><div class="subtitle">5강 · 해외 노하우</div><h2>교수법 노하우 — 해외 부트캠프에서</h2><p>나이트센터·JournalismAI·NICAR가 비기술 기자를 가르칠 때 쓰는 검증된 방법.</p></div>
+
+  <h3>1. 개념과 실습을 분리한다 — "말하기 vs 쓰기"</h3>
+  <p>나이트센터(UT 오스틴)는 "AI를 <b>말하는 것</b>과 <b>쓰는 것</b>은 다르다"며 AI 교육을 개론 강좌와 실전 강좌로 나눴다. 우리도 <b>개념 소개는 5분, 나머지는 직접 해보기</b>로 못 박는다. 설명이 길어지면 손이 멈춘다.</p>
+
+  <h3>2. 예제 데이터 말고 '본인 출입처 데이터'로</h3>
+  <p>나이트센터 데이터 강좌는 매 실습을 <b>수강생 자신의 취재 데이터</b>로 진행하게 강제한다. 몰입도가 급상승한다. → <a href="03-data-100.html">100선</a>에서 각자 <b>자기 출입처 데이터 하나</b>를 골라 전 과정을 그 데이터로 끌고 가게 한다.</p>
+
+  <h3>3. 최종 산출물 = '내 미니 AI 도우미'</h3>
+  <p>JournalismAI Skills Lab(LSE)의 14주 과정은 이론이 아니라 <b>참가자가 직접 프로토타입·도구를 만드는 것</b>으로 끝난다. 게다가 'AI 기술'보다 <b>사용자 중심 설계(프로덕트 싱킹)</b>부터 시작한다. → 우리 과정도 마지막에 각자 <b>출입처용 프롬프트 세트·워크플로</b>를 결과물로 제출하게 한다.</p>
+
+  <h3>4. 'AI 데이터 작업 4단계'로 고정 (NICAR)</h3>
+  <p>NICAR 부트캠프는 스프레드시트를 ①정렬·수식 ②필터·추출 ③피벗(항목별 집계) ④표 결합 순으로 가르친다. 코워크에는 이 순서를 그대로 말로 시킨다.</p>
+  <div class="code-block"><div class="ch"><span>코워크에 4단계로</span></div><pre>1) "이 열을 큰 값부터 정렬해 줘"
+2) "이 조건에 맞는 행만 추려 줘"
+3) "항목별 합계를 표로 묶어 줘"      <span class="cm"># 피벗</span>
+4) "이 두 표를 공통 키로 합쳐 줘"     <span class="cm"># 결합(LOOKUP)</span></pre></div>
+  <div class="callout tip"><div class="ct">한 줄</div>코딩을 가르치는 게 아니라 <b>"코워크에게 무엇을, 어떤 순서로 시킬지"</b>를 가르친다. (출처: 나이트센터, JournalismAI, IRE/NICAR)</div>
 </section>
 
 <section class="section" id="flow">
