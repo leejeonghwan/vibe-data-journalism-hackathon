@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해외 사례 심화 · AI 탐사보도 9선 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘.</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">해외 사례 심화 · AI 탐사보도 9선</span>
+</header>
+
+<nav class="sidebar">
+  <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
+    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
+    <a href="07-case-realworld.html"><span class="cn">7</span> 실전 케이스 (수주왕)</a>
+    <a href="08-overseas-cases.html" class="current"><span class="cn">8</span> 해외 사례 심화</a>
+  </div>
+  <div class="nav-group-title">이 강 — 9개 케이스</div>
+  <a class="nav-item active" data-s="intro">들어가며 — 왜 같은가</a>
+  <a class="nav-item" data-s="propublica-nsf">① ProPublica · NSF ‘woke’ 낙인</a>
+  <a class="nav-item" data-s="propublica-slt">② ProPublica × Salt Lake Tribune</a>
+  <a class="nav-item" data-s="icij-passport">③ ICIJ · 여권 스캔 검출</a>
+  <a class="nav-item" data-s="ap-restraint">④ AP · Lethal Restraint</a>
+  <a class="nav-item" data-s="forty-acres">⑤ ‘40 Acres and a Lie’</a>
+  <a class="nav-item" data-s="wsj-musk">⑥ WSJ · 머스크 41,000건</a>
+  <a class="nav-item" data-s="ajc-doctors">⑦ AJC · Doctors & Sex Abuse</a>
+  <a class="nav-item" data-s="buzzfeed-planes">⑧ BuzzFeed · Hidden Spy Planes</a>
+  <a class="nav-item" data-s="icij-panama">⑨ ICIJ · 파나마/판도라 페이퍼스</a>
+  <a class="nav-item" data-s="techmap">정리 — 기법 지도</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="intro">
+  <div class="module-header m4"><div class="subtitle">해외 사례 심화 · 들어가며</div><h2>도구는 달라도, 워크플로우는 같다</h2><p>수주왕처럼, 세계의 대표 AI 탐사보도 9건을 하나씩 뜯어본다.</p></div>
+  <p class="lead">각 사례를 왼쪽 목차에서 하나씩 넘겨 보라. 어떤 곳은 LLM 프롬프트, 어떤 곳은 컴퓨터비전, 어떤 곳은 20년 된 전통 머신러닝을 썼다. 그런데 흐름은 똑같다 — <b>수집 → AI로 후보 축소 → 사람이 검증 → 공개</b>.</p>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ 공통점</div><ul>
+      <li>AI는 ‘리드 생성·선별’, 최종 판정은 사람</li>
+      <li>대량을 사람이 감당할 크기로 축소</li>
+      <li>원본 대조·다중 교차검증을 명문화</li>
+      <li>방법·데이터·코드를 공개해 재현 가능하게</li>
+    </ul></div>
+    <div class="col no"><div class="h">⚠ 오해 주의</div><ul>
+      <li>‘AI = 클로드/LLM’ 아님 — 대부분 전통 ML·CV</li>
+      <li>‘AI = 생성형’ 아님 — 임베딩·분류·OCR이 다수</li>
+      <li>모델 출력을 그대로 기사화한 곳은 없다</li>
+    </ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">읽는 법</div>각 케이스의 <b>‘AI가 한 일 / 사람이 한 일’</b> 두 칸을 먼저 보라. 이 구분이 신뢰의 핵심이고, 우리 수주왕 케이스(7강)와 정확히 같은 틀이다.</div>
+</section>
+<section class="section" id="propublica-nsf">
+  <div class="module-header m4"><div class="subtitle">해외 사례 1 · LLM · 구조화 프롬프트</div><h2>ProPublica (2025) — LLM에게 ‘woke 사냥꾼처럼 읽어보라’ 시켜 낙인을 해부</h2><p>크루즈 상원의원실이 “DEI·신마르크스주의 선전”이라며 지목한 미국 국립과학재단(NSF) 연구비 명단을 검증해, 불평등을 한 번 언급했거나 무관한 과제까지 무더기로 싸잡아 낙인된 사실을 드러냈다. 예: ‘diversify(생물다양성)’·‘female’ 두 단어 때문에 걸린 47만 달러 박하 진화 연구.</p></div>
+  <div class="hero">
+    <div class="big">3,400+건</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">크루즈실이 ‘woke’로 지목한<br>NSF 연구비 (약 20억 달러)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>‘탐사기자처럼 각 과제를 읽고 wokeness로 볼 소지가 있는지 판단하라’는 역할 부여</li><li>woke_description·why_flagged·citation_for_flag(원문 인용 근거) 지정 필드로 구조화 추출</li><li>“확실하지 않으면 추측하지 말라”는 지시로 환각 차단</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>발표 전 모든 항목을 사람이 직접 검토·확인</li><li>기사에 실린 모든 개인·기관에 반론 취재(크루즈실·공화당은 무응답)</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>공개 DB 다운로드 → LLM 구조화 프롬프트로 낙인 사유 분류·인용 추출 → 전수 인간 검토+반론 → 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>정치가 ‘데이터’로 포장한 낙인의 자의성을 구체 사례로 입증. (구체 모델 버전·후속 정책 파장은 미확인)</div>
+  <blockquote>AI는 정치가 ‘객관적 데이터’로 포장한 주장을 거꾸로 해부하는 도구가 된다 — ‘모르면 비워 두라’ 지시와 전수 검증이 있을 때.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.propublica.org/article/using-ai-responsibly-for-reporting" target="_blank" rel="noopener">ProPublica 방법론</a> · <a href="https://www.propublica.org/article/ted-cruz-woke-grants-national-science-foundation" target="_blank" rel="noopener">기사</a></div>
+</section>
+<section class="section" id="propublica-slt">
+  <div class="module-header m4"><div class="subtitle">해외 사례 2 · LLM · few-shot 분류</div><h2>ProPublica × The Salt Lake Tribune (2023) — few-shot로 성비위 문서를 걸러내다</h2><p>유타주 면허당국(DOPL)이 징계한 정신건강 종사자들의 성비위 패턴을 추적. 게이 LDS 신자를 돕는다는 평판을 쌓은 치료사 스콧 오언의 성학대 의혹이 중심.</p></div>
+  <div class="hero">
+    <div class="big">197명 중 73명</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">2012년 이후 징계자 중<br>성비위 징계 (37%)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>이미 확인된 ‘성비위 사례’를 예시로 제공하는 few-shot 방식</li><li>찾을 키워드를 함께 지정해 대량 징계보고서에서 유사 사건만 선별</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>AI가 고른 각 결과를 기자 2명이 검토</li><li>면허 기록과 대조해 분류가 옳은지 확정</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>공개 징계문서 → few-shot+키워드로 성비위 문서 선별 → 기자 2인 교차+면허기록 대조 → 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>정신건강 종사자가 의사·간호사보다 성 관련 비위로 더 자주 징계되는 정황을 데이터로 제시. (구체 모델명, 후속 입법과의 직접 인과는 미확인)</div>
+  <blockquote>사람이 아는 ‘정답 사례’를 예시로 먹이면(few-shot) AI는 방대한 행정문서에서 원하는 유형만 걸러주는 조수가 된다.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.propublica.org/article/using-ai-responsibly-for-reporting" target="_blank" rel="noopener">ProPublica 방법론</a> · <a href="https://www.propublica.org/article/utah-therapist-built-reputation-for-helping-gay-latter-day-saints-they-say-he-sexually-abused-them" target="_blank" rel="noopener">기사</a></div>
+</section>
+<section class="section" id="icij-passport">
+  <div class="module-header m4"><div class="subtitle">해외 사례 3 · 컴퓨터비전 · YOLO+OCR</div><h2>ICIJ (2025) — 객체탐지+OCR로 유출문서 속 여권을 찾아내다</h2><p>파나마·판도라 페이퍼스류 유출 데이터에서 역외 실소유주의 핵심 단서인 ‘여권 스캔’을 자동 검출하는 도구를 개발. 과거엔 파일명·키워드 검색으로 수천 페이지를 몇 주간 수작업으로 훑어야 했다.</p></div>
+  <div class="hero">
+    <div class="big">11만 건 → 3,000건</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">표적 검토로 축소<br>(최종 약 500개 여권 식별)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>문서를 이미지로 변환 후 오픈소스 YOLO 객체탐지로 여권 페이지 검출(재현율 100%·정밀도 86%)</li><li>여권 하단 기계판독영역(MRZ)을 맞춤 OCR로 읽어 이름·생년월일·국가 추출</li><li>OsloMet·NRK와 협업, 수개월 주석·파인튜닝. 민감정보라 자체 인프라에서 처리</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>예측을 오픈소스 팩트체킹 플랫폼 Prophecies로 검토</li><li>각 예측을 서로 다른 기자 3명이 여러 라운드 교차검증</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>유출문서를 Datashare에 적재 → YOLO 탐지+MRZ OCR 추출 → Prophecies 3인 교차검증 → 확정 문서 태깅해 취재팀 제공</div>
+  <div class="callout info"><div class="ct">결과·파장</div>‘건초더미 속 바늘’ 검출을 체계화. 모델 가중치는 보안상 비공개, 서비스 코드만 오픈소스. (YOLO 세부 버전은 미확인)</div>
+  <blockquote>이미지·문서가 뒤섞인 유출에선 텍스트 검색이 아니라 객체탐지+OCR이 답 — 민감 데이터는 외부로 내보내지 않고 다중 검증으로.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.icij.org/inside-icij/2025/05/how-we-use-machine-learning-to-find-passports-and-unlock-one-key-to-offshore-secrecy/" target="_blank" rel="noopener">ICIJ 방법론</a> · <a href="https://gijn.org/stories/passports-machine-learning-icij/" target="_blank" rel="noopener">GIJN</a></div>
+</section>
+<section class="section" id="ap-restraint">
+  <div class="module-header m4"><div class="subtitle">해외 사례 4 · OCR · 음성전사(Whisper)</div><h2>AP · Howard Center (2024) — 정부가 안 세던 제압 사망 1,036명을 직접 집계</h2><p>총기 없이 물리적 제압(엎드린 자세 압박·테이저 등)으로 숨진 죽음을 정부가 제대로 집계하지 않자, 3년에 걸쳐 직접 데이터베이스를 구축해 폭로. 조지 플로이드 사망 이후 착수.</p></div>
+  <div class="hero">
+    <div class="big">1,036명 / 20만+쪽</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">10년간 제압 사망(740건 엎드린 자세)<br>수집 문서 20만 페이지 이상</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>손글씨·저화질 스캔을 검색 가능하게 만드는 OCR(Amazon Textract)</li><li>머신러닝으로 1,000여 건의 사망 원인·방식을 색인해 검시 편향 패턴 도출</li><li>보디캠 수백 시간은 OpenAI Whisper로 전사(음성인식)</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>“가장 중요한 취재 방법은 기자가 직접 문서를 읽어 정보를 뽑은 것”(데이터 에디터)</li><li>모델 출력은 그대로 게재하지 않고 여러 겹 사람 검수·팩트체크</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>공공기록 20만 쪽+보디캠 수집 → OCR·ML 색인·Whisper 전사 → 사람 정독·팩트체크 → 공개 DB</div>
+  <div class="callout info"><div class="ct">결과·파장</div>연방정부도 못 만든 최대 규모 제압 사망 집계. 2025 퓰리처상 탐사보도 부문 파이널리스트. FRONTLINE 다큐로 확장.</div>
+  <blockquote>AI(OCR·전사)는 수만 쪽 건초더미를 검색 가능하게 만드는 가속기일 뿐, 최종 사실은 기자가 원문을 읽어 책임진다.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.niemanlab.org/2025/05/how-this-years-pulitzer-awardees-used-ai-in-their-reporting/" target="_blank" rel="noopener">Nieman Lab</a> · <a href="https://apnews.com/projects/investigation-police-use-of-force/" target="_blank" rel="noopener">AP 프로젝트</a></div>
+</section>
+<section class="section" id="forty-acres">
+  <div class="module-header m4"><div class="subtitle">해외 사례 5 · 컴퓨터비전 · 필기체 이미지 인식</div><h2>Mother Jones·CPI·Reveal (2024) — 커스텀 이미지 인식으로 빼앗긴 땅문서를 발굴</h2><p>남북전쟁 후 해방노예에게 발급됐다 1년 반 만에 회수된 토지 소유권 기록을 재구성. 색인도 없는 1800년대 스펜서체 필기 문서에서 실제 수령자를 찾아, 유전자족보로 살아있는 후손까지 추적.</p></div>
+  <div class="hero">
+    <div class="big">180만 기록 / +500명</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">대상 아카이브 규모<br>AI로 추가 발굴한 수령자</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>필기체 문서는 색인·라벨이 없어, 이미 찾아둔 증서를 학습데이터로 커스텀 이미지 인식 모델 개발</li><li>‘문서 이미지 자체를 패턴으로 찾는’ 이미지 검색으로 컬렉션 전체 탐색</li><li>※ 부정확한 자동 전사(Textract)는 일부러 채택하지 않음 — 문제에 맞는 기법 선택</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>기자들이 스펜서체 판독 훈련 후 방대한 수작업 조사를 선행</li><li>AI가 찾은 후보를 검증해 약 500명 추가 확인, 팩트체크팀이 검증</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>사람의 사전 판독·수집 → 커스텀 이미지 인식으로 추가 문서 탐색 → 사람 검증·족보 확인 → 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>사상 최대 규모의 ‘40에이커’ 토지 소유권 컬렉션 공개. 2025 퓰리처상 해설보도 파이널리스트, IRE 필립 마이어상 2위.</div>
+  <blockquote>AI는 사람이 먼저 판독법을 익히고 정답 데이터를 줄 때 ‘검색 불가능한 아카이브’를 연다 — 자동 전사에 매달리기보다 맞는 기법을 고르는 판단이 핵심.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.motherjones.com/politics/2024/06/40-acres-and-a-lie/" target="_blank" rel="noopener">Mother Jones</a> · <a href="https://publicintegrity.org/40-acres-and-a-lie/" target="_blank" rel="noopener">Public Integrity</a></div>
+</section>
+<section class="section" id="wsj-musk">
+  <div class="module-header m4"><div class="subtitle">해외 사례 6 · 임베딩 · 벡터 군집화</div><h2>The Wall Street Journal (2024) — 게시물 4.1만 건을 벡터로 군집화해 정치적 변신을 시각화</h2><p>트위터 인수 뒤 머스크가 사업가에서 정치적 인물로 얼마나 급격히 이동했는지, 게시물 텍스트·이미지를 정량 분석해 시각적으로 입증.</p></div>
+  <div class="hero">
+    <div class="big">41,000+건</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">분석한 X 상호작용<br>(2019년 이후)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>게시물을 임베딩(벡터)로 변환해 의미적 유사성으로 자동 군집화(위=이민·정치, 아래=밈·테슬라)</li><li>밈까지 잡기 위해 텍스트 임베딩 + 이미지 임베딩(Google Vertex AI SDK) 병용</li><li>기자 명시: “ChatGPT에 넣은 게 아니다 — 생성형이 아니라 머신러닝에 가깝다”</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>기자들이 군집 결과를 해석하고 서사·시각화로 구성</li><li>(개별 게시물 라벨 검증의 세부 절차는 미확인)</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>외부 데이터셋+보정 수집 → 텍스트·이미지 임베딩 군집화 → 사람 해석·시각화 → 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>머스크 관련 보도 묶음의 일부로 2025 퓰리처상 전국보도 부문 수상(이 시각화 단독 수상은 아님).</div>
+  <blockquote>수만 건 소셜 데이터도 임베딩 군집화로 ‘한 사람의 담론 이동’을 눈으로 보여줄 수 있다 — 텍스트만이 아니라 이미지(밈)까지.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.niemanlab.org/2025/05/how-this-years-pulitzer-awardees-used-ai-in-their-reporting/" target="_blank" rel="noopener">Nieman Lab</a> · <a href="https://www.wsj.com/tech/elon-musk-politics-trump-social-media-267d34c8" target="_blank" rel="noopener">WSJ 기사</a></div>
+</section>
+<section class="section" id="ajc-doctors">
+  <div class="module-header m4"><div class="subtitle">해외 사례 7 · 전통 ML · 지도학습 분류</div><h2>Atlanta Journal-Constitution (2016) — 분류기로 10만 건을 6,000건으로 좁히다</h2><p>환자를 성적으로 학대하고도 면허를 유지·재취득하는 의사를 전국 규모로 추적. 조지아주에서 발견한 약 70건(3분의 2가 면허 유지)에서 출발해 50개 주로 확대.</p></div>
+  <div class="hero">
+    <div class="big">10만 건 → 6,000건</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">스크레이핑 수집 → ML 선별<br>(최종 3,100+명 확인)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>규제기관 웹사이트를 긁는 스크레이퍼 약 50개로 징계문서 10만+건 수집</li><li>키워드·상호관계로 ‘성비위 확률 점수’를 매기는 지도학습 텍스트 분류기로 6,000건 압축</li><li>※ 정확한 알고리즘명·학습 세부는 매체 비공개 — ‘키워드 기반 지도학습 분류기’까지만 단정</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>기자들이 6,000건을 전수 정독해 사건 성격·처분 판정</li><li>1999년 이전 종결 건, 복수 주 중복 처분을 손으로 제거</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>스크레이핑 → ML 분류로 후보 축소 → 기자 전수 정독 → 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>1999~2015년 성비위 공개 고발 의사 3,100+명 확인. 2016 IRE 필립 마이어상 수상, 퓰리처상 최종 후보(수상 아님).</div>
+  <blockquote>AI는 ‘답’이 아니라 ‘읽어야 할 목록’을 만든다 — 10만 건을 6,000건으로 줄여도 그 6,000건은 기자가 다 읽어야 한다.</blockquote>
+  <div class="footer-note">출처 — <a href="https://doctors.ajc.com/about_this_investigation/" target="_blank" rel="noopener">AJC 방법론</a> · <a href="https://www.ire.org/2017/01/23/2016-philip-meyer-award-winners-announced/" target="_blank" rel="noopener">IRE 수상</a></div>
+</section>
+<section class="section" id="buzzfeed-planes">
+  <div class="module-header m4"><div class="subtitle">해외 사례 8 · 전통 ML · 랜덤포레스트</div><h2>BuzzFeed News (2017) — 비행 패턴을 학습시켜 숨은 감시기를 색출</h2><p>FBI·국토안보부 등이 위장 회사 명의로 운용하는 감시 비행기를, 제보가 아니라 비행 패턴 학습만으로 색출. CBP·공군 특수전기 등을 확인.</p></div>
+  <div class="hero">
+    <div class="big">약 2만 대 → 69대</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">4개월치 항공기 → 감시기 후보<br>(학습: 기존 감시기 약 100대)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>선회율·속도·고도·경로면적·기종·스쿼크코드를 특징으로 한 랜덤포레스트 분류기</li><li>‘알려진 FBI/DHS 기와 얼마나 닮았는지’ 확률 계산(선회율에 최대 가중치)</li><li>약 2만 대에 적용해 약 69대를 후보로 표시</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>스카이다이빙 업체 등 오탐을 기자가 걸러냄</li><li>각 후보의 FAA 등록서류·기체 이력 추적, 운용 주체에 직접 취재로 확정</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>Flightradar24 수집 → 랜덤포레스트 후보 선별 → 등록서류·취재로 검증 → 데이터·코드 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>데이터·코드·주피터 노트북을 GitHub에 전면 공개해 ‘재현 가능한 저널리즘’의 교보재가 됨. (대형 수상 이력은 미확인)</div>
+  <blockquote>방법과 코드를 통째로 공개하면 기사 자체가 검증 가능한 자산이 된다 — ‘어떻게 했는지’를 숨기지 말 것.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.buzzfeednews.com/article/peteraldhous/hidden-spy-planes" target="_blank" rel="noopener">기사</a> · <a href="https://github.com/BuzzFeedNews/2017-08-spy-plane-finder" target="_blank" rel="noopener">코드(GitHub)</a></div>
+</section>
+<section class="section" id="icij-panama">
+  <div class="module-header m4"><div class="subtitle">해외 사례 9 · 전통 NLP · 엔티티+그래프DB</div><h2>ICIJ (2016~2021) — 테라바이트급 유출을 엔티티 추출과 지식 그래프로 국경 넘어 협업</h2><p>로펌·신탁 유출로 세계 정치인·부호의 역외 비밀회사 구조를 폭로. 파나마(2016)·파라다이스(2017)·판도라(2021) 페이퍼스.</p></div>
+  <div class="hero">
+    <div class="big">1,150만 건 / 2.6TB</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">파나마 페이퍼스<br>(판도라는 1,190만 건·117개국·600명+)</p>
+  </div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ AI가 한 일</div><ul><li>파나마(2016): Tika+Tesseract OCR(서버 30~40대)+Apache Solr 색인, 관계는 Talend→Neo4j→Linkurious</li><li>Datashare(오픈소스): 개체명 인식(NER; CoreNLP·OpenNLP·MITIE·IXA)으로 인물·조직 자동 추출, Elasticsearch 색인, 2024 Neo4j 플러그인</li><li>전 과정 전통 NLP+그래프DB — 생성형 AI 아님</li></ul></div>
+    <div class="col no"><div class="h">⛔ 사람이 한 일</div><ul><li>추출된 엔티티·그래프는 단서일 뿐, 각국 기자가 자국 인물을 짚어 원문 대조·현장 취재로 검증</li><li>Global I-Hub에서 국경 간 연결 공유, 전원 엠바고 서약</li></ul></div>
+  </div>
+  <div class="callout tip"><div class="ct">워크플로우</div>유출 수집 → OCR·색인 → NER 엔티티 추출·그래프화 → 사람 원문대조·취재·협업 → 동시 공개</div>
+  <div class="callout info"><div class="ct">결과·파장</div>파나마 페이퍼스 2017 퓰리처상 해설보도 수상. 총리 사임 등 각국 파장. (주의: Datashare는 파나마 ‘본편’이 아니라 이후 사건에 투입)</div>
+  <blockquote>혼자 다 읽을 수 없는 문서는 엔티티로 쪼개 연결하고, 기술보다 신뢰 기반의 국경 간 협업이 특종을 만든다.</blockquote>
+  <div class="footer-note">출처 — <a href="https://www.icij.org/investigations/panama-papers/data-tech-team-icij/" target="_blank" rel="noopener">ICIJ 데이터팀</a> · <a href="https://icij.gitbook.io/datashare" target="_blank" rel="noopener">Datashare</a></div>
+</section>
+<section class="section" id="techmap">
+  <div class="module-header m4"><div class="subtitle">해외 사례 심화 · 정리</div><h2>기법 지도 — 무슨 일에 무엇을 쓰나</h2></div>
+  <table>
+    <thead><tr><th>과제 유형</th><th>기법</th><th>사례</th></tr></thead>
+    <tbody>
+      <tr><td>텍스트 대량 분류·판단</td><td>LLM 구조화 프롬프트 / few-shot</td><td>ProPublica NSF, ProPublica×SLT</td></tr>
+      <tr><td>이미지·문서 속 대상 찾기</td><td>객체탐지(YOLO)+OCR / 커스텀 이미지 인식</td><td>ICIJ 여권, ‘40 Acres’</td></tr>
+      <tr><td>스캔·손글씨·음성 디지털화</td><td>OCR(Textract) / 음성전사(Whisper)</td><td>AP Lethal Restraint</td></tr>
+      <tr><td>대량 텍스트의 의미 지도화</td><td>임베딩 → 벡터 군집화</td><td>WSJ 머스크</td></tr>
+      <tr><td>문서 더미에서 후보 선별</td><td>전통 지도학습 분류(랜덤포레스트 등)</td><td>AJC 의사, BuzzFeed 감시기</td></tr>
+      <tr><td>인물·기업 관계 연결</td><td>엔티티 추출(NER)+그래프 DB</td><td>ICIJ 파나마/판도라</td></tr>
+    </tbody>
+  </table>
+  <div class="callout info"><div class="ct">그래서 클로드는?</div>우리 해커톤은 이 중 <b>텍스트 대량 분류·대조·정제</b>를 클로드/클로드코드로 한다(수주왕의 535만 건 추출이 그 예). 이미지·음성·그래프가 필요하면 과제에 맞는 도구를 붙이면 된다. 원리는 같다.</div>
+  <div class="footer-note">
+    해외 사례 심화 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
+    관련 강 — <a href="07-case-realworld.html">7강 · 실전 케이스(수주왕)</a> · <a href="06-verification.html">6강 · 검증과 원칙</a>
+  </div>
+</section>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
