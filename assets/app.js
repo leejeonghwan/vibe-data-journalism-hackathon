@@ -19,7 +19,13 @@
   // ---- 헤더 버튼 · 화살표 · 카운터 주입 ----
   var slideBtn = document.createElement('button'); slideBtn.className='hdr-btn'; slideBtn.type='button'; slideBtn.innerHTML='▶ 슬라이드';
   var collapseBtn = document.createElement('button'); collapseBtn.className='hdr-btn'; collapseBtn.type='button'; collapseBtn.innerHTML='⇤ 사이드바';
-  if (header){ header.appendChild(collapseBtn); header.appendChild(slideBtn); }
+  var themeBtn = document.createElement('button'); themeBtn.className='hdr-btn'; themeBtn.type='button';
+  function applyTheme(dark){ body.classList.toggle('dark', dark); themeBtn.innerHTML = dark ? '☀ 라이트' : '🌙 다크'; }
+  var savedTheme=null; try{ savedTheme=localStorage.getItem('vdjh-theme'); }catch(e){}
+  var initDark = savedTheme ? (savedTheme==='dark') : !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  applyTheme(initDark);
+  themeBtn.addEventListener('click', function(){ var d=!body.classList.contains('dark'); applyTheme(d); try{ localStorage.setItem('vdjh-theme', d?'dark':'light'); }catch(e){} });
+  if (header){ header.appendChild(themeBtn); header.appendChild(collapseBtn); header.appendChild(slideBtn); }
   collapseBtn.addEventListener('click', toggleSidebar);
 
   var arrowL=document.createElement('button'); arrowL.className='slide-arrow left'; arrowL.type='button'; arrowL.setAttribute('aria-label','이전'); arrowL.innerHTML='‹';

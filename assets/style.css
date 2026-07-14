@@ -255,3 +255,21 @@ body.present .slide-arrow{display:flex;}
 body.present .slide-count{display:block;}
 body.present .footer-note{margin-top:20px;}
 @media(max-width:900px){ body.present .main{padding:0 20px;} .slide-arrow{width:48px;font-size:28px;} }
+
+/* ===== 다크 모드 (변수 오버라이드로 전체 전환) ===== */
+body.dark{
+  --bg:#17130f; --surface:#211c16; --border:#38312a;
+  --text:#f2efe8; --text-secondary:#a89f93;
+  --accent:#6ea8fe; --accent-light:#1b2636; --accent-dark:#9cc0ff;
+  --green:#5fd0a0; --green-light:#15251d;
+  --amber:#f2c14e; --amber-light:#2a2313;
+  --purple:#bfa1f2; --purple-light:#241d33;
+  --teal:#54c9bf; --teal-light:#122725;
+  --orange:#f0975f; --orange-light:#2a1d13;
+  --red:#f2766b; --red-light:#2b1614;
+}
+body.dark{background:var(--bg);}
+body.dark .hero{border-color:#2b3a52;}
+body.dark .sidebar .nav-item{color:#a89f93;}
+body.dark .slide-arrow:hover{background:rgba(255,255,255,.06);}
+body.dark img{filter:brightness(.9);}
