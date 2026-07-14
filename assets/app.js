@@ -46,6 +46,7 @@
   var pIdx = 0;
 
   function outer(el){ var s=getComputedStyle(el); return el.offsetHeight + (parseFloat(s.marginTop)||0) + (parseFloat(s.marginBottom)||0); }
+  function isHeading(el){ return /^H[2-4]$/.test(el.tagName); }
 
   function clearInlineDisplay(){
     sections.forEach(function(sec){ Array.prototype.slice.call(sec.children).forEach(function(c){ c.style.display=''; }); });
@@ -54,7 +55,8 @@
   // 각 섹션을 화면 높이에 맞춰 페이지로 분할
   function buildDeck(){
     pages = [];
-    var cs=getComputedStyle(main); var stageH = (main.clientHeight||(window.innerHeight-60)) - (parseFloat(cs.paddingTop)||0) - (parseFloat(cs.paddingBottom)||0);
+    var headerBar = header ? (header.offsetHeight||60) : 60;
+    var avail = window.innerHeight - headerBar - 84;   // 슬라이드 가용 높이
     sections.forEach(function(sec){
       var headerEl = sec.querySelector('.module-header');
       var kids = Array.prototype.slice.call(sec.children).filter(function(k){ return k!==headerEl; });
@@ -62,12 +64,13 @@
       sections.forEach(function(s){ s.classList.toggle('active', s===sec); });
       kids.forEach(function(k){ k.style.display=''; });
       var headerH = headerEl ? outer(headerEl) : 0;
-      var budget = stageH - headerH - 36;
-      if (budget < 120) budget = stageH - 48;
+      var budget = avail - headerH - 20;
+      if (budget < 140) budget = avail - 20;
       var page=[], used=0;
       kids.forEach(function(k){
         var h = outer(k);
-        if (used + h > budget && page.length){ pages.push({sec:sec.id, els:page}); page=[]; used=0; }
+        var brk = page.length && (isHeading(k) || used + h > budget);
+        if (brk){ pages.push({sec:sec.id, els:page}); page=[]; used=0; }
         page.push(k); used += h;
       });
       pages.push({sec:sec.id, els:page});   // 마지막(또는 빈) 페이지
