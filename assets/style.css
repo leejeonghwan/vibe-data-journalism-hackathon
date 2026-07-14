@@ -268,9 +268,8 @@ body.dark{background:#000;color:#fff;}
 body.dark .site-header{background:#000;border-bottom-color:#222;}
 body.dark .sidebar{background:#000;border-right-color:#222;}
 /* 박스 = 앰버 + 내부 텍스트 검정 */
-body.dark .module-header,body.dark .cat-head,body.dark .step-head,body.dark .hero,body.dark .callout,body.dark .two .col,body.dark .prompt,body.dark .code-block,body.dark .expect,body.dark .card,body.dark .fork .row,body.dark .role .col,body.dark .loop .node,body.dark .kpi,body.dark .repeat,body.dark .timer,body.dark .pill,body.dark .tag,body.dark .big-quote{background:#fdad00 !important;border-color:#e39c00 !important;border-left-color:#000 !important;}
-body.dark .module-header *,body.dark .cat-head *,body.dark .step-head *,body.dark .hero *,body.dark .callout *,body.dark .two .col *,body.dark .prompt *,body.dark .code-block *,body.dark .expect *,body.dark .card *,body.dark .fork .row *,body.dark .role .col *,body.dark .loop .node *,body.dark .kpi *,body.dark .repeat *,body.dark .timer *,body.dark .pill *,body.dark .tag *,body.dark .big-quote *{color:#000 !important;}
-body.dark .code-block .ch{background:rgba(0,0,0,.12) !important;}
+body.dark .module-header,body.dark .cat-head,body.dark .step-head,body.dark .hero,body.dark .callout,body.dark .two .col,body.dark .expect,body.dark .card,body.dark .fork .row,body.dark .role .col,body.dark .loop .node,body.dark .kpi,body.dark .repeat,body.dark .timer,body.dark .pill,body.dark .tag,body.dark .big-quote{background:#fdad00 !important;color:#000 !important;border-color:#e39c00 !important;border-left-color:#000 !important;}
+body.dark .module-header *,body.dark .cat-head *,body.dark .step-head *,body.dark .hero *,body.dark .callout *,body.dark .two .col *,body.dark .expect *,body.dark .card *,body.dark .fork .row *,body.dark .role .col *,body.dark .loop .node *,body.dark .kpi *,body.dark .repeat *,body.dark .timer *,body.dark .pill *,body.dark .tag *,body.dark .big-quote *{color:#000 !important;}
 body.dark .callout a,body.dark .hero a,body.dark .card a,body.dark .module-header a{color:#000 !important;text-decoration:underline;}
 /* 박스 밖 링크 = 앰버 */
 body.dark .main a{color:#fdad00;}
@@ -293,6 +292,14 @@ body.dark tbody tr:hover{background:#111;}
 body.dark .pager .pg{background:#000;border-color:#444;}
 body.dark .pager .pg .t{color:#fff;}
 body.dark .pager button.pg:hover{background:#2a2000;border-color:#fdad00;}
+
+/* 노란 박스 안의 검정 박스: 검정 배경 + 흰 글씨 */
+body.dark .prompt,body.dark .code-block{background:#0f172a !important;color:#e2e8f0 !important;border:1px solid #fdad00 !important;border-left-color:#fdad00 !important;}
+body.dark .prompt *,body.dark .code-block *{color:#e2e8f0 !important;}
+body.dark .prompt .pl{color:#fdad00 !important;}
+body.dark .code-block .ch{background:rgba(255,255,255,.06) !important;color:#94a3b8 !important;}
+body.dark .promise .c{background:#000 !important;color:#fff !important;border-color:#555 !important;}
+body.dark .promise .c *{color:#fff !important;}
 
 /* ===== 모든 텍스트 마침표(라벨/부제 포함) ===== */
 .module-header .subtitle::after,.cat-head .subtitle::after,.step-head .subtitle::after,
