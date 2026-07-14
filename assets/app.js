@@ -44,6 +44,9 @@
   var current = order[0];          // 현재 섹션 id (일반 모드)
   var pages = [];                  // 슬라이드 모드: [{sec, els:[el...]}]
   var pIdx = 0;
+  var lessonOrder = Array.prototype.slice.call(document.querySelectorAll('.course-nav a')).map(function(a){ return a.getAttribute('href'); });
+  function hereFile(){ return location.pathname.split('/').pop() || 'index.html'; }
+  function gotoLesson(dir){ var i=lessonOrder.indexOf(hereFile()); var t=lessonOrder[i+dir]; if(i<0||!t) return false; try{ sessionStorage.setItem('vdjh-present','1'); sessionStorage.setItem('vdjh-pos', dir>0?'first':'last'); }catch(e){} location.href=t; return true; }
 
   function outer(el){ var s=getComputedStyle(el); return el.offsetHeight + (parseFloat(s.marginTop)||0) + (parseFloat(s.marginBottom)||0); }
   function isHeading(el){ return /^H[2-4]$/.test(el.tagName); }
@@ -90,7 +93,9 @@
     items.forEach(function(it){ it.classList.toggle('active', it.dataset.s===pg.sec); });
     current = pg.sec;
     counter.textContent=(i+1)+' / '+pages.length;
-    arrowL.disabled = i<=0; arrowR.disabled = i>=pages.length-1;
+    var li=lessonOrder.indexOf(hereFile());
+    arrowL.disabled = (i<=0) && !(li>0);
+    arrowR.disabled = (i>=pages.length-1) && !(li>=0 && li<lessonOrder.length-1);
     if (sidebar) sidebar.classList.remove('open');
     var box=sec; box.scrollTop=0;
   }
@@ -118,8 +123,12 @@
 
   // ---- 공통 이동 ----
   function step(delta){
-    if (body.classList.contains('present')) showPage(pIdx+delta);
-    else { var pos=order.indexOf(current)+delta; if (pos>=0&&pos<order.length) go(order[pos]); }
+    if (body.classList.contains('present')){
+      var ni=pIdx+delta;
+      if (ni<0){ gotoLesson(-1); return; }
+      if (ni>pages.length-1){ gotoLesson(1); return; }
+      showPage(ni);
+    } else { var pos=order.indexOf(current)+delta; if (pos>=0&&pos<order.length) go(order[pos]); }
   }
   items.forEach(function(i){ i.addEventListener('click', function(){
     if (body.classList.contains('present')){ for (var k=0;k<pages.length;k++){ if (pages[k].sec===i.dataset.s){ showPage(k); break; } } }
@@ -141,6 +150,7 @@
     } else {
       body.classList.remove('present');
       clearInlineDisplay();
+      try{ sessionStorage.removeItem('vdjh-present'); sessionStorage.removeItem('vdjh-pos'); }catch(e){}
       go(current);
     }
     slideBtn.classList.toggle('on', on);
@@ -166,4 +176,5 @@
   if (activeSection) startId=activeSection.id;
   if (location.hash && document.getElementById(location.hash.slice(1))) startId=location.hash.slice(1);
   go(startId);
+  try{ if (sessionStorage.getItem('vdjh-present')==='1'){ var _pos=sessionStorage.getItem('vdjh-pos'); setPresent(true); if(_pos==='last') showPage(pages.length-1); } }catch(e){}
 })();

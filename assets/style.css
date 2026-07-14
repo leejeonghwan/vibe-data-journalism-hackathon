@@ -275,6 +275,8 @@ body.dark .callout a,body.dark .hero a,body.dark .card a,body.dark .module-heade
 body.dark .main a{color:#fdad00;}
 /* 강조 원형/버튼 텍스트 검정 */
 body.dark .step .num,body.dark .stage .n,body.dark .btn,body.dark .course-nav a.current .cn{color:#000 !important;}
+body.dark .btn,body.dark .btn.ghost{background:#fdad00 !important;color:#000 !important;border-color:#fdad00 !important;}
+body.dark .btn:hover,body.dark .btn.ghost:hover{background:#e39c00 !important;}
 /* UI */
 body.dark .hdr-btn{background:#000;border-color:#444;color:#fff;}
 body.dark .hdr-btn:hover{background:#2a2000;border-color:#fdad00;color:#fdad00;}
