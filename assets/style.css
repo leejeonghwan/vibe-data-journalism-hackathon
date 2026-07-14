@@ -216,3 +216,42 @@ blockquote{border-left:3px solid var(--accent);background:var(--accent-light);ma
 
 .m6{background:var(--teal-light);border-left-color:var(--teal);}
 .m7{background:var(--amber-light);border-left-color:var(--amber);}
+
+/* ===== 사이드바 접기 + 슬라이드 모드 (전 페이지 공통) ===== */
+.menu-btn{display:block;}                         /* 접기 토글 항상 노출 */
+.main{transition:margin-left .28s ease;}
+.sidebar{transition:transform .28s ease;}
+body.nav-collapsed .sidebar{transform:translateX(-100%);}
+body.nav-collapsed .main{margin-left:0;}
+
+.hdr-btn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:12.5px;font-weight:700;
+  border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;
+  padding:6px 14px;cursor:pointer;transition:all .15s;}
+.hdr-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light);}
+.hdr-btn.on{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+/* 슬라이드(프레젠테이션) 모드 */
+body.present .sidebar{transform:translateX(-100%);}
+body.present .main{margin-left:0;max-width:none;padding:0 96px;height:calc(100vh - var(--header-h));
+  display:flex;align-items:center;justify-content:center;overflow:hidden;}
+body.present .section{animation:none;}
+body.present .section.active{display:flex;flex-direction:column;justify-content:center;
+  width:100%;max-width:880px;max-height:calc(100vh - var(--header-h) - 96px);overflow-y:auto;}
+body.present .pager{display:none;}
+/* 슬라이드 모드에서 미니멀하게: 여백 키우고 폰트 살짝 업 */
+body.present .module-header{margin-bottom:26px;}
+body.present .main h2{font-size:34px;line-height:1.25;}
+body.present .main p, body.present .main li{font-size:18px;line-height:1.7;}
+body.present .lead{font-size:22px;}
+
+.slide-arrow{position:fixed;top:var(--header-h);bottom:0;width:76px;display:none;align-items:center;justify-content:center;
+  background:transparent;border:none;cursor:pointer;font-size:38px;color:var(--text-secondary);z-index:85;user-select:none;transition:background .15s,color .15s;}
+.slide-arrow:hover{background:rgba(0,0,0,.04);color:var(--text);}
+.slide-arrow.left{left:0;} .slide-arrow.right{right:0;}
+.slide-arrow[disabled]{opacity:.2;cursor:default;}
+body.present .slide-arrow{display:flex;}
+.slide-count{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:700;
+  color:var(--text-secondary);background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:4px 12px;z-index:85;display:none;}
+body.present .slide-count{display:block;}
+body.present .footer-note{margin-top:20px;}
+@media(max-width:900px){ body.present .main{padding:0 20px;} .slide-arrow{width:48px;font-size:28px;} }
