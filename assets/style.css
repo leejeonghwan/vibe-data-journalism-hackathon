@@ -213,3 +213,6 @@ blockquote{border-left:3px solid var(--accent);background:var(--accent-light);ma
 .sidebar .nav-item::after{content:".";}
 .btn::after{content:".";}
 .pager .pg .t::after{content:".";}
+
+.m6{background:var(--teal-light);border-left-color:var(--teal);}
+.m7{background:var(--amber-light);border-left-color:var(--amber);}

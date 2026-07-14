@@ -27,9 +27,11 @@
     <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
     <a href="07-case-realworld.html"><span class="cn">7</span> 실전 케이스 (수주왕)</a>
     <a href="08-overseas-cases.html"><span class="cn">8</span> 해외 사례 심화</a>
+    <a href="09-crawler.html"><span class="cn">9</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">10</span> 데이터 시각화</a>
   </div>
   <div class="nav-group-title">이 강</div>
-  <a class="nav-item active" data-s="intro">왜 0강인가 — 손부터 푼다</a>
+  <a class="nav-item active" data-s="intro">왜 0강인가</a>
   <a class="nav-item" data-s="setup">5분 세팅</a>
   <a class="nav-item" data-s="warmup">10분 워밍업 — 첫 결과 3개</a>
   <a class="nav-item" data-s="rior">프롬프트 공식 R.I.O.R</a>
@@ -43,7 +45,7 @@
 <section class="section active" id="intro">
   <div class="module-header m2"><div class="subtitle">0강 · 온보딩</div><h2>클로드에 손 얹기 — 오늘 바로 시작</h2><p>가입도 안 해 본 사람을, 30분 뒤 1강을 시작할 수 있는 상태로 만든다.</p></div>
 
-  <p class="lead">현장 기자에게 필요한 건 'AI 개론'이 아니다. 지금 켜서, 지금 시켜 보고, "어 되네" 하는 첫 결과다. 이 강의 목표는 딱 하나 — <b>손에 익히기</b>.</p>
+  <p class="lead">현장 기자에게 필요한 건 'AI 개론'이 아니다. 지금 켜서, 실제 자료로 첫 결과를 내 보는 것이다. 이 강의 목표는 도구에 익숙해지는 것 하나다.</p>
 
   <div class="hero">
     <div class="big">배우기가 아니라 시키기</div>
@@ -64,8 +66,8 @@
     <li><b>작업 폴더 만들기</b> — 바탕화면에 <code>data-practice</code> 폴더를 하나 만들고, 연습할 파일을 여기에 둔다.</li>
   </ol>
   <div class="prompt"><div class="pl">첫 마디 (코워크에서 폴더 선택 후)</div><div class="q">이 폴더를 앞으로 실습 작업 공간으로 쓸 거다. 지금 이 폴더에 어떤 파일들이 있는지만 먼저 목록으로 보여 달라. 아직 아무것도 바꾸지 마라.</div></div>
-  <div class="expect">✅ <b>기대 결과:</b> 폴더 안 파일 목록이 뜬다. 이 답을 받은 순간, 이미 클로드를 '쓰기' 시작한 것이다. 막막함의 90%는 여기서 사라진다.</div>
-  <div class="callout info"><div class="ct">채팅이냐 코워크냐</div>요약·초안·질문은 <b>채팅</b>으로 충분하다. 파일을 직접 열고 표·차트·문서를 만들어야 하면 <b>코워크</b>. 이 해커톤은 채팅으로 손을 풀고, 데이터 작업은 코워크로 한다. (Code·API는 뒤 강에서.)</div>
+  <div class="expect">✅ <b>기대 결과:</b> 폴더 안 파일 목록이 뜬다. 이 목록이 나오면 클로드가 폴더를 제대로 읽고 있다는 뜻이다. 여기서부터 시작한다.</div>
+  <div class="callout info"><div class="ct">채팅이냐 코워크냐</div>요약·초안·질문은 <b>채팅</b>으로 충분하다. 파일을 직접 열고 표·차트·문서를 만들어야 하면 <b>코워크</b>. 이 해커톤은 채팅으로 시작하고, 데이터 작업은 코워크로 한다. (Code·API는 뒤 강에서.)</div>
 </section>
 
 <section class="section" id="warmup">
@@ -146,7 +148,7 @@
       <tr><td><b>결과</b></td><td>한 번의 답</td><td>대시보드·자동 반복</td></tr>
     </tbody>
   </table>
-  <p>0강은 여기까지다. 손이 풀렸으면, 진짜 데이터로 30분을 써 볼 차례다.</p>
+  <p>0강은 여기까지다. 다음은 실제 데이터로 30분을 써 보는 1강이다.</p>
   <p><a class="btn" href="01-first-exercise.html">1강 · 첫 실습 30분 시작하기</a><a class="btn ghost" href="03-data-100.html">연습할 데이터 고르기</a></p>
 </section>
 
@@ -154,7 +156,7 @@
   <div class="module-header m2"><div class="subtitle">0강</div><h2>강사용 운영 노트</h2></div>
   <ul>
     <li><b>가입·세팅에서 낙오시키지 않는다.</b> 5분 세팅을 다 함께 통과한 뒤 다음으로. 한 명이라도 폴더 선택이 안 되면 화면 공유로 즉시 해결한다.</li>
-    <li><b>성취감을 먼저.</b> 워밍업 3개 중 하나만 성공해도 "되네!"가 나온다. 이론 설명은 그 뒤에 최소한만.</li>
+    <li><b>성공 경험을 먼저.</b> 워밍업 3개 중 하나만 성공해도 진입 장벽이 낮아진다. 이론 설명은 그 뒤에 최소한만.</li>
     <li><b>practice.csv는 미리 배포.</b> 저장이 서툰 참가자를 위해 파일로도 나눠 주면 시간이 절약된다.</li>
     <li><b>과신 방지.</b> 마지막 5분은 반드시 "숫자는 되묻는다"에 쓴다. 워밍업이 잘 될수록 이 경고가 중요하다.</li>
     <li><b>1강으로 연결.</b> 손이 풀린 참가자를 곧바로 <a href="01-first-exercise.html">1강(첫 실습 30분)</a>으로 넘긴다.</li>

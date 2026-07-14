@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9강 · Claude Code로 크롤러 만들기 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘.</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">9강 · Claude Code로 크롤러 만들기</span>
+</header>
+
+<nav class="sidebar">
+  <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
+    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
+    <a href="07-case-realworld.html"><span class="cn">7</span> 실전 케이스 (수주왕)</a>
+    <a href="08-overseas-cases.html"><span class="cn">8</span> 해외 사례 심화</a>
+    <a href="09-crawler.html" class="current"><span class="cn">9</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">10</span> 데이터 시각화</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="intro">왜 직접 수집인가</a>
+  <a class="nav-item" data-s="ethics">긁기 전, 4가지 원칙</a>
+  <a class="nav-item" data-s="setup">Claude Code 준비</a>
+  <a class="nav-item" data-s="build">실습 — 4단계로 크롤러</a>
+  <a class="nav-item" data-s="verify">수집물 검증</a>
+  <a class="nav-item" data-s="case">수주왕과 잇기</a>
+  <a class="nav-item" data-s="run">강사용 운영 노트</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="intro">
+  <div class="module-header m6"><div class="subtitle">9강 · 중급 · 수집</div><h2>Claude Code로 크롤러 만들기 — 수집부터 검증까지</h2><p>공개돼 있지만 흩어진 데이터를, 코드로 직접 긁어 모은다. ‘답을 받는 사람’에서 ‘일을 시키는 사람’으로.</p></div>
+  <p class="lead">0~3강이 ‘코딩 없이 코워크’였다면, 여기서 한 걸음 올라간다. 데이터가 다운로드 버튼 뒤에 없고 수백 페이지에 흩어져 있을 때, 클로드 코드에게 <b>크롤러를 대신 짜게</b> 시킨다. 기자는 여전히 코드를 못 써도 된다 — 무엇을·왜 모을지만 정하면 된다.</p>
+  <div class="hero">
+    <div class="big">규모가 특종을 만든다</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">수주왕(7강)이 535만 건을 훑어 91명을 찾았듯, 손으로 못 모으는 규모를 코드가 모은다. 크롤러는 그 규모를 여는 열쇠다. 단, 무엇을 긁어도 되는지부터 배운다.</p>
+    <div class="promise">
+      <div class="c"><div class="t">이 강이 하는 것</div><p>클로드 코드로 크롤러를 짜고, 반복·인증을 넘고, 수집물을 검증하기.</p></div>
+      <div class="c"><div class="t">하지 않는 것</div><p>로그인 우회·과부하·개인정보 무단수집. 그건 배우지 않는다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ethics">
+  <div class="module-header m6"><div class="subtitle">9강</div><h2>긁기 전, 4가지 원칙</h2><p>‘할 수 있다’와 ‘해도 된다’는 다르다. 이 넷을 먼저 확인한다.</p></div>
+  <table>
+    <thead><tr><th>확인</th><th>왜</th></tr></thead>
+    <tbody>
+      <tr><td><b>① robots.txt·이용약관</b></td><td>사이트가 수집을 어떻게 허용/제한하는지 먼저 읽는다. 클로드에게 “이 사이트 robots.txt와 약관을 요약하고 수집 가능 범위를 알려 달라”고 시킨다.</td></tr>
+      <tr><td><b>② 서버에 부담 주지 않기</b></td><td>요청 사이에 지연(delay)을 넣고 동시요청을 줄인다. “예의 바른 크롤러(요청 간 1~2초 대기)”로 설계하게 한다.</td></tr>
+      <tr><td><b>③ 개인정보·민감정보</b></td><td>공개돼 있어도 무차별 수집·재배포는 위험하다. 취재 목적과 비례성을 먼저 따진다.</td></tr>
+      <tr><td><b>④ 공개 API 우선</b></td><td>긁기 전에 공식 API·다운로드가 있는지 확인. 있으면 그게 더 안전하고 정확하다.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout info"><div class="ct">참고 자료</div>GIJN <a href="https://gijn.org/web-scraping-a-journalists-guide/" target="_blank" rel="noopener">Web Scraping: A Journalist’s Guide</a>, <a href="https://datajournalism.com/read/handbook/one" target="_blank" rel="noopener">Data Journalism Handbook</a>의 “무엇을 스크레이핑해도 되는가” 장을 함께 읽는다.</div>
+</section>
+
+<section class="section" id="setup">
+  <div class="module-header m6"><div class="subtitle">9강</div><h2>Claude Code 준비 (10분)</h2><p>크롤러는 코워크 채팅이 아니라 클로드 코드(터미널)로 짠다. 명령과 코드는 클로드가 짜고, 기자는 무엇을 모을지만 정한다.</p></div>
+  <ol>
+    <li>클로드 데스크톱/코드를 설치하고, 작업 폴더 <code>scraper</code>를 하나 만든다.</li>
+    <li>그 폴더를 클로드 코드로 연다. 파이썬·라이브러리 설치도 클로드에게 시키면 된다.</li>
+    <li>맨 처음, 규칙 파일부터 만들게 한다(아래 프롬프트).</li>
+  </ol>
+  <div class="prompt"><div class="pl">첫 마디 (Claude Code에서)</div><div class="q">이 폴더에서 웹 데이터 수집 작업을 할 거다. 먼저 CLAUDE.md 규칙 파일을 만들어라: (1) 요청 간 1.5초 대기 (2) robots.txt 확인 후 진행 (3) 수집 원본을 raw/ 폴더에 그대로 저장하고 절대 덮어쓰지 않기 (4) 개인정보로 보이는 필드는 수집 전 나에게 확인. 파이썬 환경도 준비해라.</div></div>
+  <div class="expect">이런 결과 → CLAUDE.md와 가상환경이 생기고, 클로드가 “무엇을 어디서 수집할지”를 되묻는다. 이 규칙이 이후 모든 작업의 가드레일이 된다.</div>
+  <div class="callout tip"><div class="ct">코드를 못 읽어도 된다</div>클로드가 짠 코드를 이해할 필요는 없다. 대신 “이 코드가 무엇을 하는지 한 문단으로 설명해 달라”고 늘 물어, 무엇을 하는지만 파악한다.</div>
+</section>
+
+<section class="section" id="build">
+  <div class="module-header m6"><div class="subtitle">9강</div><h2>실습 — 4단계로 크롤러 만들기</h2><p>한 페이지 → 여러 페이지 → 저장 → 막힘 대응. 한 번에 하나씩 시킨다.</p></div>
+
+  <div class="stage">
+    <div class="head"><div class="n">1</div><h4>한 페이지부터 긁기 <span class="timer">15분</span></h4></div>
+    <p>전체를 짜게 하지 말고, 한 페이지에서 원하는 항목이 제대로 나오는지부터 본다.</p>
+    <div class="prompt"><div class="pl">복붙</div><div class="q">이 URL 한 페이지에서 [표/목록]의 각 항목에서 [항목명·날짜·금액] 세 필드를 뽑는 코드를 짜라. 먼저 5건만 출력해 눈으로 확인하게 해라. 원본 HTML도 raw/에 저장해라.</div></div>
+    <div class="expect">이런 결과 → 5건이 표로 뜬다. 필드가 어긋나면 “세 번째 열이 날짜가 아니라 지역이다, 다시”처럼 눈으로 고친다.</div>
+  </div>
+
+  <div class="stage">
+    <div class="head"><div class="n">2</div><h4>여러 페이지로 — 페이지네이션 <span class="timer">15분</span></h4></div>
+    <p>목록이 2페이지, 3페이지로 이어질 때 자동으로 넘기게 한다.</p>
+    <div class="prompt"><div class="pl">복붙</div><div class="q">이 목록은 페이지가 여러 개다. 다음 페이지로 넘어가며 전부 수집하되, 요청 사이 1.5초 대기하고, 몇 페이지째 몇 건 모았는지 진행상황을 출력해라. 마지막 페이지를 어떻게 판단하는지도 설명해라.</div></div>
+    <div class="expect">이런 결과 → “12/48페이지, 240건 수집…”처럼 진행이 보인다. 멈추면 어디서 막혔는지 물어 고친다.</div>
+  </div>
+
+  <div class="stage">
+    <div class="head"><div class="n">3</div><h4>표로 저장 <span class="timer">10분</span></h4></div>
+    <p>모은 것을 분석 가능한 CSV로 떨군다.</p>
+    <div class="prompt"><div class="pl">복붙</div><div class="q">수집 결과를 data.csv로 저장해라. 컬럼은 [항목·날짜·금액·출처URL·수집시각]. 빈 값과 중복은 표시만 하고 지우지 말고, 총 몇 건·빈 값 몇 건·중복 몇 건인지 요약해 달라.</div></div>
+    <div class="expect">이런 결과 → data.csv + “총 1,842건, 빈 금액 37건, 중복 5건” 요약. 이 숫자가 이미 검증의 시작이다.</div>
+  </div>
+
+  <div class="stage">
+    <div class="head"><div class="n">4</div><h4>막혔을 때 — 인증·차단 대응 <span class="timer">10분</span></h4></div>
+    <p>로그인 벽·자바스크립트 렌더링·차단을 만나면, 우회가 아니라 ‘합법적 길’을 찾는다.</p>
+    <div class="prompt"><div class="pl">복붙</div><div class="q">이 페이지는 내용이 자바스크립트로 나중에 뜬다(빈 HTML). 공개 API나 네트워크 요청(JSON)이 있는지 먼저 확인하고, 있으면 그걸 쓰는 방법을 알려 달라. 로그인·캡차 우회는 하지 마라.</div></div>
+    <div class="callout warn"><div class="ct">넘지 않는 선</div>로그인 우회, 캡차 자동해제, 접근제한 회피는 하지 않는다. 막히면 정보공개청구·공식 API·직접 문의로 전환한다(4강 ‘인증의 벽’과 같은 원칙).</div>
+  </div>
+</section>
+
+<section class="section" id="verify">
+  <div class="module-header m6"><div class="subtitle">9강</div><h2>수집물 검증 — 긁었다고 끝이 아니다</h2><p>크롤러의 가장 큰 위험은 ‘조용한 누락’과 ‘잘못 긁힘’이다.</p></div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ 반드시 확인</div>
+      <ul>
+        <li>원본 대조: 무작위 10건을 사이트에서 직접 확인</li>
+        <li>총량 대조: 사이트가 “총 N건”이라 하면 N과 맞나</li>
+        <li>경계값: 첫 페이지·마지막 페이지·빈 페이지</li>
+        <li>형 변환: 금액·날짜가 숫자/날짜로 제대로 들어갔나</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">⛔ 흔한 함정</div>
+      <ul>
+        <li>페이지네이션 중간에 조용히 끊김</li>
+        <li>‘1,234’가 1이나 1234로 잘못 파싱</li>
+        <li>중복 수집 / 같은 항목 두 번</li>
+        <li>인코딩 깨짐(한글 ????)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="prompt"><div class="pl">복붙 (검증 시키기)</div><div class="q">data.csv를 검증해라. (1) 사이트가 밝힌 총 건수와 우리 수집 건수를 비교 (2) 금액 열에서 숫자가 아닌 값·이상치 상위 10개 (3) 무작위 10건의 출처URL을 뽑아 내가 직접 대조하게 목록화. 추정하지 말고 있는 그대로만.</div></div>
+  <blockquote>크롤러는 규모를 주지만, ‘이 데이터가 맞다’는 판단은 여전히 사람이 원본과 대조해서 한다. 6강 검증 원칙이 여기서도 그대로다.</blockquote>
+</section>
+
+<section class="section" id="case">
+  <div class="module-header m6"><div class="subtitle">9강</div><h2>수주왕과 잇기</h2></div>
+  <p>7강 경향 「수주왕」이 바로 이 강의 확장판이다. 243개 지자체가 공개한 계약정보를 <b>클로드코드로 535만여 건 추출</b>하고, 업체명을 대조해 후보를 좁힌 뒤, 등기부 500건으로 사람이 확정했다.</p>
+  <div class="callout tip"><div class="ct">같은 4단계</div>한 곳에서 긁기 → 243곳으로 반복 → 표로 정규화 → 등기부로 검증. 규모만 다를 뿐, 오늘 실습한 흐름과 똑같다.</div>
+  <p><a class="btn" href="07-case-realworld.html">7강 · 수주왕 케이스 보기</a><a class="btn ghost" href="03-data-100.html">긁어볼 데이터 고르기</a></p>
+</section>
+
+<section class="section" id="run">
+  <div class="module-header m6"><div class="subtitle">9강</div><h2>강사용 운영 노트</h2></div>
+  <ul>
+    <li><b>윤리를 먼저, 코드는 나중.</b> ‘긁기 전 4원칙’을 건너뛰면 사고가 난다. 첫 30분은 여기에 쓴다.</li>
+    <li><b>한 페이지에서 성공을 먼저.</b> 전체 크롤러를 한 번에 시키면 디버깅 지옥이다. 5건 출력부터.</li>
+    <li><b>코드 이해 강요 금지.</b> “무엇을 하는지 설명해 달라”로 충분하다. 기자의 일은 검증이다.</li>
+    <li><b>막히면 전환.</b> 우회하지 말고 정보공개청구·API로 돌리는 결정도 취재의 일부다.</li>
+    <li><b>참고 강의.</b> Knight Center <a href="https://journalismcourses.org/" target="_blank" rel="noopener">Advanced Prompt Engineering for Journalists</a>(무료 MOOC), GIJN <a href="https://gijn.org/stories/how-non-coding-journalists-build-ai-web-scrapers/" target="_blank" rel="noopener">비개발자용 AI 스크레이퍼</a>.</li>
+  </ul>
+  <div class="footer-note">
+    9강 · Claude Code로 크롤러 만들기 (중급·수집) · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
+    다음 강 — <a href="10-visualization.html">10강 · 데이터 시각화</a>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
