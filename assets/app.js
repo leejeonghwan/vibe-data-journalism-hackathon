@@ -48,7 +48,7 @@
   // 각 섹션을 화면 높이에 맞춰 페이지로 분할
   function buildDeck(){
     pages = [];
-    var stageH = main.clientHeight || (window.innerHeight - 60);
+    var cs=getComputedStyle(main); var stageH = (main.clientHeight||(window.innerHeight-60)) - (parseFloat(cs.paddingTop)||0) - (parseFloat(cs.paddingBottom)||0);
     sections.forEach(function(sec){
       var headerEl = sec.querySelector('.module-header');
       var kids = Array.prototype.slice.call(sec.children).filter(function(k){ return k!==headerEl; });
@@ -56,7 +56,7 @@
       sections.forEach(function(s){ s.classList.toggle('active', s===sec); });
       kids.forEach(function(k){ k.style.display=''; });
       var headerH = headerEl ? outer(headerEl) : 0;
-      var budget = stageH - headerH - 90;
+      var budget = stageH - headerH - 36;
       if (budget < 120) budget = stageH - 48;
       var page=[], used=0;
       kids.forEach(function(k){

@@ -232,11 +232,11 @@ body.nav-collapsed .main{margin-left:0;}
 
 /* 슬라이드(프레젠테이션) 모드 */
 body.present .sidebar{transform:translateX(-100%);}
-body.present .main{margin-left:0;max-width:none;padding:0 96px;height:calc(100vh - var(--header-h));
-  display:flex;align-items:center;justify-content:center;overflow:hidden;}
+body.present .main{margin-left:0;max-width:none;padding:52px 96px 24px;height:calc(100vh - var(--header-h));
+  display:flex;align-items:flex-start;justify-content:center;overflow:hidden;}
 body.present .section{animation:none;}
-body.present .section.active{display:flex;flex-direction:column;justify-content:center;
-  width:100%;max-width:880px;max-height:calc(100vh - var(--header-h) - 96px);overflow-y:auto;}
+body.present .section.active{display:flex;flex-direction:column;justify-content:flex-start;
+  width:100%;max-width:880px;max-height:calc(100vh - var(--header-h) - 84px);overflow-y:auto;}
 body.present .pager{display:none;}
 /* 슬라이드 모드에서 미니멀하게: 여백 키우고 폰트 살짝 업 */
 body.present .module-header{margin-bottom:26px;}
