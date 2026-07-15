@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신도시 토지 시그니처 · LH 매집 탐지 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘.</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">신도시 토지 시그니처 · LH 매집 탐지</span>
+</header>
+
+<nav class="sidebar">
+  <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
+    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
+    <a href="07-case-realworld.html"><span class="cn">7</span> 실전 케이스 (수주왕)</a>
+    <a href="08-overseas-cases.html"><span class="cn">8</span> 해외 사례 심화</a>
+    <a href="09-crawler.html"><span class="cn">9</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">10</span> 데이터 시각화</a>
+    <a href="11-hira-case.html"><span class="cn">11</span> 심평원 실습</a>
+    <a href="12-election-map.html"><span class="cn">12</span> 선거 지도</a>
+    <a href="13-lh-land.html" class="current"><span class="cn">13</span> 신도시 토지 시그니처</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="why">무엇을 만드나</a>
+  <a class="nav-item" data-s="results">주요 결과</a>
+  <a class="nav-item" data-s="signature">시그니처란</a>
+  <a class="nav-item" data-s="method">방법론 — 통제군 설계</a>
+  <a class="nav-item" data-s="prompts">프롬프트 예시</a>
+  <a class="nav-item" data-s="limits">한계와 검증</a>
+  <a class="nav-item" data-s="assignment">실습 과제</a>
+  <a class="nav-item" data-s="sources">산출물과 출처</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="why">
+  <div class="module-header m2"><div class="subtitle">신도시 토지 · 샘플</div><h2>신도시 토지 거래 시그니처 — 매집을 데이터로 잡기</h2><p>3기 신도시 발표 전, 토지 매집 패턴을 국토부 실거래가로 정량 탐지한다.</p></div>
+  <p class="lead">2021년 LH 직원 13명이 광명·시흥에서 보인 매집 '시그니처'—<b>같은 임야 필지를 여러 명이 같은 날 지분으로 분할 매수</b>—를 코드로 자동 탐지하고, 다른 신도시 후보지에 <b>같은 코드를 그대로 적용</b>해 시그니처가 재현되는지 검증한다. 규모가 커서 사람 손으로는 못 보는 패턴을, 클로드가 통제군과 비교해 드러낸다.</p>
+  <div class="hero">
+    <div class="big">"발표 전에 누가 알고 샀나"를 신호로 잡는다</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">단, 실거래가는 매수자 신원이 마스킹돼 있다. 그래서 이 분석은 "누가 샀나"가 아니라 <b>"매집 신호가 존재하는가"</b>까지를 데이터로 입증한다. 그다음은 등기부와 취재의 몫이다.</p>
+  </div>
+  <div class="callout tip"><div class="ct">이 샘플이 강력한 이유</div>통제군(비지정 인근 동)을 baseline으로 두는 <b>실험 설계</b>, 한 번 짠 탐지 코드를 다른 지구에 재적용하는 <b>재현성</b>, 그리고 "신호와 증거"를 나누는 <b>절제</b>—탐사 데이터 저널리즘의 핵심이 다 들어 있다.</div>
+</section>
+
+<section class="section" id="results">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>주요 결과 (2025-05 기준)</h2><p>지구의 거래 급증을, 같은 시·구의 비지정 동(통제군)과 비교한 '배율'로 본다.</p></div>
+  <table>
+    <thead><tr><th>지구</th><th>발표일</th><th>지구 배율</th><th>통제군 배율</th><th>격차</th><th>발표 후 잔존</th></tr></thead>
+    <tbody>
+      <tr><td>광명·시흥</td><td>2021-02-24</td><td>×1.65</td><td>×1.02</td><td><b>×1.62</b></td><td>10%</td></tr>
+      <tr><td>의왕·군포·안산 + 화성진안</td><td>2021-08-30</td><td>×1.06</td><td>×0.65</td><td><b>×1.63</b></td><td>31%</td></tr>
+    </tbody>
+  </table>
+  <div class="two">
+    <div class="col yes"><div class="h">광명·시흥 — 강한 매집 신호</div>
+      <ul>
+        <li>발표 8~12개월 전, 지구 7개 동에서 거래 <b>65% 폭증</b>.</li>
+        <li>같은 임야 필지에 같은 날 <b>17~26명이 지분 분할 매수</b>한 클러스터 다수.</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">의왕·군포·안산 — 다른 메커니즘</div>
+      <ul>
+        <li>격차 배율(×1.63)은 비슷하지만 성격이 다름.</li>
+        <li>시장 전반이 둔화된 가운데 <b>지구만 거래가 유지</b>된 약한 잔존 신호.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout warn"><div class="ct">같은 숫자, 다른 이야기</div>두 지구의 '격차 배율'이 거의 같지만(×1.62 vs ×1.63), 하나는 폭증, 하나는 둔화 속 잔존이다. 배율 하나로 뭉뚱그리지 말고 <b>메커니즘</b>을 봐야 한다는 게 이 사례의 교훈이다.</div>
+</section>
+
+<section class="section" id="signature">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>'시그니처'란 무엇인가</h2><p>매집은 흔적을 남긴다. 그 흔적을 규칙으로 정의한다.</p></div>
+  <ul>
+    <li><b>같은 날·같은 필지·다수</b> — 한 임야 필지를 같은 날 여러 명이 나눠 산다(지분 분할).</li>
+    <li><b>지목 쏠림</b> — 대지가 아니라 임야·전·답에 거래가 몰린다(보상·개발 노림).</li>
+    <li><b>발표 전 급증</b> — 지정 고시 8~12개월 전 거래량이 통제군보다 튀어 오른다.</li>
+    <li><b>같은 번지 누적</b> — 특정 번지에 거래가 반복 누적된다.</li>
+  </ul>
+  <blockquote>시그니처는 '부정의 증거'가 아니라 '어디를 파야 하는지'를 가리키는 지문이다. 지문이 나온 필지를 등기부로 넘긴다.</blockquote>
+</section>
+
+<section class="section" id="method">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>방법론 — 통제군 설계가 핵심</h2><p>거래가 는 게 '개발 기대' 때문인지 '전국적 부동산 열풍' 때문인지 가르려면 비교 대상이 필요하다.</p></div>
+  <div class="stage"><div class="head"><div class="n">1</div><h4>지구 vs 통제군 정의</h4></div>
+    <p>지정 고시에 포함된 법정동을 '지구'로, 같은 시·구 안의 <b>비지정 법정동</b>을 '통제군'으로 잡는다. 통제군의 변화가 곧 거시 요인의 baseline이다.</p></div>
+  <div class="stage"><div class="head"><div class="n">2</div><h4>실거래가 수집</h4></div>
+    <p>국토부 실거래가 공개시스템(rt.molit.go.kr)에서 시군구·연도별 토지 매매 CSV를 내려받는다.</p></div>
+  <div class="stage"><div class="head"><div class="n">3</div><h4>인코딩·정규화</h4></div>
+    <p>EUC-KR → UTF-8 변환, 날짜·지목·면적·금액 정규화. 광명·시흥 24,765건, 의왕·군포·안산 13,624건 규모.</p></div>
+  <div class="stage"><div class="head"><div class="n">4</div><h4>시그니처 탐지</h4></div>
+    <p>월별 거래 시계열(지구 vs 통제군), 같은 시군구·동·일자의 5건 이상 클러스터, 같은 번지 누적, 지분 거래 비율·지목을 규칙으로 뽑는다.</p></div>
+  <div class="stage"><div class="head"><div class="n">5</div><h4>거시요인 통제</h4></div>
+    <p>통제군 변화를 baseline으로 빼서, '지구만의' 초과 거래를 배율로 계산한다. 같은 코드를 다른 지구에 재적용해 재현성을 확인한다.</p></div>
+</section>
+
+<section class="section" id="prompts">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>프롬프트 예시</h2><p>파싱 → 통제군 비교 → 시그니처 탐지를 하나씩 시킨다.</p></div>
+  <div class="prompt"><div class="pl">① 파싱·정규화</div><div class="q">국토부 실거래가 토지 매매 CSV들(EUC-KR)을 UTF-8로 변환해 하나로 합쳐라. 계약일·법정동·지목·면적·거래금액·지분여부 컬럼을 표준화하고, 파싱 실패·빈 행은 따로 남겨라. 번지 끝자리가 *로 마스킹된 건 그대로 두되 표시해라.</div></div>
+  <div class="prompt"><div class="pl">② 지구 vs 통제군</div><div class="q">지정 고시에 포함된 법정동 목록을 '지구', 같은 시·구의 나머지 법정동을 '통제군'으로 나눠라. 발표일 전후로 월별 거래건수 시계열을 지구·통제군 각각 만들고, 통제군 대비 지구의 거래 배율을 계산해라.</div></div>
+  <div class="prompt"><div class="pl">③ 시그니처 탐지</div><div class="q">같은 시군구·동·같은 계약일에 5건 이상 몰린 거래 클러스터를 찾아라. 각 클러스터의 지목(임야·전·답 비율)과 지분 분할 매수 비율을 표로 보여주고, 같은 번지에 반복 누적된 거래도 목록화해라. 이건 신호이지 부정의 증거가 아님을 결과 상단에 명시해라.</div></div>
+</section>
+
+<section class="section" id="limits">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>한계와 검증</h2><p>데이터가 어디까지 말하는지 선을 긋는다.</p></div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ 데이터가 말하는 것</div>
+      <ul>
+        <li>"지구에서 발표 전 거래가 통제군보다 크게 튀었다."</li>
+        <li>"같은 필지·같은 날 다수 지분 매수 클러스터가 있다."</li>
+        <li>"같은 탐지 코드가 다른 지구에서도 신호를 보인다/약해진다."</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">⛔ 아직 못 하는 것</div>
+      <ul>
+        <li>"누가 샀는가" — 실거래가는 매수자 신원이 마스킹됨 → 등기부 단계.</li>
+        <li>"동일 필지 확정" — 번지 끝자리 마스킹 → 추가 확인 필요.</li>
+        <li>"내부정보로 샀다" — 동기·정보흐름은 취재로.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout tip"><div class="ct">신호 → 증거로 넘기는 다리</div>데이터가 짚어준 필지·날짜·클러스터를 <b>등기부등본</b>으로 실명 확인하고, 당사자·기관에 반론을 구한다. 수주왕(7강)이 등기부 500건으로 확정한 것과 같은 구조다.</div>
+</section>
+
+<section class="section" id="assignment">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>실습 과제</h2></div>
+  <ol>
+    <li>한 신도시 후보지를 골라 지구·통제군 법정동을 정의한다.</li>
+    <li>발표일 전 12개월 월별 거래 시계열을 지구·통제군으로 그린다.</li>
+    <li>같은 날·같은 동 5건 이상 클러스터를 찾고, 지목·지분 비율을 표로 만든다.</li>
+    <li>통제군 대비 지구 배율을 계산하고, "폭증형/잔존형" 중 어느 쪽인지 판정한다.</li>
+    <li>가장 의심스러운 필지 3개에 대해 등기부 확인 계획과 반론 질문을 작성한다.</li>
+  </ol>
+</section>
+
+<section class="section" id="sources">
+  <div class="module-header m2"><div class="subtitle">신도시 토지</div><h2>산출물과 출처</h2></div>
+  <ul>
+    <li>프로젝트 저장소 <a href="https://github.com/leejeonghwan/lh-newcity-land" target="_blank" rel="noopener">lh-newcity-land</a> — 파서(<code>parse.py</code>·<code>parse_ugas.py</code>), 통합 데이터(<code>land_all.csv</code>), 지구별 분석 페이지</li>
+    <li>국토교통부 <a href="https://rt.molit.go.kr/" target="_blank" rel="noopener">실거래가 공개시스템</a> — 시군구·연도별 토지 매매 원본</li>
+    <li>3기 신도시 지정 고시(법정동 목록) · 3기신도시 정보</li>
+  </ul>
+  <div class="callout info"><div class="ct">이 교재의 전제</div>공개 실거래가 기반 실습이다. 매집 '신호'의 존재까지를 데이터로 입증하며, 개인의 위법·내부정보 이용은 등기부·취재로 넘긴다. 신호를 증거로 단정하지 않는다.</div>
+  <div class="footer-note">
+    신도시 토지 거래 시그니처 · LH 매집 탐지 (광명·시흥 외) · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
+    관련 강 — <a href="09-crawler.html">9강 · 크롤러 만들기</a> · <a href="07-case-realworld.html">7강 · 실전 케이스(수주왕)</a>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
