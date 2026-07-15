@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4강 · 콜린알포 케이스 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<title>9강 · 콜린알포 케이스 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -12,26 +12,27 @@
   <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘.</a>
   <span class="sn">슬로우뉴스</span>
   <span class="spacer"></span>
-  <span class="mod-label">4강 · 콜린알포 케이스</span>
+  <span class="mod-label">9강 · 콜린알포 케이스</span>
 </header>
 
 <nav class="sidebar">
-  <div class="course-nav">
+    <div class="course-nav">
     <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
     <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
     <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
     <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
     <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
-    <a href="04-case-colin.html" class="current"><span class="cn">4</span> 콜린알포 케이스</a>
-    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
-    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
-    <a href="07-case-realworld.html"><span class="cn">7</span> 실전 케이스 (수주왕)</a>
-    <a href="08-overseas-cases.html"><span class="cn">8</span> 해외 사례 심화</a>
-    <a href="09-crawler.html"><span class="cn">9</span> 크롤러 만들기</a>
-    <a href="10-visualization.html"><span class="cn">10</span> 데이터 시각화</a>
+    <a href="09-crawler.html"><span class="cn">4</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">5</span> 데이터 시각화</a>
+    <a href="github.html"><span class="cn">6</span> 깃허브 원리</a>
+    <a href="05-manual.html"><span class="cn">7</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">8</span> 검증과 원칙</a>
+    <a href="04-case-colin.html" class="current"><span class="cn">9</span> 콜린알포 케이스</a>
+    <a href="07-case-realworld.html"><span class="cn">10</span> 실전 케이스 (수주왕)</a>
     <a href="11-hira-case.html"><span class="cn">11</span> 심평원 실습</a>
     <a href="12-election-map.html"><span class="cn">12</span> 선거 지도</a>
     <a href="13-lh-land.html"><span class="cn">13</span> 신도시 토지 시그니처</a>
+    <a href="08-overseas-cases.html"><span class="cn">14</span> 해외 사례 심화</a>
   </div>
   <div class="nav-group-title">이 강</div>
   <a class="nav-item active" data-s="intro">들어가며</a>
@@ -56,7 +57,7 @@
 <main class="main">
 
 <section class="section active" id="intro">
-  <div class="step-head"><div class="kicker">4강 · 심화</div><h2>콜린알포 케이스 스터디</h2><p>방대한 청구 데이터를 클로드 코워크와 코드로 다루며 '기사 가치'를 찾아간 실제 취재의 전 과정.</p></div>
+  <div class="step-head"><div class="kicker">9강 · 심화</div><h2>콜린알포 케이스 스터디</h2><p>방대한 청구 데이터를 클로드 코워크와 코드로 다루며 '기사 가치'를 찾아간 실제 취재의 전 과정.</p></div>
   <p class="lead">갈림길마다 무슨 판단을 했고, 그때 코워크에게 어떻게 시켰는지를 나란히 본다.</p>
   <div class="callout warn"><div class="ct">먼저 짚을 것</div>이 취재는 <b>아직 진행 중</b>이다. 여기 적힌 수치는 보도 확정본이 아니라 <b>분석 과정의 작업 수치</b>이고, 회사·기관에 대한 어떤 단정도 아니다. 이 강의 목적은 '결론'이 아니라 <b>결론에 이르는 사고 과정과 기법</b>을 전수하는 것이다.</div>
   <h3>이 케이스로 배우는 두 가지</h3>
@@ -202,7 +203,7 @@ params = {<span class="str">"gnlNmCd"</span>: <span class="str">"138101ACS"</spa
       <tr><td>인구 보정</td><td>인구·환자수로 정규화해도 패턴이 남나?</td><td>'많다'가 단지 '사람이 많아서'는 아닌지</td></tr>
     </tbody>
   </table>
-  <div class="callout danger"><div class="ct">절대 규칙</div>AI가 낸 수치는 <b>반드시 원본에서 사람 손으로 1건 이상 역추적</b>해 일치해야 보도한다. "코워크가 그렇게 말했다"는 근거가 아니다. 이 한 줄이 오보와 명예훼손을 막는다. (자세히는 <a href="06-verification.html">6강</a>)</div>
+  <div class="callout danger"><div class="ct">절대 규칙</div>AI가 낸 수치는 <b>반드시 원본에서 사람 손으로 1건 이상 역추적</b>해 일치해야 보도한다. "코워크가 그렇게 말했다"는 근거가 아니다. 이 한 줄이 오보와 명예훼손을 막는다. (자세히는 <a href="06-verification.html">8강</a>)</div>
 </section>
 
 <section class="section" id="express">
@@ -251,12 +252,12 @@ params = {<span class="str">"gnlNmCd"</span>: <span class="str">"138101ACS"</spa
     <li>콜린알포의 4가설 틀을 <b>그대로 빌려</b> 내 주제에 맞게 4개를 적는다.</li>
     <li>smoke test → 거시 → 정밀 순서로, 재사용 크롤러를 <b>키워드만 바꿔</b> 돌린다.</li>
     <li>가장 반직관적인 수를 찾고, <b>5가지 cross-check</b>를 통과시킨다.</li>
-    <li>표준 템플릿 대시보드에 연결해 GitHub Pages로 올린다(<a href="05-manual.html">5강</a>).</li>
+    <li>표준 템플릿 대시보드에 연결해 GitHub Pages로 올린다(<a href="05-manual.html">7강</a>).</li>
   </ol>
   <div class="callout tip"><div class="ct">멘토에게</div>초보가 1~6(판단)에서 막히는 것은 정상이다 — 거기가 기자의 일이고, 멘토가 붙어야 할 곳이다. 7~12(실행)에서 막히면 코워크에게 더 잘 물어보게 도와라. <b>멘토가 대신 코드를 짜 주면 학습은 0이 된다.</b></div>
   <div class="footer-note">
-    4강 · 콜린알포 케이스 스터디 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스 · 진행 중 취재의 교육용 재구성. 수치는 분석 과정의 작업값이며 보도 확정·단정이 아니다.<br>
-    다음 강 — <a href="05-manual.html">5강 · 프로젝트 매뉴얼</a>
+    9강 · 콜린알포 케이스 스터디 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스 · 진행 중 취재의 교육용 재구성. 수치는 분석 과정의 작업값이며 보도 확정·단정이 아니다.<br>
+    다음 강 — <a href="07-case-realworld.html">10강 · 실전 케이스 (수주왕)</a>
   </div>
 </section>
 

@@ -16,22 +16,23 @@
 </header>
 
 <nav class="sidebar">
-  <div class="course-nav">
+    <div class="course-nav">
     <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
     <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
     <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
     <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
     <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
-    <a href="04-case-colin.html"><span class="cn">4</span> 콜린알포 케이스</a>
-    <a href="05-manual.html"><span class="cn">5</span> 프로젝트 매뉴얼</a>
-    <a href="06-verification.html"><span class="cn">6</span> 검증과 원칙</a>
-    <a href="07-case-realworld.html"><span class="cn">7</span> 실전 케이스 (수주왕)</a>
-    <a href="08-overseas-cases.html"><span class="cn">8</span> 해외 사례 심화</a>
-    <a href="09-crawler.html"><span class="cn">9</span> 크롤러 만들기</a>
-    <a href="10-visualization.html"><span class="cn">10</span> 데이터 시각화</a>
+    <a href="09-crawler.html"><span class="cn">4</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">5</span> 데이터 시각화</a>
+    <a href="github.html"><span class="cn">6</span> 깃허브 원리</a>
+    <a href="05-manual.html"><span class="cn">7</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">8</span> 검증과 원칙</a>
+    <a href="04-case-colin.html"><span class="cn">9</span> 콜린알포 케이스</a>
+    <a href="07-case-realworld.html"><span class="cn">10</span> 실전 케이스 (수주왕)</a>
     <a href="11-hira-case.html"><span class="cn">11</span> 심평원 실습</a>
     <a href="12-election-map.html" class="current"><span class="cn">12</span> 선거 지도</a>
     <a href="13-lh-land.html"><span class="cn">13</span> 신도시 토지 시그니처</a>
+    <a href="08-overseas-cases.html"><span class="cn">14</span> 해외 사례 심화</a>
   </div>
   <div class="nav-group-title">이 강</div>
   <a class="nav-item active" data-s="why">무엇을 만드나</a>
@@ -49,11 +50,12 @@
 <section class="section active" id="why">
   <div class="module-header m3"><div class="subtitle">선거 지도 · 샘플</div><h2>선거 지도 만들기 — 동별 집값과 표심</h2><p>서울 424개 행정동의 집값과 2026 서울시장 선거 결과를 지도·산점도로 겹쳐, "돈과 표"의 관계를 눈으로 본다.</p></div>
   <p class="lead">개표 결과 숫자만으로는 안 보이던 것이, 동네 단위 집값과 겹치는 순간 드러난다. 이 샘플은 <b>선관위 개표 데이터 + 부동산 데이터</b>를 동 이름으로 붙여, 코로플레스 지도와 산점도를 클로드로 만드는 전 과정을 다룬다. 코딩 없이 시작하지만, 결과는 발행 가능한 인터랙티브 지도다.</p>
+  <p><a class="btn" href="https://leejeonghwan.github.io/election_map/" target="_blank" rel="noopener">대시보드 열기</a><a class="btn ghost" href="https://github.com/leejeonghwan/election_map" target="_blank" rel="noopener">저장소 보기</a></p>
   <div class="hero">
     <div class="big">"집값이 비싼 동네일수록 어느 후보를 찍었나?"</div>
     <p style="margin-bottom:0;color:var(--text-secondary)">재밌고 직관적이지만, 가장 오해하기 쉬운 질문이기도 하다. 그래서 이 강은 지도를 만드는 법만큼 <b>지도를 잘못 읽지 않는 법</b>에 무게를 둔다.</p>
   </div>
-  <div class="callout tip"><div class="ct">이 샘플이 좋은 이유</div>공개데이터가 확실하고(선관위·부동산), 지도·산점도라 결과가 직관적이며, "상관은 인과가 아니다"라는 데이터 저널리즘의 핵심 함정을 정면으로 가르칠 수 있다. 10강(시각화)의 실전 적용편이다.</div>
+  <div class="callout tip"><div class="ct">이 샘플이 좋은 이유</div>공개데이터가 확실하고(선관위·부동산), 지도·산점도라 결과가 직관적이며, "상관은 인과가 아니다"라는 데이터 저널리즘의 핵심 함정을 정면으로 가르칠 수 있다. 5강(시각화)의 실전 적용편이다.</div>
 </section>
 
 <section class="section" id="data">
@@ -110,7 +112,7 @@
       </ul>
     </div>
   </div>
-  <div class="callout tip"><div class="ct">지도 색 구간이 곧 주장이다</div>같은 데이터라도 색 구간을 등간으로 하느냐 분위로 하느냐에 따라 지도의 인상이 달라진다. 10강 원칙대로 기준을 공개하고, 인구로 정규화된 값(득표'율')을 쓴다.</div>
+  <div class="callout tip"><div class="ct">지도 색 구간이 곧 주장이다</div>같은 데이터라도 색 구간을 등간으로 하느냐 분위로 하느냐에 따라 지도의 인상이 달라진다. 5강 원칙대로 기준을 공개하고, 인구로 정규화된 값(득표'율')을 쓴다.</div>
 </section>
 
 <section class="section" id="caution">
@@ -146,7 +148,7 @@
   <div class="callout info"><div class="ct">이 교재의 전제</div>공개자료 기반 실습이다. 동 단위 경향을 개인의 투표로 단정하지 않으며, 상관을 인과로 옮기지 않는다. 지도는 취재의 출발점이지 결론이 아니다.</div>
   <div class="footer-note">
     선거 지도 만들기 · 동별 집값과 표심 (2026 서울시장) · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
-    관련 강 — <a href="10-visualization.html">10강 · 데이터 시각화</a> · <a href="06-verification.html">6강 · 검증과 원칙</a>
+    관련 강 — <a href="10-visualization.html">5강 · 데이터 시각화</a> · <a href="06-verification.html">8강 · 검증과 원칙</a>
   </div>
 </section>
 

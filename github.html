@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>깃허브 원리 — 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘.</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">6강 · 깃허브 원리</span>
+</header>
+
+<nav class="sidebar">
+    <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="09-crawler.html"><span class="cn">4</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">5</span> 데이터 시각화</a>
+    <a href="github.html" class="current"><span class="cn">6</span> 깃허브 원리</a>
+    <a href="05-manual.html"><span class="cn">7</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">8</span> 검증과 원칙</a>
+    <a href="04-case-colin.html"><span class="cn">9</span> 콜린알포 케이스</a>
+    <a href="07-case-realworld.html"><span class="cn">10</span> 실전 케이스 (수주왕)</a>
+    <a href="11-hira-case.html"><span class="cn">11</span> 심평원 실습</a>
+    <a href="12-election-map.html"><span class="cn">12</span> 선거 지도</a>
+    <a href="13-lh-land.html"><span class="cn">13</span> 신도시 토지 시그니처</a>
+    <a href="08-overseas-cases.html"><span class="cn">14</span> 해외 사례 심화</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="why">왜 기자가 깃허브를</a>
+  <a class="nav-item" data-s="concept">세 가지 개념</a>
+  <a class="nav-item" data-s="pages">깃허브 페이지 = 무료 배포</a>
+  <a class="nav-item" data-s="cowork">코딩 없이 — 코워크로</a>
+  <a class="nav-item" data-s="commands">그래도 알아둘 명령 3개</a>
+  <a class="nav-item" data-s="journalism">저널리즘에서 깃허브</a>
+  <a class="nav-item" data-s="caution">주의 — 공개의 무게</a>
+  <a class="nav-item" data-s="assignment">실습 과제</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="why">
+  <div class="module-header m1"><div class="subtitle">6강 · 제작 · 배포</div><h2>깃허브 원리 — 저장하고, 되돌리고, 공개한다</h2><p>코드를 몰라도 된다. 깃허브가 무엇을 위한 도구인지 개념만 잡는다.</p></div>
+  <p class="lead">깃허브는 프로그래머만의 것이 아니다. 데이터 저널리즘에서는 <b>작업을 안전하게 저장하고(버전), 남과 나누고(협업), 세상에 공개하는(배포)</b> 도구다. 수주왕도, 신도시 토지 분석도 데이터·코드·대시보드를 깃허브로 공개했다. 이 강의 사이트 자체도 깃허브에 올라가 있다.</p>
+  <div class="hero">
+    <div class="big">깃허브 = 구글 문서의 '버전 기록' + 무료 웹 호스팅</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">언제든 이전 상태로 되돌리고, 누가 무엇을 바꿨는지 남고, 완성물을 웹으로 공개할 수 있다. 기자에게 필요한 건 이 세 가지다.</p>
+  </div>
+  <div class="callout tip"><div class="ct">이 강의 목표</div>깃허브를 '개발 도구'가 아니라 '취재 결과를 검증 가능하게 공개하는 곳'으로 이해한다. 세부 명령은 코워크에게 시키면 된다.</div>
+</section>
+
+<section class="section" id="concept">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>세 가지 개념만 잡으면 된다</h2></div>
+  <table>
+    <thead><tr><th>개념</th><th>쉬운 비유</th><th>하는 일</th></tr></thead>
+    <tbody>
+      <tr><td><b>저장소 (Repository)</b></td><td>프로젝트 폴더 하나</td><td>한 취재의 데이터·코드·문서를 담는 통. 공개/비공개 선택.</td></tr>
+      <tr><td><b>커밋 (Commit)</b></td><td>'저장' 스냅샷 + 메모</td><td>변경을 시점별로 박제한다. "무엇을 왜 바꿨나"를 메시지로 남긴다.</td></tr>
+      <tr><td><b>푸시·풀 (Push/Pull)</b></td><td>클라우드 동기화</td><td>내 컴퓨터의 커밋을 깃허브로 올리고(push), 남의 변경을 받아온다(pull).</td></tr>
+    </tbody>
+  </table>
+  <blockquote>커밋은 '저장'이 아니라 '되돌릴 수 있는 저장'이다. 어제 잘 되던 상태로 언제든 돌아갈 수 있다는 것 — 이것이 버전 관리의 핵심이다.</blockquote>
+</section>
+
+<section class="section" id="pages">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>깃허브 페이지 = 무료 웹 배포</h2><p>저장소에 index.html을 올리면, 그게 곧 웹사이트가 된다.</p></div>
+  <ul>
+    <li>공개 저장소에서 <b>Settings → Pages</b>를 켜면 <code>아이디.github.io/저장소이름</code> 주소로 사이트가 뜬다.</li>
+    <li>서버·도메인·비용이 없다. 대시보드(단일 HTML)를 올리면 누구나 열어볼 수 있는 공개 대시보드가 된다.</li>
+    <li>수주왕의 계약 검색, 신도시 토지 분석, 이 강의 사이트가 모두 이 방식이다.</li>
+  </ul>
+  <div class="callout info"><div class="ct">이 사이트가 살아 있는 증거</div>지금 보고 있는 이 강의 페이지가 바로 깃허브 페이지로 배포된 결과물이다. 5강(시각화)에서 만든 대시보드를 여기에 얹으면 배포가 끝난다.</div>
+</section>
+
+<section class="section" id="cowork">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>코딩 없이 — 코워크로 올리기</h2><p>기자는 "올려줘"라고 말하면 된다. 명령은 클로드가 짠다.</p></div>
+  <div class="prompt"><div class="pl">복붙 — 처음 올리기</div><div class="q">이 폴더를 깃허브에 새 공개 저장소로 올려줘. 저장소 이름은 [프로젝트명]. 민감정보나 개인정보가 들어간 파일이 있으면 올리기 전에 먼저 알려줘. README도 간단히 만들어줘.</div></div>
+  <div class="expect">이런 결과 → 저장소가 생기고 파일이 올라간다. 클로드가 위험해 보이는 파일을 먼저 짚어준다.</div>
+  <div class="prompt"><div class="pl">복붙 — 수정 후 반영</div><div class="q">방금 바꾼 내용을 깃허브에 반영해줘. 무엇을 왜 바꿨는지 커밋 메시지로 남기고, 푸시해줘.</div></div>
+  <div class="callout tip"><div class="ct">깃허브 몰라도 된다</div>7강 매뉴얼의 "깃허브에 올려줘"와 같다. 개념(저장소·커밋·푸시)만 알면, 실행은 코워크가 대신한다.</div>
+</section>
+
+<section class="section" id="commands">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>그래도 알아둘 명령 3개</h2><p>터미널을 직접 쓸 때를 위해. 딱 이 셋이면 90%가 된다.</p></div>
+  <div class="code-block"><div class="ch"><span>터미널</span><span>git</span></div><pre><span class="cm"># 1) 바뀐 파일을 담는다</span>
+git add -A
+<span class="cm"># 2) 스냅샷 + 메모로 박제</span>
+git commit -m "무엇을 왜 바꿨는지"
+<span class="cm"># 3) 깃허브로 올린다</span>
+git push</pre></div>
+  <div class="callout warn"><div class="ct">막히면</div>"권한 없음"·"잠금(index.lock)" 같은 에러가 나면 그 메시지를 그대로 코워크에 붙여넣고 물어본다. 대부분 한 줄로 해결된다.</div>
+</section>
+
+<section class="section" id="journalism">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>저널리즘에서 깃허브가 왜 중요한가</h2></div>
+  <div class="two">
+    <div class="col yes"><div class="h">✅ 주는 것</div>
+      <ul>
+        <li><b>재현성</b> — 데이터·코드·방법을 공개하면 남이 검증할 수 있다.</li>
+        <li><b>신뢰</b> — "어떻게 분석했는지"를 숨기지 않는다(BuzzFeed 감시기 사례).</li>
+        <li><b>협업</b> — 여러 기자가 같은 프로젝트를 안전하게 함께 만진다.</li>
+        <li><b>무료 배포</b> — 대시보드를 독자에게 바로 공개.</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">⛔ 아닌 것</div>
+      <ul>
+        <li>깃허브는 '개발자 전용'이 아니다.</li>
+        <li>모든 걸 코딩으로 해야 하는 게 아니다(코워크).</li>
+        <li>공개가 강제는 아니다 — 비공개 저장소도 된다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="caution">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>주의 — 공개의 무게</h2><p>공개 저장소는 전 세계에 공개된다. 올리기 전에 반드시 확인한다.</p></div>
+  <ul>
+    <li><b>개인정보·취재원</b> — 실명·주민번호·연락처·미공개 제보 자료를 올리지 않는다.</li>
+    <li><b>비밀번호·토큰</b> — API 키·비밀번호를 코드에 담지 않는다(한 번 올라가면 기록에 남는다).</li>
+    <li><b>저작권·라이선스</b> — 원본 데이터의 재배포 조건을 확인한다.</li>
+    <li><b>되돌려도 남는다</b> — 커밋 기록에 흔적이 남으니, 지웠다고 안심하지 않는다.</li>
+  </ul>
+  <div class="callout warn"><div class="ct">한 줄 원칙</div>"이 파일이 지금 인터넷 검색에 떠도 괜찮은가?"를 올리기 전에 스스로 묻는다.</div>
+</section>
+
+<section class="section" id="assignment">
+  <div class="module-header m1"><div class="subtitle">6강</div><h2>실습 과제</h2></div>
+  <ol>
+    <li>연습용 폴더를 하나 만들고, 코워크로 공개 저장소에 올린다.</li>
+    <li>파일을 하나 고친 뒤, 커밋 메시지를 달아 다시 푸시한다.</li>
+    <li>Settings → Pages를 켜고, <code>아이디.github.io/저장소</code>가 열리는지 확인한다.</li>
+    <li>5강에서 만든 대시보드(단일 HTML)를 올려 공개 대시보드로 배포한다.</li>
+    <li>올리기 전에 "공개돼도 괜찮은가" 체크리스트를 스스로 통과시킨다.</li>
+  </ol>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
