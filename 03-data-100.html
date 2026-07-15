@@ -16,7 +16,7 @@
 </header>
 
 <nav class="sidebar">
-    <div class="course-nav">
+  <div class="course-nav">
     <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
     <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
     <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
@@ -34,221 +34,198 @@
     <a href="13-lh-land.html"><span class="cn">13</span> 신도시 토지 시그니처</a>
     <a href="08-overseas-cases.html"><span class="cn">14</span> 해외 사례 심화</a>
   </div>
-  <div class="nav-group-title">이 강</div>
-  <a class="nav-item active" data-s="intro">쓰는 법</a>
-  <div class="nav-group-title">분야별 (총 100)</div>
-  <a class="nav-item" data-s="c1">A 생활·인허가 <span class="ct">10</span></a>
-  <a class="nav-item" data-s="c2">B 부동산·국토 <span class="ct">10</span></a>
-  <a class="nav-item" data-s="c3">C 보건의료 <span class="ct">10</span></a>
-  <a class="nav-item" data-s="c4">D 복지·인구 <span class="ct">10</span></a>
-  <a class="nav-item" data-s="c5">E 안전·재난 <span class="ct">10</span></a>
-  <a class="nav-item" data-s="c6">F 교통·물류 <span class="ct">9</span></a>
-  <a class="nav-item" data-s="c7">G 환경·기상 <span class="ct">9</span></a>
-  <a class="nav-item" data-s="c8">H 교육 <span class="ct">8</span></a>
-  <a class="nav-item" data-s="c9">I 산업·고용·재정 <span class="ct">10</span></a>
-  <a class="nav-item" data-s="c10">J 농축수산·식품 <span class="ct">7</span></a>
-  <a class="nav-item" data-s="c11">K 문화·관광·행정 <span class="ct">7</span></a>
+  <div class="nav-group-title">이 강 — 11개 챕터</div>
+  <a class="nav-item active" data-s="how">쓰는 법</a>
+  <a class="nav-item" data-s="cat-A">A · 생활·인허가</a>
+  <a class="nav-item" data-s="cat-B">B · 부동산·국토</a>
+  <a class="nav-item" data-s="cat-C">C · 보건의료</a>
+  <a class="nav-item" data-s="cat-D">D · 복지·인구</a>
+  <a class="nav-item" data-s="cat-E">E · 안전·재난</a>
+  <a class="nav-item" data-s="cat-F">F · 교통·물류</a>
+  <a class="nav-item" data-s="cat-G">G · 환경·기상</a>
+  <a class="nav-item" data-s="cat-H">H · 교육</a>
+  <a class="nav-item" data-s="cat-I">I · 산업·고용·재정</a>
+  <a class="nav-item" data-s="cat-J">J · 농축수산·식품</a>
+  <a class="nav-item" data-s="cat-K">K · 문화·관광·행정</a>
 </nav>
 
 <main class="main">
 
-<section class="section active" id="intro">
-  <div class="cat-head"><h2>공공데이터 100선 — 던져 보기 좋은 데이터</h2><p>data.go.kr에서 "대충 던져 보고 단서를 찾기" 좋은 데이터 100개.</p></div>
-  <p class="lead">각 항목은 <b>데이터셋 + 던질 질문 + 기대 단서</b>로 되어 있다. 그대로 코워크에 던지면 탐색이 시작된다.</p>
-  <div class="callout info"><div class="ct">2강과 함께 쓴다</div>이 100선은 <a href="02-method.html">기초취재 방법론</a>의 <b>연료</b>다. 여기서 데이터를 하나 골라 "대충 던지기 → 뽑기 → 어? 포착 → 검증 → 좁히기" 루프를 돌린다. 한 항목이 곧 한 번의 실습이 된다.</div>
-
-  <h3>왜 data.go.kr 하나면 충분한가</h3>
-  <p>공공데이터포털은 <b>16개 분류</b>(공공행정·보건의료·사회복지·재난안전·환경기상 등)에 걸쳐 수만 건의 데이터를 한곳에 모아 둔다. 특히 두 가지가 초보 훈련에 결정적이다.</p>
+<section class="section active" id="how">
+  <div class="module-header m1"><div class="subtitle">3강 · 자료 은행</div><h2>공공데이터 100선</h2><p>data.go.kr에서 던져 보기 좋은 데이터 100개. 데이터셋 + 던질 질문 + 기대 단서.</p></div>
+  <p class="chapter-lead">데이터 이름을 눌러 data.go.kr에서 바로 검색하고, ‘던질 질문’을 코워크에 그대로 붙여 넣으면 탐색이 시작된다.</p>
   <ul>
-    <li><span class="tag file">파일</span> <b>파일데이터(엑셀·CSV)는 로그인·키 없이 즉시 다운로드.</b> 받아서 코워크에 던지기만 하면 된다. 초보 1순위.</li>
-    <li><span class="tag api">API</span> 오픈API는 회원가입·키 신청이 필요하지만, 시계열·전국 단위 대량 수집에 강하다. 익숙해지면 넘어간다.</li>
+    <li><b>데이터셋</b> — data.go.kr에서 검색할 이름(파일/API). 이름을 누르면 검색 결과로 이동한다.</li>
+    <li><b>던질 질문</b> — 코워크에 그대로 던지는 탐색 시작 질문.</li>
+    <li><b>기대 단서</b> — 잘 풀리면 나올 수 있는 ‘어?’. 정답이 아니라 방향이다.</li>
   </ul>
-  <p>여기에 <b>LOCALDATA</b>(지방행정 인허가 195종: 일반음식점·통신판매·미용·담배소매 등)와 <b>전국 표준데이터</b>(어린이집·주차장·도서관 등 전국을 같은 양식으로)가 더해져, "전국을 한 양식으로 비교"하는 기사가 쉬워진다.</p>
-
-  <div class="callout warn"><div class="ct">쓰기 전 한 가지</div>데이터셋의 정확한 제목·연도는 수시로 바뀐다. 표의 이름은 <b>검색 키워드</b>로 쓰고, data.go.kr 상단 검색창에 넣어 최신본을 찾는다. "파일데이터" 탭부터 보면 키 없이 받을 수 있는 것만 추려진다.</div>
-
-  <h3>각 항목 읽는 법</h3>
-  <table>
-    <thead><tr><th>칸</th><th>뜻</th></tr></thead>
-    <tbody>
-      <tr><td class="ds">데이터셋</td><td>data.go.kr에서 검색할 이름 + 파일/API 표시</td></tr>
-      <tr><td class="ds">던질 질문</td><td>코워크에 그대로 던질 탐색 시작 질문</td></tr>
-      <tr><td class="ds">기대 단서</td><td>잘 풀리면 어떤 "어?"가 나올 수 있는지 — 정답이 아니라 방향</td></tr>
-    </tbody>
-  </table>
-  <div class="prompt"><div class="pl">공통 첫 문장</div><div class="q">이 폴더의 [파일]을 원본은 두고 사본으로 작업해라. 먼저 무엇이 들었는지 훑고, 기자가 눈여겨볼 이상한 지점을 근거와 함께 짚어 달라.</div></div>
-  <div class="callout tip"><div class="ct">난이도 기준</div><span class="tag file">파일</span>은 초보·주말 실습용, <span class="tag api">API</span>는 시계열·전수 수집이 필요한 심화용. 첫 해커톤은 <b>파일데이터 위주</b>로 배정하면 데이터를 받지 못해 시간을 날리는 일이 없다.</div>
+  <div class="callout tip"><div class="ct">2강과 함께</div>이 100선은 <a href="02-method.html">기초취재 방법론</a>의 연료다. 하나 골라 “대충 던지기 → 뽑기 → 어? 포착 → 검증 → 좁히기” 루프를 돌린다.</div>
 </section>
 
-<section class="section" id="c1">
-  <div class="cat-head"><h2>A · 생활·인허가</h2><p>LOCALDATA 195종. 전국이 같은 양식이라 "어느 동네가 유독…" 비교가 쉽다. 대부분 파일.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">1</td><td class="ds">일반음식점 인허가 <span class="tag file">파일</span></td><td>개·폐업을 연도·동별로 세어 달라. 폐업률이 급등한 상권은?</td><td>특정 상권 붕괴·젠트리피케이션 신호</td></tr>
-  <tr><td class="n">2</td><td class="ds">통신판매업 신고 <span class="tag file">파일</span></td><td>같은 주소에 수십 개 신고된 곳이 있는가?</td><td>유령업체·대량신고 주소 클러스터</td></tr>
-  <tr><td class="n">3</td><td class="ds">학원·교습소 인허가 <span class="tag file">파일</span></td><td>지역별 학원 밀도와 폐업률 비교</td><td>사교육 과밀지구·학령인구 감소 충격</td></tr>
-  <tr><td class="n">4</td><td class="ds">담배소매업 지정 <span class="tag file">파일</span></td><td>학교 인근 거리기준 위반 의심 분포</td><td>청소년 접근성·규제 사각</td></tr>
-  <tr><td class="n">5</td><td class="ds">PC방·게임제공업 <span class="tag file">파일</span></td><td>10년 추이로 업종 흥망을 그려 달라</td><td>사양 업종 지도·지역 경제 변화</td></tr>
-  <tr><td class="n">6</td><td class="ds">숙박업(여관·모텔) <span class="tag file">파일</span></td><td>폐업 후 용도전환 패턴이 있는가?</td><td>러브모텔→고시원 전환 등 도시 변화</td></tr>
-  <tr><td class="n">7</td><td class="ds">노래연습장 <span class="tag file">파일</span></td><td>인구 대비 밀도 상·하위 지역</td><td>유흥 인프라 편중</td></tr>
-  <tr><td class="n">8</td><td class="ds">동물병원·동물미용 <span class="tag file">파일</span></td><td>반려동물 인프라 증가 속도 지역 비교</td><td>반려 트렌드의 지역 격차</td></tr>
-  <tr><td class="n">9</td><td class="ds">장례식장·화장시설 <span class="tag file">파일</span></td><td>고령인구 대비 시설이 부족한 지역은?</td><td>초고령 사회 인프라 공백</td></tr>
-  <tr><td class="n">10</td><td class="ds">미용업·목욕장업 <span class="tag file">파일</span></td><td>개업 대비 1년 생존율 계산</td><td>자영업 생존율·창업 위험 업종</td></tr>
-  </tbody></table>
+<section class="section" id="cat-A">
+  <div class="module-header m1"><div class="subtitle">공공데이터 100선 · A</div><h2>A · 생활·인허가</h2><p>10선.</p></div>
+  <p class="chapter-lead">동네 인허가 데이터로 상권의 개·폐업과 젠트리피케이션, 자영업 생존율을 읽는다.</p>
+  <h3>던져 볼 10선</h3>
+  <div class="ds"><div class="n">1</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9D%BC%EB%B0%98%EC%9D%8C%EC%8B%9D%EC%A0%90%20%EC%9D%B8%ED%97%88%EA%B0%80" target="_blank" rel="noopener">일반음식점 인허가</a></div><div class="q">개·폐업을 연도·동별로 세어 달라. 폐업률이 급등한 상권은?</div><div class="clue">→ 특정 상권 붕괴·젠트리피케이션 신호</div></div></div>
+  <div class="ds"><div class="n">2</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%86%B5%EC%8B%A0%ED%8C%90%EB%A7%A4%EC%97%85%20%EC%8B%A0%EA%B3%A0" target="_blank" rel="noopener">통신판매업 신고</a></div><div class="q">같은 주소에 수십 개 신고된 곳이 있는가?</div><div class="clue">→ 유령업체·대량신고 주소 클러스터</div></div></div>
+  <div class="ds"><div class="n">3</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%95%99%EC%9B%90%C2%B7%EA%B5%90%EC%8A%B5%EC%86%8C%20%EC%9D%B8%ED%97%88%EA%B0%80" target="_blank" rel="noopener">학원·교습소 인허가</a></div><div class="q">지역별 학원 밀도와 폐업률 비교</div><div class="clue">→ 사교육 과밀지구·학령인구 감소 충격</div></div></div>
+  <div class="ds"><div class="n">4</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%8B%B4%EB%B0%B0%EC%86%8C%EB%A7%A4%EC%97%85%20%EC%A7%80%EC%A0%95" target="_blank" rel="noopener">담배소매업 지정</a></div><div class="q">학교 인근 거리기준 위반 의심 분포</div><div class="clue">→ 청소년 접근성·규제 사각</div></div></div>
+  <div class="ds"><div class="n">5</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=PC%EB%B0%A9%C2%B7%EA%B2%8C%EC%9E%84%EC%A0%9C%EA%B3%B5%EC%97%85" target="_blank" rel="noopener">PC방·게임제공업</a></div><div class="q">10년 추이로 업종 흥망을 그려 달라</div><div class="clue">→ 사양 업종 지도·지역 경제 변화</div></div></div>
+  <div class="ds"><div class="n">6</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%88%99%EB%B0%95%EC%97%85%28%EC%97%AC%EA%B4%80%C2%B7%EB%AA%A8%ED%85%94%29" target="_blank" rel="noopener">숙박업(여관·모텔)</a></div><div class="q">폐업 후 용도전환 패턴이 있는가?</div><div class="clue">→ 러브모텔→고시원 전환 등 도시 변화</div></div></div>
+  <div class="ds"><div class="n">7</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%85%B8%EB%9E%98%EC%97%B0%EC%8A%B5%EC%9E%A5" target="_blank" rel="noopener">노래연습장</a></div><div class="q">인구 대비 밀도 상·하위 지역</div><div class="clue">→ 유흥 인프라 편중</div></div></div>
+  <div class="ds"><div class="n">8</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%8F%99%EB%AC%BC%EB%B3%91%EC%9B%90%C2%B7%EB%8F%99%EB%AC%BC%EB%AF%B8%EC%9A%A9" target="_blank" rel="noopener">동물병원·동물미용</a></div><div class="q">반려동물 인프라 증가 속도 지역 비교</div><div class="clue">→ 반려 트렌드의 지역 격차</div></div></div>
+  <div class="ds"><div class="n">9</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9E%A5%EB%A1%80%EC%8B%9D%EC%9E%A5%C2%B7%ED%99%94%EC%9E%A5%EC%8B%9C%EC%84%A4" target="_blank" rel="noopener">장례식장·화장시설</a></div><div class="q">고령인구 대비 시설이 부족한 지역은?</div><div class="clue">→ 초고령 사회 인프라 공백</div></div></div>
+  <div class="ds"><div class="n">10</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%AF%B8%EC%9A%A9%EC%97%85%C2%B7%EB%AA%A9%EC%9A%95%EC%9E%A5%EC%97%85" target="_blank" rel="noopener">미용업·목욕장업</a></div><div class="q">개업 대비 1년 생존율 계산</div><div class="clue">→ 자영업 생존율·창업 위험 업종</div></div></div>
 </section>
 
-<section class="section" id="c2">
-  <div class="cat-head"><h2>B · 부동산·국토</h2><p>실거래가·공시가·건축물대장. "거래가 비정상적으로 몰린 곳"이 단골 단서.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">11</td><td class="ds">아파트 매매 실거래가 <span class="tag api">API</span><span class="tag file">파일</span></td><td>특정 단지 거래량이 어느 달에 튀었나?</td><td>이상 급등락·자전거래 의심</td></tr>
-  <tr><td class="n">12</td><td class="ds">아파트 전월세 실거래가 <span class="tag api">API</span></td><td>전세가율 높은 동네를 지도로</td><td>깡통전세 위험지도</td></tr>
-  <tr><td class="n">13</td><td class="ds">토지 매매 실거래가 <span class="tag api">API</span></td><td>개발 발표 전 거래가 늘었나(통제군 비교)</td><td>사전 매집 시그니처 (LH 방식)</td></tr>
-  <tr><td class="n">14</td><td class="ds">상업업무용 부동산 실거래 <span class="tag api">API</span></td><td>법인·외지인 매수 비중 추이</td><td>외지·법인 자본 유입</td></tr>
-  <tr><td class="n">15</td><td class="ds">개별공시지가 <span class="tag file">파일</span></td><td>공시지가 대비 실거래 괴리가 큰 곳</td><td>저평가·과세 형평 문제</td></tr>
-  <tr><td class="n">16</td><td class="ds">건축물대장(표제부) <span class="tag api">API</span></td><td>노후 30년 이상 건물 밀집 지역</td><td>안전·재건축 압력 지도</td></tr>
-  <tr><td class="n">17</td><td class="ds">개발제한구역(그린벨트) <span class="tag file">파일</span></td><td>최근 해제지 인근 거래 변화</td><td>해제 수혜·투기</td></tr>
-  <tr><td class="n">18</td><td class="ds">공공임대주택 현황 <span class="tag file">파일</span></td><td>대기수요 대비 공급이 부족한 지역</td><td>주거복지 사각</td></tr>
-  <tr><td class="n">19</td><td class="ds">빈집·폐가 실태 <span class="tag file">파일</span></td><td>빈집 비율 상위 지역과 추세</td><td>지방소멸·도심 공동화</td></tr>
-  <tr><td class="n">20</td><td class="ds">외국인 토지·주택 보유 <span class="tag file">파일</span></td><td>외국인 보유 집중 지역·국적</td><td>외국 자본 부동산 유입</td></tr>
-  </tbody></table>
+<section class="section" id="cat-B">
+  <div class="module-header m2"><div class="subtitle">공공데이터 100선 · B</div><h2>B · 부동산·국토</h2><p>10선.</p></div>
+  <p class="chapter-lead">실거래가·공시지가로 집값 이상과 투기 시그니처를 잡는다.</p>
+  <h3>던져 볼 10선</h3>
+  <div class="ds"><div class="n">11</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%95%84%ED%8C%8C%ED%8A%B8%20%EB%A7%A4%EB%A7%A4%20%EC%8B%A4%EA%B1%B0%EB%9E%98%EA%B0%80" target="_blank" rel="noopener">아파트 매매 실거래가 API</a></div><div class="q">특정 단지 거래량이 어느 달에 튀었나?</div><div class="clue">→ 이상 급등락·자전거래 의심</div></div></div>
+  <div class="ds"><div class="n">12</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%84%EC%9B%94%EC%84%B8%20%EC%8B%A4%EA%B1%B0%EB%9E%98%EA%B0%80" target="_blank" rel="noopener">아파트 전월세 실거래가 API</a></div><div class="q">전세가율 높은 동네를 지도로</div><div class="clue">→ 깡통전세 위험지도</div></div></div>
+  <div class="ds"><div class="n">13</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%86%A0%EC%A7%80%20%EB%A7%A4%EB%A7%A4%20%EC%8B%A4%EA%B1%B0%EB%9E%98%EA%B0%80" target="_blank" rel="noopener">토지 매매 실거래가 API</a></div><div class="q">개발 발표 전 거래가 늘었나(통제군 비교)</div><div class="clue">→ 사전 매집 시그니처 (LH 방식)</div></div></div>
+  <div class="ds"><div class="n">14</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%83%81%EC%97%85%EC%97%85%EB%AC%B4%EC%9A%A9%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%A4%EA%B1%B0%EB%9E%98" target="_blank" rel="noopener">상업업무용 부동산 실거래 API</a></div><div class="q">법인·외지인 매수 비중 추이</div><div class="clue">→ 외지·법인 자본 유입</div></div></div>
+  <div class="ds"><div class="n">15</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B0%9C%EB%B3%84%EA%B3%B5%EC%8B%9C%EC%A7%80%EA%B0%80" target="_blank" rel="noopener">개별공시지가</a></div><div class="q">공시지가 대비 실거래 괴리가 큰 곳</div><div class="clue">→ 저평가·과세 형평 문제</div></div></div>
+  <div class="ds"><div class="n">16</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B1%B4%EC%B6%95%EB%AC%BC%EB%8C%80%EC%9E%A5%28%ED%91%9C%EC%A0%9C%EB%B6%80%29" target="_blank" rel="noopener">건축물대장(표제부) API</a></div><div class="q">노후 30년 이상 건물 밀집 지역</div><div class="clue">→ 안전·재건축 압력 지도</div></div></div>
+  <div class="ds"><div class="n">17</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B0%9C%EB%B0%9C%EC%A0%9C%ED%95%9C%EA%B5%AC%EC%97%AD%28%EA%B7%B8%EB%A6%B0%EB%B2%A8%ED%8A%B8%29" target="_blank" rel="noopener">개발제한구역(그린벨트)</a></div><div class="q">최근 해제지 인근 거래 변화</div><div class="clue">→ 해제 수혜·투기</div></div></div>
+  <div class="ds"><div class="n">18</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B3%B5%EA%B3%B5%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">공공임대주택 현황</a></div><div class="q">대기수요 대비 공급이 부족한 지역</div><div class="clue">→ 주거복지 사각</div></div></div>
+  <div class="ds"><div class="n">19</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%B9%88%EC%A7%91%C2%B7%ED%8F%90%EA%B0%80%20%EC%8B%A4%ED%83%9C" target="_blank" rel="noopener">빈집·폐가 실태</a></div><div class="q">빈집 비율 상위 지역과 추세</div><div class="clue">→ 지방소멸·도심 공동화</div></div></div>
+  <div class="ds"><div class="n">20</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%86%A0%EC%A7%80%C2%B7%EC%A3%BC%ED%83%9D%20%EB%B3%B4%EC%9C%A0" target="_blank" rel="noopener">외국인 토지·주택 보유</a></div><div class="q">외국인 보유 집중 지역·국적</div><div class="clue">→ 외국 자본 부동산 유입</div></div></div>
 </section>
 
-<section class="section" id="c3">
-  <div class="cat-head"><h2>C · 보건의료</h2><p>병의원·약국·심평원. 콜린알포가 나온 분야. 적응증·편중·비급여가 단서.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">21</td><td class="ds">병의원·치과·한의원 현황 <span class="tag file">파일</span></td><td>인구 대비 의원이 부족한 지역(필수과목)</td><td>의료격차·소아과/산부인과 공백</td></tr>
-  <tr><td class="n">22</td><td class="ds">약국 현황 <span class="tag file">파일</span></td><td>심야·공휴 약국이 없는 지역</td><td>약 접근성 사각</td></tr>
-  <tr><td class="n">23</td><td class="ds">심평원 처방·청구(의약품) <span class="tag api">API</span></td><td>특정 약의 적응증 외 처방 비중</td><td>과잉처방 (콜린알포형)</td></tr>
-  <tr><td class="n">24</td><td class="ds">비급여 진료비 공개 <span class="tag file">파일</span></td><td>같은 시술인데 병원별 가격차가 최대인 곳?</td><td>비급여 가격 폭리</td></tr>
-  <tr><td class="n">25</td><td class="ds">응급의료기관 현황 <span class="tag file">파일</span></td><td>응급실까지 거리가 먼 지역</td><td>응급의료 골든타임 공백</td></tr>
-  <tr><td class="n">26</td><td class="ds">감염병 발생 통계 <span class="tag api">API</span></td><td>특정 감염병이 지역·계절에 급증?</td><td>방역 사각·집단발생</td></tr>
-  <tr><td class="n">27</td><td class="ds">의료기관 개·폐업 <span class="tag file">파일</span></td><td>폐업이 급증한 진료과·지역</td><td>지역의료 붕괴 신호</td></tr>
-  <tr><td class="n">28</td><td class="ds">건강검진·만성질환 통계 <span class="tag file">파일</span></td><td>지역별 비만·당뇨 격차</td><td>건강 불평등</td></tr>
-  <tr><td class="n">29</td><td class="ds">정신건강·자살 통계 <span class="tag file">파일</span></td><td>지역별 자살률과 상담인프라 비교</td><td>정신건강 자원 부족</td></tr>
-  <tr><td class="n">30</td><td class="ds">요양병원·시설 평가 <span class="tag file">파일</span></td><td>저평가 시설 분포·병상 과밀</td><td>노인의료 질 격차</td></tr>
-  </tbody></table>
+<section class="section" id="cat-C">
+  <div class="module-header m3"><div class="subtitle">공공데이터 100선 · C</div><h2>C · 보건의료</h2><p>10선.</p></div>
+  <p class="chapter-lead">의료 접근성·과잉진료·건강 불평등을 짚는다.</p>
+  <h3>던져 볼 10선</h3>
+  <div class="ds"><div class="n">21</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%B3%91%EC%9D%98%EC%9B%90%C2%B7%EC%B9%98%EA%B3%BC%C2%B7%ED%95%9C%EC%9D%98%EC%9B%90%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">병의원·치과·한의원 현황</a></div><div class="q">인구 대비 의원이 부족한 지역(필수과목)</div><div class="clue">→ 의료격차·소아과/산부인과 공백</div></div></div>
+  <div class="ds"><div class="n">22</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%95%BD%EA%B5%AD%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">약국 현황</a></div><div class="q">심야·공휴 약국이 없는 지역</div><div class="clue">→ 약 접근성 사각</div></div></div>
+  <div class="ds"><div class="n">23</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%8B%AC%ED%8F%89%EC%9B%90%20%EC%B2%98%EB%B0%A9%C2%B7%EC%B2%AD%EA%B5%AC%28%EC%9D%98%EC%95%BD%ED%92%88%29" target="_blank" rel="noopener">심평원 처방·청구(의약품) API</a></div><div class="q">특정 약의 적응증 외 처방 비중</div><div class="clue">→ 과잉처방 (콜린알포형)</div></div></div>
+  <div class="ds"><div class="n">24</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%B9%84%EA%B8%89%EC%97%AC%20%EC%A7%84%EB%A3%8C%EB%B9%84%20%EA%B3%B5%EA%B0%9C" target="_blank" rel="noopener">비급여 진료비 공개</a></div><div class="q">같은 시술인데 병원별 가격차가 최대인 곳?</div><div class="clue">→ 비급여 가격 폭리</div></div></div>
+  <div class="ds"><div class="n">25</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9D%91%EA%B8%89%EC%9D%98%EB%A3%8C%EA%B8%B0%EA%B4%80%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">응급의료기관 현황</a></div><div class="q">응급실까지 거리가 먼 지역</div><div class="clue">→ 응급의료 골든타임 공백</div></div></div>
+  <div class="ds"><div class="n">26</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B0%90%EC%97%BC%EB%B3%91%20%EB%B0%9C%EC%83%9D%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">감염병 발생 통계 API</a></div><div class="q">특정 감염병이 지역·계절에 급증?</div><div class="clue">→ 방역 사각·집단발생</div></div></div>
+  <div class="ds"><div class="n">27</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9D%98%EB%A3%8C%EA%B8%B0%EA%B4%80%20%EA%B0%9C%C2%B7%ED%8F%90%EC%97%85" target="_blank" rel="noopener">의료기관 개·폐업</a></div><div class="q">폐업이 급증한 진료과·지역</div><div class="clue">→ 지역의료 붕괴 신호</div></div></div>
+  <div class="ds"><div class="n">28</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84%C2%B7%EB%A7%8C%EC%84%B1%EC%A7%88%ED%99%98%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">건강검진·만성질환 통계</a></div><div class="q">지역별 비만·당뇨 격차</div><div class="clue">→ 건강 불평등</div></div></div>
+  <div class="ds"><div class="n">29</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%C2%B7%EC%9E%90%EC%82%B4%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">정신건강·자살 통계</a></div><div class="q">지역별 자살률과 상담인프라 비교</div><div class="clue">→ 정신건강 자원 부족</div></div></div>
+  <div class="ds"><div class="n">30</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9A%94%EC%96%91%EB%B3%91%EC%9B%90%C2%B7%EC%8B%9C%EC%84%A4%20%ED%8F%89%EA%B0%80" target="_blank" rel="noopener">요양병원·시설 평가</a></div><div class="q">저평가 시설 분포·병상 과밀</div><div class="clue">→ 노인의료 질 격차</div></div></div>
 </section>
 
-<section class="section" id="c4">
-  <div class="cat-head"><h2>D · 복지·인구</h2><p>어린이집·요양·수급. 표준데이터로 전국 비교가 쉽다.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">31</td><td class="ds">어린이집 정보(표준) <span class="tag file">파일</span></td><td>영유아 대비 정원이 부족·과잉인 지역</td><td>보육 수급 불균형·폐원 위기</td></tr>
-  <tr><td class="n">32</td><td class="ds">유치원 현황·감사 <span class="tag file">파일</span></td><td>정원 충원율이 급락한 곳</td><td>학령인구 감소·사학 회계</td></tr>
-  <tr><td class="n">33</td><td class="ds">노인복지시설 현황 <span class="tag file">파일</span></td><td>고령인구 대비 시설이 부족한 지역</td><td>돌봄 공백</td></tr>
-  <tr><td class="n">34</td><td class="ds">기초생활수급자 통계 <span class="tag file">파일</span></td><td>수급률과 빈곤지표가 어긋나는 곳</td><td>복지 사각(부양의무 등)</td></tr>
-  <tr><td class="n">35</td><td class="ds">장애인 편의·시설 <span class="tag file">파일</span></td><td>이동·편의시설 미설치 지역</td><td>접근권 차별</td></tr>
-  <tr><td class="n">36</td><td class="ds">아동학대 통계 <span class="tag file">파일</span></td><td>신고 대비 분리·조치율 지역차</td><td>보호 체계 편차</td></tr>
-  <tr><td class="n">37</td><td class="ds">주민등록 인구·세대 <span class="tag file">파일</span></td><td>1인가구·고령 단독세대가 급증한 지역</td><td>고독사 위험지대</td></tr>
-  <tr><td class="n">38</td><td class="ds">국내 인구이동 통계 <span class="tag file">파일</span></td><td>청년 순유출이 심한 지역과 행선지</td><td>지방소멸·수도권 집중</td></tr>
-  <tr><td class="n">39</td><td class="ds">출생·합계출산율 <span class="tag file">파일</span></td><td>출산율 지역격차와 인프라 상관</td><td>저출생 정책 효과 점검</td></tr>
-  <tr><td class="n">40</td><td class="ds">무연고 사망·공영장례 <span class="tag file">파일</span></td><td>무연고 사망이 증가한 지역·연령</td><td>고독사 실태</td></tr>
-  </tbody></table>
+<section class="section" id="cat-D">
+  <div class="module-header m4"><div class="subtitle">공공데이터 100선 · D</div><h2>D · 복지·인구</h2><p>10선.</p></div>
+  <p class="chapter-lead">돌봄 공백과 지방소멸·고독사 위험을 찾는다.</p>
+  <h3>던져 볼 10선</h3>
+  <div class="ds"><div class="n">31</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%A7%91%20%EC%A0%95%EB%B3%B4%28%ED%91%9C%EC%A4%80%29" target="_blank" rel="noopener">어린이집 정보(표준)</a></div><div class="q">영유아 대비 정원이 부족·과잉인 지역</div><div class="clue">→ 보육 수급 불균형·폐원 위기</div></div></div>
+  <div class="ds"><div class="n">32</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9C%A0%EC%B9%98%EC%9B%90%20%ED%98%84%ED%99%A9%C2%B7%EA%B0%90%EC%82%AC" target="_blank" rel="noopener">유치원 현황·감사</a></div><div class="q">정원 충원율이 급락한 곳</div><div class="clue">→ 학령인구 감소·사학 회계</div></div></div>
+  <div class="ds"><div class="n">33</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%85%B8%EC%9D%B8%EB%B3%B5%EC%A7%80%EC%8B%9C%EC%84%A4%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">노인복지시설 현황</a></div><div class="q">고령인구 대비 시설이 부족한 지역</div><div class="clue">→ 돌봄 공백</div></div></div>
+  <div class="ds"><div class="n">34</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C%EC%88%98%EA%B8%89%EC%9E%90%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">기초생활수급자 통계</a></div><div class="q">수급률과 빈곤지표가 어긋나는 곳</div><div class="clue">→ 복지 사각(부양의무 등)</div></div></div>
+  <div class="ds"><div class="n">35</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9E%A5%EC%95%A0%EC%9D%B8%20%ED%8E%B8%EC%9D%98%C2%B7%EC%8B%9C%EC%84%A4" target="_blank" rel="noopener">장애인 편의·시설</a></div><div class="q">이동·편의시설 미설치 지역</div><div class="clue">→ 접근권 차별</div></div></div>
+  <div class="ds"><div class="n">36</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%95%84%EB%8F%99%ED%95%99%EB%8C%80%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">아동학대 통계</a></div><div class="q">신고 대비 분리·조치율 지역차</div><div class="clue">→ 보호 체계 편차</div></div></div>
+  <div class="ds"><div class="n">37</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%20%EC%9D%B8%EA%B5%AC%C2%B7%EC%84%B8%EB%8C%80" target="_blank" rel="noopener">주민등록 인구·세대</a></div><div class="q">1인가구·고령 단독세대가 급증한 지역</div><div class="clue">→ 고독사 위험지대</div></div></div>
+  <div class="ds"><div class="n">38</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B5%AD%EB%82%B4%20%EC%9D%B8%EA%B5%AC%EC%9D%B4%EB%8F%99%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">국내 인구이동 통계</a></div><div class="q">청년 순유출이 심한 지역과 행선지</div><div class="clue">→ 지방소멸·수도권 집중</div></div></div>
+  <div class="ds"><div class="n">39</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%B6%9C%EC%83%9D%C2%B7%ED%95%A9%EA%B3%84%EC%B6%9C%EC%82%B0%EC%9C%A8" target="_blank" rel="noopener">출생·합계출산율</a></div><div class="q">출산율 지역격차와 인프라 상관</div><div class="clue">→ 저출생 정책 효과 점검</div></div></div>
+  <div class="ds"><div class="n">40</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%AC%B4%EC%97%B0%EA%B3%A0%20%EC%82%AC%EB%A7%9D%C2%B7%EA%B3%B5%EC%98%81%EC%9E%A5%EB%A1%80" target="_blank" rel="noopener">무연고 사망·공영장례</a></div><div class="q">무연고 사망이 증가한 지역·연령</div><div class="clue">→ 고독사 실태</div></div></div>
 </section>
 
-<section class="section" id="c5">
-  <div class="cat-head"><h2>E · 안전·재난</h2><p>화재·교통사고·CCTV. 좌표가 있어 "핫스팟 지도"로 바로 보인다.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">41</td><td class="ds">국가화재정보 <span class="tag api">API</span><span class="tag file">파일</span></td><td>화재 원인·장소 유형이 집중된 지역</td><td>반복 화재 위험지대</td></tr>
-  <tr><td class="n">42</td><td class="ds">교통사고 정보(도로교통공단) <span class="tag api">API</span></td><td>사망사고 핫스팟을 좌표로 찍어 달라</td><td>위험 교차로·구간</td></tr>
-  <tr><td class="n">43</td><td class="ds">어린이보호구역 <span class="tag file">파일</span></td><td>스쿨존인데 사고가 잦은 곳</td><td>실효성 없는 보호구역</td></tr>
-  <tr><td class="n">44</td><td class="ds">CCTV 설치 현황 <span class="tag file">파일</span></td><td>인구·범죄 대비 CCTV가 적은 지역</td><td>안전 인프라 편중</td></tr>
-  <tr><td class="n">45</td><td class="ds">침수·홍수 위험지구 <span class="tag file">파일</span></td><td>상습침수지와 거주·시설이 겹치는 곳</td><td>기후 취약지대</td></tr>
-  <tr><td class="n">46</td><td class="ds">위험물 저장·취급시설 <span class="tag file">파일</span></td><td>주거지에 인접한 위험물시설</td><td>주민 노출 위험</td></tr>
-  <tr><td class="n">47</td><td class="ds">산업재해 발생 <span class="tag file">파일</span></td><td>업종·지역별 재해율 상위</td><td>위험 사업장·중대재해</td></tr>
-  <tr><td class="n">48</td><td class="ds">식중독 발생 통계 <span class="tag file">파일</span></td><td>학교·급식 관련 발생 추이</td><td>급식 위생 사각</td></tr>
-  <tr><td class="n">49</td><td class="ds">범죄 발생 지역통계 <span class="tag file">파일</span></td><td>범죄유형별 지역 집중도</td><td>체감 안전 격차</td></tr>
-  <tr><td class="n">50</td><td class="ds">노후 위험시설(D·E등급) <span class="tag file">파일</span></td><td>위험등급 시설 분포·방치 기간</td><td>안전점검 사각</td></tr>
-  </tbody></table>
+<section class="section" id="cat-E">
+  <div class="module-header m5"><div class="subtitle">공공데이터 100선 · E</div><h2>E · 안전·재난</h2><p>10선.</p></div>
+  <p class="chapter-lead">화재·사고·재난의 반복 위험지대를 좌표로 찍는다.</p>
+  <h3>던져 볼 10선</h3>
+  <div class="ds"><div class="n">41</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B5%AD%EA%B0%80%ED%99%94%EC%9E%AC%EC%A0%95%EB%B3%B4" target="_blank" rel="noopener">국가화재정보 API</a></div><div class="q">화재 원인·장소 유형이 집중된 지역</div><div class="clue">→ 반복 화재 위험지대</div></div></div>
+  <div class="ds"><div class="n">42</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B5%90%ED%86%B5%EC%82%AC%EA%B3%A0%20%EC%A0%95%EB%B3%B4%28%EB%8F%84%EB%A1%9C%EA%B5%90%ED%86%B5%EA%B3%B5%EB%8B%A8%29" target="_blank" rel="noopener">교통사고 정보(도로교통공단) API</a></div><div class="q">사망사고 핫스팟을 좌표로 찍어 달라</div><div class="clue">→ 위험 교차로·구간</div></div></div>
+  <div class="ds"><div class="n">43</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%B3%B4%ED%98%B8%EA%B5%AC%EC%97%AD" target="_blank" rel="noopener">어린이보호구역</a></div><div class="q">스쿨존인데 사고가 잦은 곳</div><div class="clue">→ 실효성 없는 보호구역</div></div></div>
+  <div class="ds"><div class="n">44</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=CCTV%20%EC%84%A4%EC%B9%98%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">CCTV 설치 현황</a></div><div class="q">인구·범죄 대비 CCTV가 적은 지역</div><div class="clue">→ 안전 인프라 편중</div></div></div>
+  <div class="ds"><div class="n">45</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%B9%A8%EC%88%98%C2%B7%ED%99%8D%EC%88%98%20%EC%9C%84%ED%97%98%EC%A7%80%EA%B5%AC" target="_blank" rel="noopener">침수·홍수 위험지구</a></div><div class="q">상습침수지와 거주·시설이 겹치는 곳</div><div class="clue">→ 기후 취약지대</div></div></div>
+  <div class="ds"><div class="n">46</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9C%84%ED%97%98%EB%AC%BC%20%EC%A0%80%EC%9E%A5%C2%B7%EC%B7%A8%EA%B8%89%EC%8B%9C%EC%84%A4" target="_blank" rel="noopener">위험물 저장·취급시설</a></div><div class="q">주거지에 인접한 위험물시설</div><div class="clue">→ 주민 노출 위험</div></div></div>
+  <div class="ds"><div class="n">47</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%82%B0%EC%97%85%EC%9E%AC%ED%95%B4%20%EB%B0%9C%EC%83%9D" target="_blank" rel="noopener">산업재해 발생</a></div><div class="q">업종·지역별 재해율 상위</div><div class="clue">→ 위험 사업장·중대재해</div></div></div>
+  <div class="ds"><div class="n">48</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%8B%9D%EC%A4%91%EB%8F%85%20%EB%B0%9C%EC%83%9D%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">식중독 발생 통계</a></div><div class="q">학교·급식 관련 발생 추이</div><div class="clue">→ 급식 위생 사각</div></div></div>
+  <div class="ds"><div class="n">49</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%B2%94%EC%A3%84%20%EB%B0%9C%EC%83%9D%20%EC%A7%80%EC%97%AD%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">범죄 발생 지역통계</a></div><div class="q">범죄유형별 지역 집중도</div><div class="clue">→ 체감 안전 격차</div></div></div>
+  <div class="ds"><div class="n">50</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%85%B8%ED%9B%84%20%EC%9C%84%ED%97%98%EC%8B%9C%EC%84%A4%28D%C2%B7E%EB%93%B1%EA%B8%89%29" target="_blank" rel="noopener">노후 위험시설(D·E등급)</a></div><div class="q">위험등급 시설 분포·방치 기간</div><div class="clue">→ 안전점검 사각</div></div></div>
 </section>
 
-<section class="section" id="c6">
-  <div class="cat-head"><h2>F · 교통·물류</h2><p>자동차·주차·대중교통. 생활 밀착이라 독자 반응이 좋다.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">51</td><td class="ds">자동차 등록 현황 <span class="tag file">파일</span></td><td>전기·노후 경유차 비율 지역차</td><td>친환경 전환 격차</td></tr>
-  <tr><td class="n">52</td><td class="ds">전국 주차장 정보(표준) <span class="tag file">파일</span></td><td>차량 대비 주차장이 부족한 지역</td><td>주차난 지도</td></tr>
-  <tr><td class="n">53</td><td class="ds">전기차 충전소(표준) <span class="tag file">파일</span></td><td>충전소 공백·고장 방치</td><td>전기차 인프라 격차</td></tr>
-  <tr><td class="n">54</td><td class="ds">버스 정류장·노선 <span class="tag api">API</span></td><td>대중교통 사각(정류장이 먼 거주지)</td><td>교통 소외지역</td></tr>
-  <tr><td class="n">55</td><td class="ds">택시 운행·요금 <span class="tag file">파일</span></td><td>심야 승차난 지역·시간</td><td>이동권 불균형</td></tr>
-  <tr><td class="n">56</td><td class="ds">교통량 조사 <span class="tag file">파일</span></td><td>혼잡이 급증한 구간 추이</td><td>도로 정책 우선순위</td></tr>
-  <tr><td class="n">57</td><td class="ds">공영자전거·공유 모빌리티 <span class="tag file">파일</span></td><td>대여소 이용 편중·적자 노선</td><td>예산 대비 효과</td></tr>
-  <tr><td class="n">58</td><td class="ds">철도·지하철 승하차 <span class="tag api">API</span></td><td>역별 혼잡·이용 급변</td><td>생활권 변화</td></tr>
-  <tr><td class="n">59</td><td class="ds">개인형 이동장치 사고 <span class="tag file">파일</span></td><td>킥보드 사고가 급증한 지역·연령</td><td>신종 안전 공백</td></tr>
-  </tbody></table>
+<section class="section" id="cat-F">
+  <div class="module-header m1"><div class="subtitle">공공데이터 100선 · F</div><h2>F · 교통·물류</h2><p>9선.</p></div>
+  <p class="chapter-lead">교통 소외지역과 인프라 격차를 드러낸다.</p>
+  <h3>던져 볼 9선</h3>
+  <div class="ds"><div class="n">51</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9E%90%EB%8F%99%EC%B0%A8%20%EB%93%B1%EB%A1%9D%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">자동차 등록 현황</a></div><div class="q">전기·노후 경유차 비율 지역차</div><div class="clue">→ 친환경 전환 격차</div></div></div>
+  <div class="ds"><div class="n">52</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%84%EA%B5%AD%20%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%95%EB%B3%B4%28%ED%91%9C%EC%A4%80%29" target="_blank" rel="noopener">전국 주차장 정보(표준)</a></div><div class="q">차량 대비 주차장이 부족한 지역</div><div class="clue">→ 주차난 지도</div></div></div>
+  <div class="ds"><div class="n">53</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%84%EA%B8%B0%EC%B0%A8%20%EC%B6%A9%EC%A0%84%EC%86%8C%28%ED%91%9C%EC%A4%80%29" target="_blank" rel="noopener">전기차 충전소(표준)</a></div><div class="q">충전소 공백·고장 방치</div><div class="clue">→ 전기차 인프라 격차</div></div></div>
+  <div class="ds"><div class="n">54</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%B2%84%EC%8A%A4%20%EC%A0%95%EB%A5%98%EC%9E%A5%C2%B7%EB%85%B8%EC%84%A0" target="_blank" rel="noopener">버스 정류장·노선 API</a></div><div class="q">대중교통 사각(정류장이 먼 거주지)</div><div class="clue">→ 교통 소외지역</div></div></div>
+  <div class="ds"><div class="n">55</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%83%9D%EC%8B%9C%20%EC%9A%B4%ED%96%89%C2%B7%EC%9A%94%EA%B8%88" target="_blank" rel="noopener">택시 운행·요금</a></div><div class="q">심야 승차난 지역·시간</div><div class="clue">→ 이동권 불균형</div></div></div>
+  <div class="ds"><div class="n">56</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B5%90%ED%86%B5%EB%9F%89%20%EC%A1%B0%EC%82%AC" target="_blank" rel="noopener">교통량 조사</a></div><div class="q">혼잡이 급증한 구간 추이</div><div class="clue">→ 도로 정책 우선순위</div></div></div>
+  <div class="ds"><div class="n">57</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B3%B5%EC%98%81%EC%9E%90%EC%A0%84%EA%B1%B0%C2%B7%EA%B3%B5%EC%9C%A0%20%EB%AA%A8%EB%B9%8C%EB%A6%AC%ED%8B%B0" target="_blank" rel="noopener">공영자전거·공유 모빌리티</a></div><div class="q">대여소 이용 편중·적자 노선</div><div class="clue">→ 예산 대비 효과</div></div></div>
+  <div class="ds"><div class="n">58</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%B2%A0%EB%8F%84%C2%B7%EC%A7%80%ED%95%98%EC%B2%A0%20%EC%8A%B9%ED%95%98%EC%B0%A8" target="_blank" rel="noopener">철도·지하철 승하차 API</a></div><div class="q">역별 혼잡·이용 급변</div><div class="clue">→ 생활권 변화</div></div></div>
+  <div class="ds"><div class="n">59</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B0%9C%EC%9D%B8%ED%98%95%20%EC%9D%B4%EB%8F%99%EC%9E%A5%EC%B9%98%20%EC%82%AC%EA%B3%A0" target="_blank" rel="noopener">개인형 이동장치 사고</a></div><div class="q">킥보드 사고가 급증한 지역·연령</div><div class="clue">→ 신종 안전 공백</div></div></div>
 </section>
 
-<section class="section" id="c7">
-  <div class="cat-head"><h2>G · 환경·기상</h2><p>대기·수질·폐기물·에너지. 전력망 시뮬레이터의 연장.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">60</td><td class="ds">대기오염(미세먼지) 측정 <span class="tag api">API</span></td><td>측정소별 초과일수·악화 지역</td><td>대기질 불평등</td></tr>
-  <tr><td class="n">61</td><td class="ds">사업장 대기·수질 배출 <span class="tag file">파일</span></td><td>신고 대비 초과 배출 사업장</td><td>오염 배출 관리 사각</td></tr>
-  <tr><td class="n">62</td><td class="ds">폐기물 발생·처리 <span class="tag file">파일</span></td><td>처리시설 인근 vs 발생지 불일치</td><td>폐기물 이동·님비</td></tr>
-  <tr><td class="n">63</td><td class="ds">온실가스 배출 통계 <span class="tag file">파일</span></td><td>지역·업종별 배출 집중</td><td>탄소 다배출원</td></tr>
-  <tr><td class="n">64</td><td class="ds">상수도 통계(누수) <span class="tag file">파일</span></td><td>누수율이 높은 지자체와 노후관</td><td>물 새는 지자체</td></tr>
-  <tr><td class="n">65</td><td class="ds">재생에너지 발전 현황 <span class="tag file">파일</span></td><td>태양광이 급증한 지역·민원</td><td>입지 갈등·출력제어</td></tr>
-  <tr><td class="n">66</td><td class="ds">화학물질 배출·이동(PRTR) <span class="tag file">파일</span></td><td>발암물질 배출 상위 사업장</td><td>유해물질 노출</td></tr>
-  <tr><td class="n">67</td><td class="ds">소음·진동 측정 <span class="tag file">파일</span></td><td>주거지 소음 기준 초과 지점</td><td>생활환경 침해</td></tr>
-  <tr><td class="n">68</td><td class="ds">기상·폭염·한파 통계 <span class="tag api">API</span></td><td>폭염일수가 급증한 지역과 취약계층</td><td>기후 취약지도</td></tr>
-  </tbody></table>
+<section class="section" id="cat-G">
+  <div class="module-header m2"><div class="subtitle">공공데이터 100선 · G</div><h2>G · 환경·기상</h2><p>9선.</p></div>
+  <p class="chapter-lead">오염 배출과 기후 취약지도를 그린다.</p>
+  <h3>던져 볼 9선</h3>
+  <div class="ds"><div class="n">60</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%8C%80%EA%B8%B0%EC%98%A4%EC%97%BC%28%EB%AF%B8%EC%84%B8%EB%A8%BC%EC%A7%80%29%20%EC%B8%A1%EC%A0%95" target="_blank" rel="noopener">대기오염(미세먼지) 측정 API</a></div><div class="q">측정소별 초과일수·악화 지역</div><div class="clue">→ 대기질 불평등</div></div></div>
+  <div class="ds"><div class="n">61</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%82%AC%EC%97%85%EC%9E%A5%20%EB%8C%80%EA%B8%B0%C2%B7%EC%88%98%EC%A7%88%20%EB%B0%B0%EC%B6%9C" target="_blank" rel="noopener">사업장 대기·수질 배출</a></div><div class="q">신고 대비 초과 배출 사업장</div><div class="clue">→ 오염 배출 관리 사각</div></div></div>
+  <div class="ds"><div class="n">62</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%8F%90%EA%B8%B0%EB%AC%BC%20%EB%B0%9C%EC%83%9D%C2%B7%EC%B2%98%EB%A6%AC" target="_blank" rel="noopener">폐기물 발생·처리</a></div><div class="q">처리시설 인근 vs 발생지 불일치</div><div class="clue">→ 폐기물 이동·님비</div></div></div>
+  <div class="ds"><div class="n">63</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%98%A8%EC%8B%A4%EA%B0%80%EC%8A%A4%20%EB%B0%B0%EC%B6%9C%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">온실가스 배출 통계</a></div><div class="q">지역·업종별 배출 집중</div><div class="clue">→ 탄소 다배출원</div></div></div>
+  <div class="ds"><div class="n">64</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%83%81%EC%88%98%EB%8F%84%20%ED%86%B5%EA%B3%84%28%EB%88%84%EC%88%98%29" target="_blank" rel="noopener">상수도 통계(누수)</a></div><div class="q">누수율이 높은 지자체와 노후관</div><div class="clue">→ 물 새는 지자체</div></div></div>
+  <div class="ds"><div class="n">65</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EB%B0%9C%EC%A0%84%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">재생에너지 발전 현황</a></div><div class="q">태양광이 급증한 지역·민원</div><div class="clue">→ 입지 갈등·출력제어</div></div></div>
+  <div class="ds"><div class="n">66</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%99%94%ED%95%99%EB%AC%BC%EC%A7%88%20%EB%B0%B0%EC%B6%9C%C2%B7%EC%9D%B4%EB%8F%99%28PRTR%29" target="_blank" rel="noopener">화학물질 배출·이동(PRTR)</a></div><div class="q">발암물질 배출 상위 사업장</div><div class="clue">→ 유해물질 노출</div></div></div>
+  <div class="ds"><div class="n">67</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%86%8C%EC%9D%8C%C2%B7%EC%A7%84%EB%8F%99%20%EC%B8%A1%EC%A0%95" target="_blank" rel="noopener">소음·진동 측정</a></div><div class="q">주거지 소음 기준 초과 지점</div><div class="clue">→ 생활환경 침해</div></div></div>
+  <div class="ds"><div class="n">68</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B8%B0%EC%83%81%C2%B7%ED%8F%AD%EC%97%BC%C2%B7%ED%95%9C%ED%8C%8C%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">기상·폭염·한파 통계 API</a></div><div class="q">폭염일수가 급증한 지역과 취약계층</div><div class="clue">→ 기후 취약지도</div></div></div>
 </section>
 
-<section class="section" id="c8">
-  <div class="cat-head"><h2>H · 교육</h2><p>학교·급식·도서관. 학령인구 감소가 큰 흐름.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">69</td><td class="ds">전국 초중고 현황(표준) <span class="tag file">파일</span></td><td>학생 수 급감·통폐합 위기 학교</td><td>지방 학교 소멸</td></tr>
-  <tr><td class="n">70</td><td class="ds">대학 입학정원·충원율 <span class="tag file">파일</span></td><td>충원율 미달 대학·학과 추이</td><td>대학 위기·미충원</td></tr>
-  <tr><td class="n">71</td><td class="ds">학교급식 식재료·납품 <span class="tag file">파일</span></td><td>특정 업체 납품 편중이 있는가?</td><td>급식 납품 구조</td></tr>
-  <tr><td class="n">72</td><td class="ds">사교육비·학원 통계 <span class="tag file">파일</span></td><td>지역별 사교육비 격차</td><td>교육 불평등</td></tr>
-  <tr><td class="n">73</td><td class="ds">학업중단·학교밖 청소년 <span class="tag file">파일</span></td><td>중단율이 높은 지역·학년</td><td>교육 이탈 사각</td></tr>
-  <tr><td class="n">74</td><td class="ds">전국 도서관 정보(표준) <span class="tag file">파일</span></td><td>인구 대비 장서·예산 격차</td><td>문화 인프라 불균형</td></tr>
-  <tr><td class="n">75</td><td class="ds">학교폭력 실태 <span class="tag file">파일</span></td><td>유형별 증가·처리 지역차</td><td>대응 편차</td></tr>
-  <tr><td class="n">76</td><td class="ds">특수교육 대상·시설 <span class="tag file">파일</span></td><td>대상 학생 대비 시설·교사 부족</td><td>특수교육 공백</td></tr>
-  </tbody></table>
+<section class="section" id="cat-H">
+  <div class="module-header m3"><div class="subtitle">공공데이터 100선 · H</div><h2>H · 교육</h2><p>8선.</p></div>
+  <p class="chapter-lead">학교 소멸·사교육·교육 불평등을 본다.</p>
+  <h3>던져 볼 8선</h3>
+  <div class="ds"><div class="n">69</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%84%EA%B5%AD%20%EC%B4%88%EC%A4%91%EA%B3%A0%20%ED%98%84%ED%99%A9%28%ED%91%9C%EC%A4%80%29" target="_blank" rel="noopener">전국 초중고 현황(표준)</a></div><div class="q">학생 수 급감·통폐합 위기 학교</div><div class="clue">→ 지방 학교 소멸</div></div></div>
+  <div class="ds"><div class="n">70</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%8C%80%ED%95%99%20%EC%9E%85%ED%95%99%EC%A0%95%EC%9B%90%C2%B7%EC%B6%A9%EC%9B%90%EC%9C%A8" target="_blank" rel="noopener">대학 입학정원·충원율</a></div><div class="q">충원율 미달 대학·학과 추이</div><div class="clue">→ 대학 위기·미충원</div></div></div>
+  <div class="ds"><div class="n">71</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%95%99%EA%B5%90%EA%B8%89%EC%8B%9D%20%EC%8B%9D%EC%9E%AC%EB%A3%8C%C2%B7%EB%82%A9%ED%92%88" target="_blank" rel="noopener">학교급식 식재료·납품</a></div><div class="q">특정 업체 납품 편중이 있는가?</div><div class="clue">→ 급식 납품 구조</div></div></div>
+  <div class="ds"><div class="n">72</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%82%AC%EA%B5%90%EC%9C%A1%EB%B9%84%C2%B7%ED%95%99%EC%9B%90%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">사교육비·학원 통계</a></div><div class="q">지역별 사교육비 격차</div><div class="clue">→ 교육 불평등</div></div></div>
+  <div class="ds"><div class="n">73</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%95%99%EC%97%85%EC%A4%91%EB%8B%A8%C2%B7%ED%95%99%EA%B5%90%EB%B0%96%20%EC%B2%AD%EC%86%8C%EB%85%84" target="_blank" rel="noopener">학업중단·학교밖 청소년</a></div><div class="q">중단율이 높은 지역·학년</div><div class="clue">→ 교육 이탈 사각</div></div></div>
+  <div class="ds"><div class="n">74</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%84%EA%B5%AD%20%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%A0%95%EB%B3%B4%28%ED%91%9C%EC%A4%80%29" target="_blank" rel="noopener">전국 도서관 정보(표준)</a></div><div class="q">인구 대비 장서·예산 격차</div><div class="clue">→ 문화 인프라 불균형</div></div></div>
+  <div class="ds"><div class="n">75</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%95%99%EA%B5%90%ED%8F%AD%EB%A0%A5%20%EC%8B%A4%ED%83%9C" target="_blank" rel="noopener">학교폭력 실태</a></div><div class="q">유형별 증가·처리 지역차</div><div class="clue">→ 대응 편차</div></div></div>
+  <div class="ds"><div class="n">76</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%ED%8A%B9%EC%88%98%EA%B5%90%EC%9C%A1%20%EB%8C%80%EC%83%81%C2%B7%EC%8B%9C%EC%84%A4" target="_blank" rel="noopener">특수교육 대상·시설</a></div><div class="q">대상 학생 대비 시설·교사 부족</div><div class="clue">→ 특수교육 공백</div></div></div>
 </section>
 
-<section class="section" id="c9">
-  <div class="cat-head"><h2>I · 산업·고용·재정</h2><p>상권·계약·보조금·공공기관. 돈의 흐름이 곧 기사.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">77</td><td class="ds">소상공인 상가(상권) 정보 <span class="tag api">API</span><span class="tag file">파일</span></td><td>업종 과밀·공실이 급증한 상권</td><td>자영업 위기 상권</td></tr>
-  <tr><td class="n">78</td><td class="ds">나라장터 입찰·계약 <span class="tag api">API</span></td><td>특정 업체 수의계약 집중도</td><td>편중 계약·전관</td></tr>
-  <tr><td class="n">79</td><td class="ds">국고보조금 교부 <span class="tag file">파일</span></td><td>같은 단체가 여러 사업을 수령했나?</td><td>보조금 중복·쏠림</td></tr>
-  <tr><td class="n">80</td><td class="ds">지방재정(세출·업무추진비) <span class="tag file">파일</span></td><td>연말 몰아쓰기·특정 항목 급증</td><td>예산 낭비 정황</td></tr>
-  <tr><td class="n">81</td><td class="ds">공공기관 경영정보(ALIO) <span class="tag file">파일</span></td><td>부채·임원 보수·복리후생 비교</td><td>방만 경영</td></tr>
-  <tr><td class="n">82</td><td class="ds">임금체불 사업장 <span class="tag file">파일</span></td><td>체불 상습·금액 상위 사업장</td><td>체불 명단 지도</td></tr>
-  <tr><td class="n">83</td><td class="ds">고용·실업 지역통계 <span class="tag file">파일</span></td><td>청년 고용률이 급락한 지역</td><td>고용 위기 지역</td></tr>
-  <tr><td class="n">84</td><td class="ds">사업체 통계(전수) <span class="tag file">파일</span></td><td>업종 증감으로 본 산업 구조변화</td><td>지역 산업 흥망</td></tr>
-  <tr><td class="n">85</td><td class="ds">전통시장·상점가 현황 <span class="tag file">파일</span></td><td>지원 대비 공실·매출 변화</td><td>시장 활성화 효과 점검</td></tr>
-  <tr><td class="n">86</td><td class="ds">지방세 체납·결손 <span class="tag file">파일</span></td><td>고액 체납 추이·결손 처리</td><td>징수 형평·봐주기</td></tr>
-  </tbody></table>
+<section class="section" id="cat-I">
+  <div class="module-header m4"><div class="subtitle">공공데이터 100선 · I</div><h2>I · 산업·고용·재정</h2><p>10선.</p></div>
+  <p class="chapter-lead">계약 편중·보조금 쏠림·예산 낭비·고용 위기를 캔다.</p>
+  <h3>던져 볼 10선</h3>
+  <div class="ds"><div class="n">77</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EC%83%81%EA%B0%80%28%EC%83%81%EA%B6%8C%29%20%EC%A0%95%EB%B3%B4" target="_blank" rel="noopener">소상공인 상가(상권) 정보 API</a></div><div class="q">업종 과밀·공실이 급증한 상권</div><div class="clue">→ 자영업 위기 상권</div></div></div>
+  <div class="ds"><div class="n">78</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%82%98%EB%9D%BC%EC%9E%A5%ED%84%B0%20%EC%9E%85%EC%B0%B0%C2%B7%EA%B3%84%EC%95%BD" target="_blank" rel="noopener">나라장터 입찰·계약 API</a></div><div class="q">특정 업체 수의계약 집중도</div><div class="clue">→ 편중 계약·전관</div></div></div>
+  <div class="ds"><div class="n">79</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B5%AD%EA%B3%A0%EB%B3%B4%EC%A1%B0%EA%B8%88%20%EA%B5%90%EB%B6%80" target="_blank" rel="noopener">국고보조금 교부</a></div><div class="q">같은 단체가 여러 사업을 수령했나?</div><div class="clue">→ 보조금 중복·쏠림</div></div></div>
+  <div class="ds"><div class="n">80</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A7%80%EB%B0%A9%EC%9E%AC%EC%A0%95%28%EC%84%B8%EC%B6%9C%C2%B7%EC%97%85%EB%AC%B4%EC%B6%94%EC%A7%84%EB%B9%84%29" target="_blank" rel="noopener">지방재정(세출·업무추진비)</a></div><div class="q">연말 몰아쓰기·특정 항목 급증</div><div class="clue">→ 예산 낭비 정황</div></div></div>
+  <div class="ds"><div class="n">81</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B3%B5%EA%B3%B5%EA%B8%B0%EA%B4%80%20%EA%B2%BD%EC%98%81%EC%A0%95%EB%B3%B4%28ALIO%29" target="_blank" rel="noopener">공공기관 경영정보(ALIO)</a></div><div class="q">부채·임원 보수·복리후생 비교</div><div class="clue">→ 방만 경영</div></div></div>
+  <div class="ds"><div class="n">82</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9E%84%EA%B8%88%EC%B2%B4%EB%B6%88%20%EC%82%AC%EC%97%85%EC%9E%A5" target="_blank" rel="noopener">임금체불 사업장</a></div><div class="q">체불 상습·금액 상위 사업장</div><div class="clue">→ 체불 명단 지도</div></div></div>
+  <div class="ds"><div class="n">83</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B3%A0%EC%9A%A9%C2%B7%EC%8B%A4%EC%97%85%20%EC%A7%80%EC%97%AD%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">고용·실업 지역통계</a></div><div class="q">청년 고용률이 급락한 지역</div><div class="clue">→ 고용 위기 지역</div></div></div>
+  <div class="ds"><div class="n">84</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%82%AC%EC%97%85%EC%B2%B4%20%ED%86%B5%EA%B3%84%28%EC%A0%84%EC%88%98%29" target="_blank" rel="noopener">사업체 통계(전수)</a></div><div class="q">업종 증감으로 본 산업 구조변화</div><div class="clue">→ 지역 산업 흥망</div></div></div>
+  <div class="ds"><div class="n">85</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%84%ED%86%B5%EC%8B%9C%EC%9E%A5%C2%B7%EC%83%81%EC%A0%90%EA%B0%80%20%ED%98%84%ED%99%A9" target="_blank" rel="noopener">전통시장·상점가 현황</a></div><div class="q">지원 대비 공실·매출 변화</div><div class="clue">→ 시장 활성화 효과 점검</div></div></div>
+  <div class="ds"><div class="n">86</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A7%80%EB%B0%A9%EC%84%B8%20%EC%B2%B4%EB%82%A9%C2%B7%EA%B2%B0%EC%86%90" target="_blank" rel="noopener">지방세 체납·결손</a></div><div class="q">고액 체납 추이·결손 처리</div><div class="clue">→ 징수 형평·봐주기</div></div></div>
 </section>
 
-<section class="section" id="c10">
-  <div class="cat-head"><h2>J · 농축수산·식품</h2><p>가격·방역·안전. 생활물가와 직결.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">87</td><td class="ds">농수산물 도소매 가격 <span class="tag api">API</span></td><td>산지·소비자 가격차(유통마진)</td><td>유통 폭리 구간</td></tr>
-  <tr><td class="n">88</td><td class="ds">가축전염병 발생 <span class="tag file">파일</span></td><td>발생지 확산 경로·살처분 규모</td><td>방역 구멍</td></tr>
-  <tr><td class="n">89</td><td class="ds">식품 위해·회수(리콜) <span class="tag api">API</span></td><td>회수가 잦은 품목·제조사</td><td>반복 위반 업체</td></tr>
-  <tr><td class="n">90</td><td class="ds">농약·잔류허용 검사 <span class="tag file">파일</span></td><td>부적합이 잦은 품목·산지</td><td>먹거리 안전</td></tr>
-  <tr><td class="n">91</td><td class="ds">원산지 표시 위반 <span class="tag file">파일</span></td><td>위반 업종·지역 집중</td><td>둔갑판매 패턴</td></tr>
-  <tr><td class="n">92</td><td class="ds">축산물 이력 <span class="tag api">API</span></td><td>이력 누락·전환 이상</td><td>유통 추적 사각</td></tr>
-  <tr><td class="n">93</td><td class="ds">농지·경자유전 통계 <span class="tag file">파일</span></td><td>비농민 소유·외지인 비중</td><td>농지 투기</td></tr>
-  </tbody></table>
+<section class="section" id="cat-J">
+  <div class="module-header m5"><div class="subtitle">공공데이터 100선 · J</div><h2>J · 농축수산·식품</h2><p>7선.</p></div>
+  <p class="chapter-lead">유통 폭리·먹거리 안전·농지 투기를 짚는다.</p>
+  <h3>던져 볼 7선</h3>
+  <div class="ds"><div class="n">87</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%86%8D%EC%88%98%EC%82%B0%EB%AC%BC%20%EB%8F%84%EC%86%8C%EB%A7%A4%20%EA%B0%80%EA%B2%A9" target="_blank" rel="noopener">농수산물 도소매 가격 API</a></div><div class="q">산지·소비자 가격차(유통마진)</div><div class="clue">→ 유통 폭리 구간</div></div></div>
+  <div class="ds"><div class="n">88</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B0%80%EC%B6%95%EC%A0%84%EC%97%BC%EB%B3%91%20%EB%B0%9C%EC%83%9D" target="_blank" rel="noopener">가축전염병 발생</a></div><div class="q">발생지 확산 경로·살처분 규모</div><div class="clue">→ 방역 구멍</div></div></div>
+  <div class="ds"><div class="n">89</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%8B%9D%ED%92%88%20%EC%9C%84%ED%95%B4%C2%B7%ED%9A%8C%EC%88%98%28%EB%A6%AC%EC%BD%9C%29" target="_blank" rel="noopener">식품 위해·회수(리콜) API</a></div><div class="q">회수가 잦은 품목·제조사</div><div class="clue">→ 반복 위반 업체</div></div></div>
+  <div class="ds"><div class="n">90</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%86%8D%EC%95%BD%C2%B7%EC%9E%94%EB%A5%98%ED%97%88%EC%9A%A9%20%EA%B2%80%EC%82%AC" target="_blank" rel="noopener">농약·잔류허용 검사</a></div><div class="q">부적합이 잦은 품목·산지</div><div class="clue">→ 먹거리 안전</div></div></div>
+  <div class="ds"><div class="n">91</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%9B%90%EC%82%B0%EC%A7%80%20%ED%91%9C%EC%8B%9C%20%EC%9C%84%EB%B0%98" target="_blank" rel="noopener">원산지 표시 위반</a></div><div class="q">위반 업종·지역 집중</div><div class="clue">→ 둔갑판매 패턴</div></div></div>
+  <div class="ds"><div class="n">92</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%B6%95%EC%82%B0%EB%AC%BC%20%EC%9D%B4%EB%A0%A5" target="_blank" rel="noopener">축산물 이력 API</a></div><div class="q">이력 누락·전환 이상</div><div class="clue">→ 유통 추적 사각</div></div></div>
+  <div class="ds"><div class="n">93</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%86%8D%EC%A7%80%C2%B7%EA%B2%BD%EC%9E%90%EC%9C%A0%EC%A0%84%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">농지·경자유전 통계</a></div><div class="q">비농민 소유·외지인 비중</div><div class="clue">→ 농지 투기</div></div></div>
 </section>
 
-<section class="section" id="c11">
-  <div class="cat-head"><h2>K · 문화·관광·행정</h2><p>시설·예약·민원. 예산 대비 효과를 보기 좋다.</p></div>
-  <table><thead><tr><th>#</th><th>데이터셋</th><th>던질 질문</th><th>기대 단서</th></tr></thead><tbody>
-  <tr><td class="n">94</td><td class="ds">관광지 방문자 통계 <span class="tag api">API</span></td><td>예산 투입 대비 방문이 정체된 관광지</td><td>혈세 관광사업 점검</td></tr>
-  <tr><td class="n">95</td><td class="ds">공공시설 예약·이용 <span class="tag file">파일</span></td><td>이용률 저조·특정인 독점 예약</td><td>공공자원 편중</td></tr>
-  <tr><td class="n">96</td><td class="ds">체육시설·생활체육 <span class="tag file">파일</span></td><td>인구 대비 시설이 부족한 지역</td><td>생활체육 격차</td></tr>
-  <tr><td class="n">97</td><td class="ds">공유재산·국유지 <span class="tag file">파일</span></td><td>저가 임대·유휴 방치 자산</td><td>공공자산 관리 부실</td></tr>
-  <tr><td class="n">98</td><td class="ds">정보공개 청구·처리 <span class="tag file">파일</span></td><td>비공개율이 높은 기관·항목</td><td>깜깜이 행정</td></tr>
-  <tr><td class="n">99</td><td class="ds">민원·콜센터 통계 <span class="tag file">파일</span></td><td>급증한 민원 유형·지역</td><td>숨은 생활 현안</td></tr>
-  <tr><td class="n">100</td><td class="ds">지방의회 의정·예산 <span class="tag file">파일</span></td><td>의정비·출장·조례 처리 비교</td><td>일 안 하는 의회</td></tr>
-  </tbody></table>
-  <div class="callout tip"><div class="ct">100을 넘기는 법</div>위 100개 대부분은 <b>전국이 같은 양식</b>(표준데이터·LOCALDATA)이라, <b>같은 분석을 다른 시·도/연도에 재적용</b>하면 수백 개로 불어난다. "서울로 한 것을 부산으로" — 가장 빠른 양산법이자, 초보의 두 번째 프로젝트로 안성맞춤이다.</div>
-  <div class="footer-note">
-    3강 · 공공데이터 100선 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스<br>
-    분류·데이터 유형은 data.go.kr 기준. 정확한 제목·연도는 포털 검색으로 확인. · 다음 강 — <a href="09-crawler.html">4강 · 크롤러 만들기</a>
-  </div>
+<section class="section" id="cat-K">
+  <div class="module-header m1"><div class="subtitle">공공데이터 100선 · K</div><h2>K · 문화·관광·행정</h2><p>7선.</p></div>
+  <p class="chapter-lead">혈세 사업·공공자산 방치·깜깜이 행정을 본다.</p>
+  <h3>던져 볼 7선</h3>
+  <div class="ds"><div class="n">94</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B4%80%EA%B4%91%EC%A7%80%20%EB%B0%A9%EB%AC%B8%EC%9E%90%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">관광지 방문자 통계 API</a></div><div class="q">예산 투입 대비 방문이 정체된 관광지</div><div class="clue">→ 혈세 관광사업 점검</div></div></div>
+  <div class="ds"><div class="n">95</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B3%B5%EA%B3%B5%EC%8B%9C%EC%84%A4%20%EC%98%88%EC%95%BD%C2%B7%EC%9D%B4%EC%9A%A9" target="_blank" rel="noopener">공공시설 예약·이용</a></div><div class="q">이용률 저조·특정인 독점 예약</div><div class="clue">→ 공공자원 편중</div></div></div>
+  <div class="ds"><div class="n">96</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4%C2%B7%EC%83%9D%ED%99%9C%EC%B2%B4%EC%9C%A1" target="_blank" rel="noopener">체육시설·생활체육</a></div><div class="q">인구 대비 시설이 부족한 지역</div><div class="clue">→ 생활체육 격차</div></div></div>
+  <div class="ds"><div class="n">97</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EA%B3%B5%EC%9C%A0%EC%9E%AC%EC%82%B0%C2%B7%EA%B5%AD%EC%9C%A0%EC%A7%80" target="_blank" rel="noopener">공유재산·국유지</a></div><div class="q">저가 임대·유휴 방치 자산</div><div class="clue">→ 공공자산 관리 부실</div></div></div>
+  <div class="ds"><div class="n">98</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C%20%EC%B2%AD%EA%B5%AC%C2%B7%EC%B2%98%EB%A6%AC" target="_blank" rel="noopener">정보공개 청구·처리</a></div><div class="q">비공개율이 높은 기관·항목</div><div class="clue">→ 깜깜이 행정</div></div></div>
+  <div class="ds"><div class="n">99</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EB%AF%BC%EC%9B%90%C2%B7%EC%BD%9C%EC%84%BC%ED%84%B0%20%ED%86%B5%EA%B3%84" target="_blank" rel="noopener">민원·콜센터 통계</a></div><div class="q">급증한 민원 유형·지역</div><div class="clue">→ 숨은 생활 현안</div></div></div>
+  <div class="ds"><div class="n">100</div><div class="body"><div class="name"><a href="https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%A7%80%EB%B0%A9%EC%9D%98%ED%9A%8C%20%EC%9D%98%EC%A0%95%C2%B7%EC%98%88%EC%82%B0" target="_blank" rel="noopener">지방의회 의정·예산</a></div><div class="q">의정비·출장·조례 처리 비교</div><div class="clue">→ 일 안 하는 의회</div></div></div>
 </section>
 
 </main>

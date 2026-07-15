@@ -307,3 +307,17 @@ body.dark .promise .c *{color:#fff !important;}
 .module-header .subtitle::after,.cat-head .subtitle::after,.step-head .subtitle::after,
 .hero .big::after,.callout .ct::after,.two .col .h::after,.prompt .pl::after,
 .promise .c .t::after{content:".";}
+
+/* ===== 공공데이터 100선 · 데이터셋 카드 (.ds-card-style marker) ===== */
+.ds{display:flex;gap:16px;padding:16px 2px;border-bottom:1px solid var(--border);}
+.ds:last-child{border-bottom:none;}
+.ds .n{flex:0 0 36px;height:36px;border-radius:9px;background:var(--accent);color:#fff;font-weight:800;
+  display:flex;align-items:center;justify-content:center;font-size:15px;}
+.ds .body{flex:1;min-width:0;}
+.ds .name{font-size:17px;font-weight:800;letter-spacing:-.01em;margin-bottom:3px;}
+.ds .name a{color:var(--accent-dark);text-decoration:none;}
+.ds .name a:hover{text-decoration:underline;}
+.ds .q{font-size:14.5px;color:var(--text);line-height:1.5;}
+.ds .clue{font-size:13px;color:var(--text-secondary);margin-top:3px;}
+.chapter-lead{font-size:22px;font-weight:800;line-height:1.45;letter-spacing:-.01em;color:var(--text);margin:8px 0 6px;}
+body.dark .ds .name a{color:#fdad00 !important;}
