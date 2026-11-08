@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>알고리즘 감사 — 정부가 쓰는 AI를 거꾸로 취재하기 · 바이브 코딩 x 데이터 저널리즘 해커톤</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-btn" aria-label="메뉴">☰</button>
+  <a class="brand" href="index.html">바이브 코딩 <b>x</b> 데이터 저널리즘.</a>
+  <span class="sn">슬로우뉴스</span>
+  <span class="spacer"></span>
+  <span class="mod-label">알고리즘 감사 · 정부 AI를 취재하기</span>
+</header>
+
+<nav class="sidebar">
+    <div class="course-nav">
+    <a href="index.html"><span class="cn">홈</span> 강의 홈</a>
+    <a href="00-onboarding.html"><span class="cn">0</span> 클로드 온보딩</a>
+    <a href="01-first-exercise.html"><span class="cn">1</span> 첫 실습 30분</a>
+    <a href="02-method.html"><span class="cn">2</span> 기초취재 방법론</a>
+    <a href="03-data-100.html"><span class="cn">3</span> 공공데이터 100선</a>
+    <a href="09-crawler.html"><span class="cn">4</span> 크롤러 만들기</a>
+    <a href="10-visualization.html"><span class="cn">5</span> 데이터 시각화</a>
+    <a href="github.html"><span class="cn">6</span> 깃허브 원리</a>
+    <a href="05-manual.html"><span class="cn">7</span> 프로젝트 매뉴얼</a>
+    <a href="06-verification.html"><span class="cn">8</span> 검증과 원칙</a>
+    <a href="04-case-colin.html"><span class="cn">9</span> 콜린알포 케이스</a>
+    <a href="07-case-realworld.html"><span class="cn">10</span> 실전 케이스 (수주왕)</a>
+    <a href="11-hira-case.html"><span class="cn">11</span> 심평원 실습</a>
+    <a href="12-election-map.html"><span class="cn">12</span> 선거 지도</a>
+    <a href="13-lh-land.html"><span class="cn">13</span> 신도시 토지 시그니처</a>
+    <a href="08-overseas-cases.html"><span class="cn">14</span> 해외 사례 심화</a>
+    <a href="14-tools-2026.html"><span class="cn">15</span> 취재 도구 2026</a>
+    <a href="15-algorithm-audit.html" class="current"><span class="cn">16</span> 알고리즘 감사</a>
+  </div>
+  <div class="nav-group-title">이 강</div>
+  <a class="nav-item active" data-s="why">무엇을 배우나</a>
+  <a class="nav-item" data-s="twoways">두 가지 감사법</a>
+  <a class="nav-item" data-s="suspicion">케이스 해부 — Suspicion Machines</a>
+  <a class="nav-item" data-s="foi">FOIA 전략 — 알고리즘용</a>
+  <a class="nav-item" data-s="gaming">'게이밍' 반론 깨기</a>
+  <a class="nav-item" data-s="method">방법론 공개와 검증</a>
+  <a class="nav-item" data-s="korea">한국에 적용하기</a>
+  <a class="nav-item" data-s="assignment">실습 과제</a>
+  <a class="nav-item" data-s="sources">출처</a>
+</nav>
+
+<main class="main">
+
+<section class="section active" id="why">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사 · 들어가며</div><h2>AI를 쓰는 게 아니라, AI를 취재한다</h2><p>복지·신용·채용·치안에서 알고리즘이 사람의 삶을 가르는 결정을 내린다. 이 강은 그 알고리즘 자체를 취재 대상으로 삼는다.</p></div>
+  <p class="lead">지금까지(9~15강)는 AI를 <b>도구</b>로 썼다. 이 강은 방향을 뒤집는다. 정부·기업이 쓰는 자동 결정 시스템을 <b>취재 대상</b>으로 놓고, "이 알고리즘은 공정한가, 누구를 더 의심하는가"를 데이터로 입증한다. 국내엔 사례가 거의 없다. 그래서 기회다.</p>
+  <div class="hero">
+    <div class="big">"객관적이다"는 주장 자체가 기삿거리</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">공급사·정부는 알고리즘이 "편향 없고 효율적"이라 말한다. 그 주장은 <b>검증 가능한 가설</b>이다. 가설을 세우는 순간 취재가 시작된다.</p>
+  </div>
+  <div class="callout tip"><div class="ct">이 강이 중요한 이유</div>"AI를 쓰되 사람이 판단·검증·공개한다"는 우리 원칙이 가장 선명하게 드러나는 영역이다. 알고리즘 책임보도는 가설→공개청구→재현→검증→공개라는 데이터 저널리즘의 골격을 그대로 밟는다.</div>
+</section>
+
+<section class="section" id="twoways">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사</div><h2>두 가지 감사법 — 입력 감사 vs 출력 감사</h2><p>알고리즘에 얼마나 접근할 수 있느냐에 따라 길이 갈린다. 둘 다 유효하다.</p></div>
+  <div class="two">
+    <div class="col yes"><div class="h">① 입력 감사 (화이트박스)</div>
+      <ul>
+        <li>코드·모델·학습데이터·변수를 <b>정보공개로 입수</b>해 직접 돌린다.</li>
+        <li>"어떤 변수가, 어떤 집단을, 왜 높게 매기나"를 블랙박스 안에서 본다.</li>
+        <li>대표 사례 — Lighthouse Reports <b>Suspicion Machines</b>(로테르담).</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">② 출력 감사 (블랙박스)</div>
+      <ul>
+        <li>알고리즘을 못 받으면 <b>결과(점수·판정)만으로</b> 편향을 측정한다.</li>
+        <li>같은 조건의 집단 간 오류율·위양성률 차이를 통계로 드러낸다.</li>
+        <li>대표 사례 — ProPublica <b>Machine Bias</b>(COMPAS 재범위험 점수, 2016).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout info"><div class="ct">접근이 막혀도 포기하지 않는다</div>ProPublica는 COMPAS의 알고리즘을 받지 못했지만, 피고 수천 명의 위험점수와 실제 재범 여부를 대조해 흑인 피고의 <b>위양성률</b>이 더 높다는 걸 입증했다. 모델을 못 받아도 출력만으로 강력한 기사가 된다.</div>
+  <blockquote>접근 수준이 기사의 각도를 정한다. 코드가 있으면 "어떻게 차별하는가"를, 결과만 있으면 "결과가 차별적인가"를 묻는다.</blockquote>
+</section>
+
+<section class="section" id="suspicion">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사 · 케이스 해부</div><h2>Suspicion Machines — 블랙박스를 연 2년의 기록</h2><p>Lighthouse Reports와 WIRED가 네덜란드 로테르담의 복지부정 예측 알고리즘을 감사한 과정. 8개국·100건 넘는 공개청구의 핵심.</p></div>
+  <div class="hero">
+    <div class="big">나이 · 성별 · 자녀 수</div>
+    <p style="margin-bottom:0;color:var(--text-secondary)">수백 개 결정트리로 만든 위험점수 모델. 가장 영향력 큰 변수는 <b>나이</b>, 이민배경 싱글맘이 고위험으로 찍혔다. 12,707건의 과거 조사로 학습.</p>
+  </div>
+  <div class="stage"><div class="head"><div class="n">1</div><h4>가설을 공급사에게서 얻다</h4></div>
+    <p>로테르담의 기술 파트너 액센추어는 백서에 "편향 없는 시민 결과"라고 큰 글씨로 적었다. 담당 시의원도 "입력·출력 모두 편향 없다"고 말했다. <b>검증할 명확한 주장</b>이 생겼다.</p></div>
+  <div class="stage"><div class="head"><div class="n">2</div><h4>생애주기 전체를 공개청구</h4></div>
+    <p>입력 변수 → 학습데이터 → 모델(수백 개 결정트리) → 출력까지, 알고리즘의 '생애주기' 각 구성요소를 겨냥해 FOI를 설계했다(다음 섹션 표).</p></div>
+  <div class="stage"><div class="head"><div class="n">3</div><h4>모델 파일을 둘러싼 1년</h4></div>
+    <p>로테르담은 소스코드·문서는 줬지만 <b>점수를 실제 계산하는 모델 파일</b>은 "부정수급자가 시스템을 악용한다"며 거부했다. 1년간의 이의신청 끝에, 심리에서 위원장이 "모델 파일을 PDF로 보낼 수 있냐"고 물을 만큼 미지의 영역이었다. 결국 시가 모델 파일을 넘겼다.</p></div>
+  <div class="stage"><div class="head"><div class="n">4</div><h4>뜻밖의 학습데이터</h4></div>
+    <p>시가 변수별 통계분포 파일을 보내며 <b>코드 안에 전체 학습데이터를 실수로 함께 넘겼다.</b> 실험을 더 탄탄하게 만들었다.</p></div>
+  <div class="stage"><div class="head"><div class="n">5</div><h4>아키타입으로 돌려보다</h4></div>
+    <p>변수 조합이 거의 무한하므로, 현장 취재로 '아키타입'(변수 묶음)을 만들어 시스템이 어떤 프로필에 높은 점수를 주는지 측정했다. <b>데이터 실험과 현장 취재가 서로를 안내</b>했다.</p></div>
+  <div class="stage"><div class="head"><div class="n">6</div><h4>GDPR로 당사자 점수 확보</h4></div>
+    <p>복지 수급자들이 GDPR 열람권으로 <b>자신의 위험점수와 사용된 변수</b>를 받게 했다. 누가 알고리즘 때문에 조사받았는지 확인하는 열쇠였다.</p></div>
+  <div class="callout warn"><div class="ct">핵심 교훈</div>알고리즘 감사는 'AI 전문가가 있는 뉴스룸'만의 일이 아니다. 필요한 건 <b>데이터 기자 + 현장 기자</b>로 이뤄진 작고 다학제적인 팀이다. 기술 접근이 적어도(스페인 사례) 알고리즘을 쓰는 사회복지사들의 일상을 파고들어 강한 기사를 만들 수 있다.</div>
+</section>
+
+<section class="section" id="foi">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사</div><h2>FOIA 전략 — 알고리즘을 어떻게 청구하나</h2><p>Lighthouse가 쓴 '알고리즘용 정보공개 툴킷'. 쉬운 것부터 요청해 발판을 만든다.</p></div>
+  <table>
+    <thead><tr><th>항목</th><th>난이도</th><th>물어볼 질문</th></tr></thead>
+    <tbody>
+      <tr><td>학습데이터</td><td>매우 어려움</td><td>학습 데이터셋은 대표성이 있나? 어떤 샘플링을 썼나?</td></tr>
+      <tr><td>머신러닝 모델 파일</td><td>어려움</td><td>모두 같은 기준으로 판정되나? 어떤 집단이 높은 점수를 받나?</td></tr>
+      <tr><td>소스코드</td><td>어려움</td><td>개발자가 내린 의도적 설계는? 변수는 자동 선택인가 하드코딩인가?</td></tr>
+      <tr><td>입력 변수 목록</td><td>보통</td><td>보호 대상 범주(성별·인종 등)를 쓰나? 명백한 대리변수가 있나?</td></tr>
+      <tr><td>성능 평가</td><td>보통</td><td>얼마나 잘 작동하나? 어떤 기준으로 평가했고, 그게 타당한가?</td></tr>
+      <tr><td>기술 문서</td><td>보통</td><td>데이터 과학자용 핸드북 — 시스템을 어떻게 설명하나?</td></tr>
+      <tr><td>담당자(사회복지사) 지침</td><td>쉬움</td><td>현장 담당자는 시스템을 얼마나 아나? 판단이 어떻게 재입력되나?</td></tr>
+      <tr><td>개인정보 영향평가(DPIA)</td><td>쉬움</td><td>문제 소지가 있는 데이터를 쓰나? 기관이 인정한 위험은?</td></tr>
+    </tbody>
+  </table>
+  <div class="callout tip"><div class="ct">비협조 기관 다루기</div>한 번에 전부 청구하지 않는다. 먼저 보도자료팀에 "부정예측에 머신러닝을 쓰는지, 시스템 이름은 무엇인지, 어떤 범주의 데이터를 쓰는지"를 묻는다. 비협조적일 것 같으면 <b>청구를 잘게 쪼갠다</b> — 코드·데이터 대신 기술문서부터. 거절당해도 기사에 쓸 문서는 손에 남는다.</div>
+  <div class="prompt"><div class="pl">먼저 할 질문</div><div class="q">① 귀 기관은 부정·위험 예측에 머신러닝 알고리즘을 사용합니까? ② 사용한다면 그 시스템의 명칭은? ③ 입력으로 쓰는 데이터의 일반 범주는? — 협조도와 시스템의 복잡성을 먼저 가늠한다.</div></div>
+</section>
+
+<section class="section" id="gaming">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사</div><h2>'게이밍' 반론 깨기</h2><p>기관은 거의 항상 "공개하면 부정수급자가 시스템을 악용한다"며 모델을 숨긴다. 이 논리는 대개 허술하다.</p></div>
+  <div class="two">
+    <div class="col no"><div class="h">⛔ 기관의 논리</div>
+      <ul>
+        <li>"모델을 공개하면 사기꾼이 점수를 피해 간다."</li>
+        <li>범죄·행정위반 통제를 이유로 한 FOI 예외 조항에 기댄다.</li>
+      </ul>
+    </div>
+    <div class="col yes"><div class="h">✅ 반박의 핵심</div>
+      <ul>
+        <li>로테르담 모델의 최대 변수는 <b>나이</b> — 바꿀 수 없는 속성이다.</li>
+        <li>대부분의 변수가 거의 불변의 인구학적 특성이라 '악용'이 불가능하다.</li>
+        <li>'게이밍 논리'를 반박하는 <b>학술 문헌</b>이 이미 풍부하다 — 인용하라.</li>
+      </ul>
+    </div>
+  </div>
+  <blockquote>바꿀 수 없는 변수로 사람을 판정하는 시스템은, 공개한다고 '악용'될 수 없다. 그 사실 자체가 시스템의 부당함을 드러낸다.</blockquote>
+</section>
+
+<section class="section" id="method">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사</div><h2>방법론 공개와 검증 — 오류를 견디는 보도</h2><p>접근 수준이 높고 모델이 복잡할수록 오류 위험이 크다. 그래서 방법론을 함께 쓴다.</p></div>
+  <div class="stage"><div class="head"><div class="n">1</div><h4>학계 레드팀</h4></div>
+    <p>컴퓨터과학자·통계학자·인권전문가를 모아 실험 전후로 방법론을 검토받는다.</p></div>
+  <div class="stage"><div class="head"><div class="n">2</div><h4>모든 숫자에 각주</h4></div>
+    <p>기사와 방법론의 모든 주장·숫자를 실험 결과와 1:1로 각주 처리한다.</p></div>
+  <div class="stage"><div class="head"><div class="n">3</div><h4>당사자에게 충분한 시간</h4></div>
+    <p>보통 며칠 주는 반론 기간을, 방법론과 결과를 함께 보내며 <b>3주</b>를 줬다. 로테르담은 결과를 "적절하고 교훈적이며 부분적으로 인정된다"고 답했다.</p></div>
+  <div class="stage"><div class="head"><div class="n">4</div><h4>전부 깃허브에 공개</h4></div>
+    <p>실험 재료와 결과를 모두 공개해, 독자가 직접 모델로 자신의 가설을 검증할 수 있게 했다. <b>재현 가능성</b>이 신뢰의 핵심이다.</p></div>
+  <div class="callout info"><div class="ct">우리 원칙과 같다</div>"상관≠인과, 가설 먼저·검증은 사람, 재현 가능하게 공개." 알고리즘 감사는 이 원칙을 가장 높은 난이도에서 실천하는 일이다.</div>
+</section>
+
+<section class="section" id="korea">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사</div><h2>한국에 적용하기</h2><p>국내엔 사례가 거의 없다. 어디를 보고, 무엇으로 청구할지부터 정한다.</p></div>
+  <div class="two">
+    <div class="col yes"><div class="h">어디에 알고리즘이 있나</div>
+      <ul>
+        <li>복지·부정수급 탐지, 조세 위험 선별</li>
+        <li>신용평가·대출 심사 모형</li>
+        <li>채용 AI·인적성 자동평가</li>
+        <li>추천·노출 알고리즘(플랫폼)</li>
+        <li>재범·치안 위험 예측(도입 논의)</li>
+      </ul>
+    </div>
+    <div class="col no"><div class="h">무엇으로 여나</div>
+      <ul>
+        <li><b>정보공개청구</b> — 시스템 명칭·변수·기술문서·영향평가부터</li>
+        <li><b>개인정보보호법 열람권</b> — 당사자가 자신에 대한 자동결정 정보를 요구(GDPR의 한국판 지렛대)</li>
+        <li>안 되면 <b>출력 감사</b> — 공개된 판정 결과·통계로 집단별 편향 측정</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout tip"><div class="ct">기회</div>국내 언론에 알고리즘 책임보도가 사실상 없다는 건, 같은 방법론으로 <b>처음 하는 기사</b>를 쓸 수 있다는 뜻이다. 작은 공공 알고리즘 하나, 출력 감사 하나면 시작할 수 있다.</div>
+</section>
+
+<section class="section" id="assignment">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사</div><h2>실습 과제</h2></div>
+  <ol>
+    <li>자동 결정을 내리는 국내 공공/민간 시스템 하나를 고른다(복지 선별·신용·채용·추천 중).</li>
+    <li>공급사·기관의 공개 발언에서 "공정하다/효율적이다"류 <b>검증 가능한 주장</b> 1개를 찾아 가설로 적는다.</li>
+    <li>위 FOI 툴킷 표를 참고해 <b>정보공개청구서 초안</b>을 쓴다 — 쉬운 항목(기술문서·영향평가)부터, 잘게 쪼개서.</li>
+    <li>접근이 막힐 경우의 <b>출력 감사 설계</b>를 함께 적는다 — 어떤 결과 데이터로, 어떤 집단 간 무엇을 비교할지.</li>
+    <li>'게이밍 반론'에 대한 재반박 1문단과, 당사자 보호·반론 계획을 적는다.</li>
+  </ol>
+  <div class="callout info"><div class="ct">제출 기준</div>모델을 못 받아도 좋다. <b>가설·청구 전략·출력 감사 설계</b>가 분명하면 그 자체가 완성된 취재 기획이다.</div>
+</section>
+
+<section class="section" id="sources">
+  <div class="module-header m4"><div class="subtitle">알고리즘 감사 · 정리</div><h2>출처와 더 보기</h2></div>
+  <ul>
+    <li>Lighthouse Reports × WIRED — <a href="https://www.lighthousereports.com/investigation/suspicion-machines/" target="_blank" rel="noopener">Suspicion Machines</a> · <a href="https://pulitzercenter.org/how-we-did-it-unlocking-europes-welfare-fraud-algorithms" target="_blank" rel="noopener">방법론(How we did it)</a></li>
+    <li>ProPublica — <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target="_blank" rel="noopener">Machine Bias (COMPAS, 출력 감사)</a></li>
+    <li>Salud con Lupa — <a href="https://gijn.org/stories/2026-data-journalism-sigma-award-winners/" target="_blank" rel="noopener">Invisibles(페루 연금 배제 알고리즘)</a></li>
+  </ul>
+  <div class="callout tip"><div class="ct">한 줄 요약</div>알고리즘도 취재 대상이다. 공급사의 "객관적" 주장을 가설로 세우고, 공개청구(또는 출력)로 열고, 재현 가능하게 공개한다 — AI를 쓰는 저널리즘에서 AI를 감시하는 저널리즘으로.</div>
+  <div class="footer-note">
+    알고리즘 감사 · 바이브 코딩 x 데이터 저널리즘 해커톤 · 슬로우뉴스 (2026)<br>
+    관련 강 — <a href="08-overseas-cases.html#lighthouse-suspicion">14강 · Suspicion Machines</a> · <a href="14-tools-2026.html#missions">15강 · 트랙 11 알고리즘을 감사하라</a> · <a href="06-verification.html">8강 · 검증과 원칙</a>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
